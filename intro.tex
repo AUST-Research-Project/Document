@@ -1,0 +1,66 @@
+%!TEX root = aust_thesis.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Introduction}\label{ch:INTRO}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{summary}
+	 The summary at the beginning of each chapter explains what is going to be written in that chapter.
+\end{summary}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{First section}\label{sec:INTRO:ml}
+
+Here the description of the concepts relating to your work.%
+\footnote{ %
+The test of the files are examples in Hungarian related to the EDITIING of the thesis. In what follows there is a CITATION: \citeN{Mitchell97}:\newline
+    ``The field of machine learning is concerned with the question of how to construct computer programs    that automatically improve with experience.''
+}
+
+
+
+
+\begin{figure}[t]
+  \centering
+  \pgfimage[width=0.2\linewidth]{images/bayes}
+  \caption[Example figure]%
+  {Example of including a figure. Please always state its origin if NOT YOUR OWN:\\
+  {\white .}\hfill\url{http://en.wikipedia.org/wiki/Thomas_Bayes}}
+  \label{fig:ALAP:sm1}
+\end{figure}
+
+Including figures:\\
+ \verb+\pgfimage[width=0.4\linewidth]{images/bayes}+\\
+where parameters:\\
+\verb+width=0.4\linewidth+ \\
+
+Putting images side by side using \verb+tabular+
+
+
+If one puts graphics, illustrations, it is better to use the VECTOR format -- we mean PDF or EPS, eventually SVG -- as one sees in Fig.~\ref{fig:ALAP:sm3}
+
+\begin{figure}[t]
+  \centering
+  \begin{tabular}{ccc}
+		  \pgfimage[height=4cm]{images/bayes}
+		  &
+		  \pgfimage[height=4cm]{images/vapnik}
+	\end{tabular}
+  \caption[Side by side example]%
+  {Two eminent scientists.\\
+  {\white .}\url{http://en.wikipedia.org/wiki/Vladimir_Vapnik}}
+  \label{fig:ALAP:sm2}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \pgfimage[width=0.7\linewidth]{images/parzen}
+  \caption[Vector graphics example]%
+  {Caption for the vector graphics example.}
+  \label{fig:ALAP:sm3}
+\end{figure}
+
+It is also recommended the usage of:
+\begin{itemize}
+	\item elements like: \verb+\chapter+, \verb+\section+, \verb+\subsection+, \verb+\subsubsection+
+	\item use of different types of lists;
+\end{itemize}
