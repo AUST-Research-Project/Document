@@ -1,0 +1,111 @@
+% HEADER and settings -- do not change
+\documentclass[final,a4paper]{aust_thesis}
+\usepackage{definitions}
+%%
+
+
+% The set of languages we want to show
+\lstloadlanguages{Python}
+
+% one can select one...
+\lstset{language=Python}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%!!          THIS WILL BE CHANGED       !!%%%%
+
+%%   FRONT MATTER  
+\submityear{%
+2019%
+}
+\submitmonth{%
+July%
+}
+\title{%
+Sentiment Analysis Based on Social Media Data
+}
+\author{%
+Kudzai Zishumba
+}
+\tutor{%
+Prof. dr. Lehel Csat\'o\\
+~\\
+Faculty of Mathematics and Informatics,\hspace*{-3cm}\\
+Babe\c{s} Bolyai University of Cluj-Napoca,\hspace*{-3cm}\\
+Romania
+}
+
+% this is to speed up compilation...
+
+%\includeonly{intro}
+
+
+\begin{document}
+
+%% ABSTRACT
+\begin{abstract}%
+
+Sentiment analysis is a challenging natural language processing (NLP) problem.
+%
+Our task here us to build an artificial agent -- or an AI system -- that is capable of detecting polarity in a document.
+%
+But more information such as the emotion of the author can be obtained.
+%
+In a general sense, sentiment analysis determines the opinion regarding the object/subject in discussion.
+%
+But emotion detection can identify the particular ``mood'' of the author.
+%
+Social platforms -- such as Facebook, Twitter, IMDB, or comment sections from newspapers -- to name a few -- can provide a huge corpus of -- usually unlabelled or extremely sparsely labelled -- content.
+
+Using modern machine learning tools and the available computational power, an agent can analyse the content -- given usually as a list of messages -- and detect the general emotion ``within the message''.
+%
+It is capable of identifying subjects with unstable or ``chaotic'' mood that might require attention.
+
+Our aim is to attempt detecting the underlying emotion as well as the polarity of a document.
+%
+In this process we will make use of open source libraries and publicly available data sets.
+%
+The program will be able to run locally, both in geographic and in cultural sense, and to analyse the results that were obtained.
+
+~
+
+This work is the result of my own activity. I have neither given nor received unauthorized assistance on this work.
+
+\end{abstract}
+
+% this command generates the titlepage
+\maketitle
+
+%% 
+
+% this command generates the table of contents
+{ \baselineskip 1ex
+  \parskip 1ex
+  \tableofcontents
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%    the structure of your thesis     %%%%%%%%%%%%
+
+
+% the document is structured into LOGICAL parts:
+\include{intro.tex}
+
+\include{theory}
+
+\include{analysis}
+
+\include{experim}
+
+\appendix
+\include{programs}
+
+
+{ \renewcommand{\baselinestretch}{0.8}\normalsize %
+  \setlength{\itemsep}{-2.4mm}
+  \setlength{\bibspacing}{0.67\baselineskip}
+  \bibliographystyle{abbrvnat}
+  \bibliography{thesis}
+}
+
+\end{document}
