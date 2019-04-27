@@ -1,0 +1,102 @@
+% HEADER and settings -- do not change
+\documentclass[final,a4paper]{aust_thesis}
+\usepackage{definitions}
+%%
+
+
+% The set of languages we want to show
+\lstloadlanguages{Python}
+
+% one can select one...
+\lstset{language=Python}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%!!          THIS WILL BE CHANGED       !!%%%%
+
+%%   FRONT MATTER  
+\submityear{%
+2019%
+}
+\submitmonth{%
+July%
+}
+\title{%
+Your work
+}
+\author{%
+Student Stan
+}
+\tutor{%
+Prof. dr. Lehel Csat\'o\\
+~\\
+Faculty of Mathematics and Informatics,\hspace*{-3cm}\\
+Babe\c{s} Bolyai University of Cluj-Napoca,\hspace*{-3cm}\\
+Romania
+}
+
+% this is to speed up compilation...
+
+%\includeonly{intro}
+
+
+\begin{document}
+
+%% ABSTRACT
+\begin{abstract}%
+
+
+{ \color{gray!60!red}
+	This abstract should NOT EXCEED one page!!!
+	
+	This part describes the thesis.
+
+	This is a description of the thesis listing the {\em CONTENT} by chapters.
+
+	It should also contain an enumeration of the {\em technologies} used and the part that is NOVEL.
+	
+	\vfill
+
+	It will end with a declaration:
+}
+
+This work is the result of my own activity. I have neither given nor received unauthorized assistance on this work.
+
+\end{abstract}
+
+% this command generates the titlepage
+\maketitle
+
+%% 
+
+% this command generates the table of contents
+{ \baselineskip 1ex
+  \parskip 1ex
+  \tableofcontents
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%    the structure of your thesis     %%%%%%%%%%%%
+
+
+% the document is structured into LOGICAL parts:
+\include{intro.tex}
+
+\include{theory}
+
+\include{analysis}
+
+\include{experim}
+
+\appendix
+\include{programs}
+
+
+{ \renewcommand{\baselinestretch}{0.8}\normalsize %
+  \setlength{\itemsep}{-2.4mm}
+  \setlength{\bibspacing}{0.67\baselineskip}
+  \bibliographystyle{abbrvnat}
+  \bibliography{thesis}
+}
+
+\end{document}
