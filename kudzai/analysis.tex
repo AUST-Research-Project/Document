@@ -1,14 +1,28 @@
 %!TEX root = kudzai_thesis.tex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Results and analysis}\label{ch:Results}
+\section{Data visualization}
+Because of the way the human brain processes information, using charts or graphs to visualize large amounts of complex data is easier than poring over spreadsheets or reports. 
+Data visualization makes it easier to identify areas that need attention.
+
+\subsection{matplotlib and seaborn}
+Seaborn is a Python data visualization library based on matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics.
+Matplotlib allows plotting multiple graphs on a single figure. Analysis can be made on different metrics at the same time. It also allows updating graph data in realtime.
+\clearpage
+\begin{figure}[h]
+  \centering
+  \pgfimage[width=0.5\linewidth]{images/graphs_results}
+  \caption[Real time plot of the analysis]
+  {Real time plot of the analysis}
+  \label{fig:ALAP:sm1}
+\end{figure}
 
 
-\section{The travelling salesman problem}
+The \textbf{wordcloud} gives a summary of the tweets in realtime.\\
+The \textbf{timeseries} gives a \textbf{stochastic trend} of the polarity of the tweets, with \textbf{1 = positive, -1 = negative and 0 = neutral}.
+The \textbf{barchart} displays the values of the number of tweets in the given category\\
+The \textbf{heat map} shows the \textbf{polarity} as well as the \textbf{subjectivity} in terms of percentage,
+a negative and subjective scenario is the least desirable while a positive and objective scenario is the most desirable.\\
 
-bla
+With this realtime analysis one can quickly see the prevailing mood as well as a summary of the tweets around a given topic.
 
-bla
-
-\subsection{Heuristics}
-
-etc, the rest is in Hungarian.
