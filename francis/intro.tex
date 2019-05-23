@@ -1,66 +1,25 @@
 %!TEX root = aust_thesis.tex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \chapter{Introduction}\label{ch:INTRO}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{summary}
-	 The summary at the beginning of each chapter explains what is going to be written in that chapter.
-\end{summary}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{First section}\label{sec:INTRO:ml}
+\section{Introduction}\label{sec:INTRO:ml}
 
-Here the description of the concepts relating to your work.%
-\footnote{ %
-The test of the files are examples in Hungarian related to the EDITIING of the thesis. In what follows there is a CITATION: \citeN{Mitchell97}:\newline
-    ``The field of machine learning is concerned with the question of how to construct computer programs    that automatically improve with experience.''
-}
+Images and videos are collected everyday by different sources. Recognizing objects, segmenting localizing and classifying them has been a major area of interest in computer vision. Significant progress has been made commencing from use of low-level image features, such as \textbf {scale invariant feature transform}  SIFT [A] and \textbf{ histogram of oriented gradients HOG }[B] , in sophisticated machine learning frameworks to the use of multi-layer convolutional networks to compute highly discriminative, and invariant features [C]. SIFT and HOG are feature descriptor and semi-local orientation histograms that counts occurrences of gradient orientation in localized portions of an image. Just as Convolutional Neural Network (CNN) is traced to the Fukushima’s \textbf{ “neocognitron”} [D], a hierarchical and shift-invariant model for pattern recognition, the use of CNN for region-based identification (R-CNN)[C] can also be traced back to the same.  After CNN was considered inelegant in the 1990s due to the rise of support vector machine (SVM), in 2012 it was revitalize by Krizhevsky et al. [D] by demonstrating a valuable improvement in image classification accuracy on the ImageNet Large Scale Visual Recognition Challenge (ILSVRC) [E] and included new mechanisms to CNN like rectified linear unit (ReLU) and, dropout regularization. To perform object detection with CNN and in attempt to bridge the gap between image segmentation and object detection two issues were fixed by R.Girshick et al [C]. First was the localization of objects with a
+Deep Network and training a high-capacity model with only a small quantity of annotated detection
+data. Use of a sliding-window detector was proposed for the localization of object but was not preferred because it can only work for one object detection and all object in an image has to have a common aspect ratio for its use in multiple object detection. Instead the localization problem was solved by operating within the “recognition using regions” paradigm.
 
+Fast R-CNN was introduced in 2015 by Girshick [F]. A single-stage training algorithm that jointly learns to classify object proposals and refine their spatial locations was demonstrated. This tackled the problem of complexity that arises in other deep ConvNets [D,G, H], caused by the multi-stage pipelines that are slow. The slow nature is due to the fact that detection requires accurate localization of objects that creates the challenge of that many proposals (candidate object locations) must be processed and these proposals provides only rough localization that must be refined to achieve precise localization. Fast R-CNN is 9 X faster than R-CNN [C] and 3 X faster than SPPnet [I]. R-CNN was speed up by \textbf{Spatial pyramid pooling networks (SPPnets)}[I] by sharing computation. A convolutional feature map for the entire input image was computed by SPPnet method. After which it then classifies each object proposal using a feature vector extracted from the shared feature map. SPPnet also has obvious pitfalls. It is a multi-stage pipeline similarly to R-CNN that involves extracting features, refining a network with log loss, training SVMs, and lastly fitting bounding-box regressors. Features are also written to disk. But unlike R-CNN, the refining algorithm demonstrated in SPPnet cannot update the convolutional layers that precede the spatial pyramid pooling. This constraint limits the accuracy of very deep networks.
+Additional efforts were made to reduce the running time of deep ConvNets for object detection and segmentation. Regional proposal computation is the root of this expensive running time in detection networks. A fully convolutional network that simultaneously predicts object bounds and objectness scores at each position called \textbf{ Region Proposal Network (RPN) }was developed by Ren et al [J]. RPN shares full-image convolutional features with the detection network, thus permitting virtually cost-free region proposals and it is trained end-to-end to generate high-quality region proposals. Integrating RPN and Fast R-CNN into a unit network by sharing their convolutional features results to Faster R-CNN. Anchor boxes that acts as reference at multiple scales and aspect ratios were introduced in Faster R-CNN instead of the pyramids of filters used in earlier methods. RPNs are developed to coherently speculate region proposals with an extensive range of scales and aspect ratios.
+Changing the architecture of the pyramids of filter to a top-down architecture with lateral connections improved the efficiency of this pyramids [K]. This is applied in building high-level semantic feature maps at all scales. This new architecture is called \textbf{ Feature Pyramid Network (FPN)} [K]. In various applications and uses it displayed a notable improvement as a generic feature extractor. When used in a Faster R-CNN it achieved results that supersedes that of Faster R-CNN alone. In order to generate a high-quality segmentation mask for object instances in an image, Mask R-CNN was developed [L]. Mask R-CNN add another branch to the Faster R-CNN. In addition to the bounding box recognition system a branch for predicting an object mask in parallel was added. It affixes only a bijou overhead to Faster R-CNN, running at \textbf{ 5 fps}.
 
+The accessibility and use of drone technology is at the increase currently. It is tackling challenges in various spheres and areas like defence, shipping of consumer goods, disease controls, events coverage and so on. One of the most important application of drone is for collection of images and videos. These data collected can be used for different purposes. This work will extend the state-of-the-art Mask R-CNN for segmentation of objects in image instances collected by a drone. It detects about 22 classes including tree, grass, other vegetation, dirt, grave, rocks, water, paved area, pool, person, dog, car, bicycle, roof, wall, fence, fence-pole, window, door, and obstacle. For the training of the model high resolution images at 1Hz with pixel-accurate annotation was used.
 
-
-\begin{figure}[t]
-  \centering
-  \pgfimage[width=0.2\linewidth]{images/bayes}
-  \caption[Example figure]%
-  {Example of including a figure. Please always state its origin if NOT YOUR OWN:\\
-  {\white .}\hfill\url{http://en.wikipedia.org/wiki/Thomas_Bayes}}
-  \label{fig:ALAP:sm1}
-\end{figure}
-
-Including figures:\\
- \verb+\pgfimage[width=0.4\linewidth]{images/bayes}+\\
-where parameters:\\
-\verb+width=0.4\linewidth+ \\
-
-Putting images side by side using \verb+tabular+
+In Chapter 2 of this work will discuss theory of CNN and Mask RCNN deeply. The first part will discuss the backbone of Mask RCNN, followed by Regional Proposal Network, ROI Classifier and Bounding Box Regressor and lastly Segmentation Mask.
+Chapter 3 will discuss fully segmentation on drone dataset. Chapter 4 will explore the methodology and implementation of the work.
 
 
-If one puts graphics, illustrations, it is better to use the VECTOR format -- we mean PDF or EPS, eventually SVG -- as one sees in Fig.~\ref{fig:ALAP:sm3}
-
-\begin{figure}[t]
-  \centering
-  \begin{tabular}{ccc}
-		  \pgfimage[height=4cm]{images/bayes}
-		  &
-		  \pgfimage[height=4cm]{images/vapnik}
-	\end{tabular}
-  \caption[Side by side example]%
-  {Two eminent scientists.\\
-  {\white .}\url{http://en.wikipedia.org/wiki/Vladimir_Vapnik}}
-  \label{fig:ALAP:sm2}
-\end{figure}
-
-\begin{figure}[t]
-  \centering
-  \pgfimage[width=0.7\linewidth]{images/parzen}
-  \caption[Vector graphics example]%
-  {Caption for the vector graphics example.}
-  \label{fig:ALAP:sm3}
-\end{figure}
-
-It is also recommended the usage of:
-\begin{itemize}
-	\item elements like: \verb+\chapter+, \verb+\section+, \verb+\subsection+, \verb+\subsubsection+
-	\item use of different types of lists;
-\end{itemize}
