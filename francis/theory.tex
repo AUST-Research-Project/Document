@@ -129,3 +129,21 @@ Input sizes of a classifier vary. Classifiers require fixed, stable input size a
   \includegraphics[width=0.5\linewidth]{images/roi.jpg}
    \caption{IROI Pooling.}
 \end{figure}
+
+\section{Drone-Based Dataset }
+Drones (or UAVs) furnished with high resolution cameras have been utilized in a wide range of applications, including agricultural, aerial photography, fast delivery, surveillance, etc. This has made, automatic comprehension of visual data collected from drones become highly demanding, which brings computer vision to drones more and more closely. Outstanding advancements have been made in general computer vision algorithms, such as detection and tracking, yet these algorithms are not usually flawless for dealing with sequences or images captured by drones, due to various difficulties such as view point changes and scales. Consequently, developing and appraising new vision algorithms for drone generated visual data is a key problem in drone-based applications.
+The major challenge of segmentation in drone generated visual data is the lack of proper datasets for these. A VisDrone Dataset was produced in [V]. The images and video sequences in the benchmark were captured over various urban/suburban areas of 14 different cities across China from north to south. Specifically, VisDrone2018 consists of 263 video clips and 10; 209 images (no overlap with video clips) with rich annotations, including object bounding boxes, object categories, occlusion, truncation ratios, etc. With intensive amount of effort, our benchmark has more than 2:5 million annotated instances in 179; 264 images/video frames [V]. Also Semantic Drone Dataset that focuses on semantic understanding of urban scenes for increasing the safety of autonomous drone flight and landing procedures. The imagery depicts more than 20 houses from nadir (bird's eye) view acquired at an altitude of 5 to 30 meters above ground. A high resolution camera was used to acquire images at a size of 6000x4000px (24Mpx). The training set contains 400 publicly available images and the test set is made up of 200 private images. [W].
+
+\begin{figure}
+  \begin{subfigure}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{images/045.jpg}
+    \caption{Drone-based imageset 1}
+    \label{fig:1}
+  \end{subfigure}
+  %
+  \begin{subfigure}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{images/044.jpg}
+    \caption{Drone-based imageset 2}
+    \label{fig:2}
+  \end{subfigure}
+\end{figure}
