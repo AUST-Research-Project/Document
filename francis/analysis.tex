@@ -178,7 +178,7 @@ Config.py is the configuration settings for the model in the implementation by M
 }
 
 
-return layers\;   
+\textbf{return} layers\;   
  \end{algorithm}
 .\\
 \\
@@ -201,7 +201,7 @@ The genuine function does not return total layers, however, it returns them in s
     block .add ( batch normalization )\;
    block . connect\_outputs (block , original\_input )\;
    block .add ( ReLu )\;
-   return block\;
+   \textbf{return} block\;
   
   \end{algorithm}
 .\\
@@ -222,7 +222,7 @@ The RPN is worked by two functions, build\_rpn\_model and rpn\_graph. Notwithsta
    rpn\_class\_logits = convolution 1x1 on shared\_layer with logits\_number\_of\_filters\;
   rpn\_probabilities = softmax on rpn\_class\_logits\;
    rpn\_bbox\_refinements = convolution 1x1 on shared\_layer with bbox\_number\_of\_filters\;
-   return rpn\_class\_logits , rpn\_probabilities , rpn\_bbox\_refinements\;
+   \textbf{return} rpn\_class\_logits , rpn\_probabilities , rpn\_bbox\_refinements\;
   
   \end{algorithm}
   .\\
@@ -246,7 +246,7 @@ top\_anchors = names\_of\_anchors\_with\_top\_probs (probs , how\_many =min(6000
  boxes = apply\_refinements ( anchors\_batch , deltas\_batch )\;
  proposals = [boxes , probs\_batch ]\;
  proposals . apply\_threshold ( threshold )\;
- return proposals\;
+ \textbf{return} proposals\;
 
   \end{algorithm}
   .\\
@@ -387,3 +387,166 @@ In the pseudocode, we can see a few classes and functions. Despite the fact that
 build\_resnet\_backbone was at that point depicted in pseudocode 5.1, ensuing function build\_top\_down\_fpn\_layers is genuinely clear procedure connecting layers 
 as in section 3.6.1, generate\_anchors will be portrayed in 5.12, build\_rpn can be seen in pseudocode 5.3, ProposalLayer in pseudocode 5.4, fpn\_classifier speaks to the fpn\_classifier\_graph from pseudocode 5.6 and fpn\_mask is work 
 build\_fpn\_mask\_graph from pseudocode 5.7.
+
+\subsubsection{utils.py}
+The most significant piece of the utils.py record is the Dataset class. It is likewise the main 
+some portion of the utils.py code that was adjusted for the necessities of Drone-based dataset utilization 
+(the other changes are simply minor refactorings). The utils.py additionally contains a great deal of functions. Just a couple of them will be referenced 
+as every one of them have adequate documentation in the code.
+\\
+\\
+\textbf{Dataset}
+\\
+The Dataset class is the base class for dataset classes and images. It contains data about them including their names, identifiers and on account of images
+
+likewise paths to them. One of the written methods is the one called import\_contents, which feeds the Dataset object with classes and images. The work process is represented in pseudocode 
+
+5.9. Contributions for the technique are: 
+\begin{itemize}
+  \item List of classes names proposed to be learned
+
+  \item List of directories containing training images and masks 
+  \item Name of model
+\end{itemize}
+
+The add\_class method in pseudocode 5.9 import a class into the Dataset object dictionary  inside and out with an exceptional identifier; a significant part is containing 
+the foundation as the first class with identifier 0 (in the pseudocode represented simplifiedly by the saved\_class dictionary ). The add\_images line is a loop over all 
+images with the predefined augmentation contained in a given registry bringing in them out and out with their identifier and way into the Dataset object list.
+\\
+\\
+\begin{algorithm}[H]
+  \caption{import\_contents}
+  \SetAlgoLined
+  \DontPrintSemicolon
+   classes = list of classes names intended to be learned\;
+  directories = list of directories containing training images and
+  masks\;
+  saved\_classes = {’BG ’: 0}\;
+  \For{\texttt{ i in classes}}{
+   add\_class\;}
+   \For{\texttt{ directory in directories}}
+   {add\_images\;}
+  
+\end{algorithm}
+.\\
+\\ 
+Another important method written for the needs of the Drone-based dataset modules is
+the one called load\_mask. The work process of the method is illustrated in pseudocode
+5.10. It returns an array containing boolean masks (True for the mask, False elsewhere)
+for each instance in the image, an array of class identifiers corresponding each instance in the masks array.
+\\
+\\
+\begin{algorithm}[H]
+  \caption{get\_mask}
+  \SetAlgoLined
+  \DontPrintSemicolon
+masks\_list = list of mask files within the directory\;
+first\_mask = masks\_list [0]\;
+masks\_array = array containing first\_mask transformed to bool\;
+classes\_list = list containing class of the first mask\;
+\For{\texttt{  new\_mask in masks\_list [1:]}}{
+ concat\_mask = new\_mask transformed to bool\;
+ concatenate masks\_array with concat\_mask\;
+ append class of new\_mask into classes\_list\;
+ \uIf {any problem happened}
+ {\textbf{return} None , None\;}
+}
+\textbf{return} masks\_array , classes\_list\; 
+\end{algorithm}
+.\\
+\\
+From the remainder of Dataset class methods, one more will be referenced. prepare must be called before the use of the Dataset object as it sets it up for use. 
+The readiness is done through setting object parameters like number of classes, classes names and identifiers or number of pictures. This setting depends on 
+data got during the import\_contents call. Bounding boxes apparatuses Since bounding boxes are not required to be given altogether with masks
+in the training dataset, the function extract\_boxes is utilized to process bounding boxes from masks. The function scans for the first and last horizontal and vertical 
+positions containing mask along all channels and returns them as an array. It implies that every pixel of the mask is contained in the returned horizontal-vertical bounding 
+box and it is likewise as tight as could reasonably be expected. 
+A function used to register the IOU is called just compute\_iou. Its work process is delineated in pseudocode 5.11. The treatment of no interception is likewise executed 
+in the function, yet for better understanding, it is excluded in the pseudocode. 
+\\
+\\
+\begin{algorithm}[H]
+  \caption{compute\_iou}
+  \SetAlgoLined
+  \DontPrintSemicolon
+   predicted\_box\_area = area of predicted box\;
+groundtruth\_box\_area = area of given mask\;
+y1 = the bigger one from the upper coordinates of the predicted and ground truth bboxes\;
+ y2 = the smaller one from the lower coordinates of the predicted and ground truth bboxes\;
+x1 = the bigger one from the left coordinates of the predicted and ground truth bboxes\;
+x2 = the smaller one from the right coordinates of the predicted and ground truth bboxes\; 
+intersection = (x2 - x1) * (y2 - y1)\;
+union = predicted\_box\_area + groundtruth\_box\_area - intersection\;
+iou = intersection / union\;
+\textbf{return} iou
+\end{algorithm}
+.\\
+\\
+With the correlation of ground truth boxes and the anticipated ones is associated likewise the function box\_refinement. It registers contrasts between ground truth 
+furthermore, anticipated directions of bounding boxes and returned them as the data 
+of the error bounding box incorrectness. 
+\\
+\\
+\textbf{Pyramid anchor tools }
+\\
+The hypothesis of scales and pyramids was at that point portrayed in chapter 3.4.3 and 3.6.1. Two functions  are associated with the formation of the anchors at various dimensions of 
+a feature pyramid. The called one is generate\_pyramid\_anchors which loops over scales. Tuned in, the generate\_anchors capacity is called to produce anchors of 
+proportions for a given arrangement of scales. The work process of the generate\_anchors function is represented in pseudocode 5.12. It takes scales and proportions of anchors, feature map shape and anchors and 
+feature map strides as a series of inputs. It utilizes these contributions to figure heights and widths of various stays (can be found in figure 3.6) and to compute a framework of anchors
+focuses. This network together with their height and widths characterizes the returned value, anchors.
+\\
+\\
+\begin{algorithm}[H]
+  \caption{generate\_anchors}
+  \SetAlgoLined
+  \DontPrintSemicolon
+  scales = array of scales\;
+ratios = array of ratios\;
+feature\_map\_shape = [height , width ]\;
+anchor\_stride = stride of anchors on the featuremap\;
+feature\_stride = stride of the featuremap\;
+ heights = scales divided by a square root of ratios ( each by each )\;
+ widths = scales multiplied by square root of ratios ( each by each )\;
+ shifts\_y = grid from 0 to shape [0] with stride anchor\_stride\;
+ shifts\_y = shifts\_y * feature\_stride\;
+ shifts\_x = grid from 0 to shape [1] with stride anchor\_stride\;
+ shifts\_x = shifts\_x * feature\_stride\;
+ anchors\_centers = stack of [ shifts\_y , shifts\_x ] in each combination\;
+anchors\_sizes = [ heights , widths ]\;
+anchors = [ anchors\_centers - 0.5 * anchors\_sizes , anchors\_centers + 0.5 * anchors\_sizes ]\;
+\textbf{return} anchors
+\end{algorithm}
+.\\
+\\
+\textbf{Drone.py}
+The responsibility of parents in teaching and training their children. The responsibility of drone.py is to train the model to detect or predict object. Drone.py teaches the model to recognize the object attributes, colour, curves, edges and other attributes of object. This file was written as part of the practical section of the thesis and defines an important function- train. The train function in drone.py calls the parent train function present in the Mask R-CNN model defined above.  Before the training can take place the dataset needs to be loaded and likewise the mask. So the call to the load\_drone function loads the drone-bades dataset and their corresponding mask.   After the load\_drone function the next is the call to the prepare function. The prepare function sets up the model for training.
+The flowchart contains couple of as of now referenced functions and classes, explicitly the ModelConfig class and its display method from chapter 5.1.1, the MaskRCNN 
+class from section 5.1.2 and the Dataset class and its methods import\_contents what's more, prepare from chapter 5.1.3. 
+The last advance in this flowchart, a method model.train(), has really two extraordinary structures relying upon the utilization of initial weights. The initial structure is connected 
+for a training from a scratch and prepares all layers. The second one comprises of three littler sections; right off the bat preparing layers 5 and higher, at that point adjusting layers 4 and 
+higher and the last and greatest section is tweaking the entire design. It is appeared in the flowchart in \ref{drone} and the thought behind this conduct is that it is 
+unrealistic to train the first layers including low-level features, while changes have a tremendous effect on more profound dimensions and those highlights ought to be pretty much the equivalent for any object.
+\clearpage
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{images/drone-graph.png}
+  \caption{Flowchart of the drone.py module written by the author.}
+ \end{figure}
+ \label{drone}
+ \clearpage
+
+ \begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{images/train-graph.png}
+  \caption{Flowchart of the train method inside the drone.py module .}
+ \end{figure}
+ \label{train}
+ \clearpage
+
+\textbf{Drone-detect.py}
+In the event that we have a trained model, either prepared by us or given by another person, we can utilize it to distinguish highlights or items in maps. In fact, the trained model is used to detect features and maps in drone datasets collected from drones developed by the Robotic Team of African University of Science and Technology.  The yield from 
+the module comprises of a set of vector maps for each class. Despite the fact that the model is somewhat scale-invariant, it is prescribed to give object detection and masks incomparable 
+goals to the one utilized in training pictures.  The module is contained in the document drone\_detect.py. This record can be viewed as the second piece of the down to earth 
+segment of the theory. Its work process is with certain improvements. As in the drone.py module, the flowchart contains few already mentioned 
+functions and classes, explicitly the ModelConfig class  and the MaskRCNN class. Be that as it may, more unmentioned function can be found in the detection module.  
+
