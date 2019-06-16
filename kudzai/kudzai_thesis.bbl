@@ -1,0 +1,247 @@
+\begin{thebibliography}{42}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Amarappa and Sathyanarayana(2014)]{ref30}
+Amarappa and Sathyanarayana.
+\newblock \emph{Data classification using Support vector}.
+\newblock 2014.
+
+\bibitem[Bollen(2011)]{ref9}
+.~Z. Bollen, Mao.
+\newblock \emph{Twitter mood predicts the stock market}.
+\newblock 2011.
+
+\bibitem[Brendan(2010)]{ref35}
+R.~Brendan, Ramnath.
+\newblock \emph{From Tweets to Polls: Linking Text Sentiment to Public Opinion
+  Time Series}.
+\newblock 2010.
+
+\bibitem[Bromberg(2012)]{ref31}
+A.~Bromberg.
+\newblock Second try: Sentiment analysis in python.
+\newblock Technical report, 2012.
+\newblock URL \url{http://andybromberg.com/sentiment-analysis-python/}.
+
+\bibitem[Chen(2008)]{ref10}
+A.~. Chen.
+\newblock \emph{A Design Framework and System for Text Analysis ofComputer
+  Mediated Communication}.
+\newblock 2008.
+
+\bibitem[Cui and Mittal(2011)]{ref37}
+H.~Cui and Mittal.
+\newblock \emph{Comparative experiments on sentiment classification for online
+  product reviews}.
+\newblock 2011.
+
+\bibitem[DuVander(2012)]{ref8}
+DuVander.
+\newblock \emph{The State-of-the-Art in Twitter Sentiment Analysis}.
+\newblock 2012.
+
+\bibitem[Dwergs(2009)]{ref25}
+Dwergs.
+\newblock \emph{reface.me}.
+\newblock 2009.
+\newblock URL
+  \url{http://reface.me/statusupdates/whats-the-maximum-length-of-a-facebook-status-update/}.
+
+\bibitem[et~al(2011)]{ref27}
+N.~et~al.
+\newblock 2011.
+
+\bibitem[et~al(2010)]{ref33}
+O.~et~al.
+\newblock \emph{Sentiment Analysis}.
+\newblock 2010.
+\newblock URL \url{https://web.stanford.edu/class/cs124/lec/sentiment.pdf}.
+
+\bibitem[Gama(2013{\natexlab{a}})]{ref14}
+R.~. Gama.
+\newblock \emph{MARKETING RESEARCH: THE ROLE OF SENTIMENT ANALYSIS}.
+\newblock 2013{\natexlab{a}}.
+
+\bibitem[Gama(2013{\natexlab{b}})]{ref21}
+R.~. Gama.
+\newblock \emph{The Role of Sentiment Analysis}.
+\newblock 2013{\natexlab{b}}.
+
+\bibitem[Go and Huang(2013)]{ref24}
+B.~Go and Huang.
+\newblock \emph{Twitter Sentiment Classification using Distant Supervision}.
+\newblock 2013.
+\newblock URL
+  \url{https://www-cs.stanford.edu/people/alecmgo/papers/TwitterDistantSupervision09.pdf}.
+
+\bibitem[Goodchild(2010)]{ref13}
+G.~Goodchild.
+\newblock \emph{Crowdsourcing geographic information for disaster,a research
+  frontier}.
+\newblock 2010.
+
+\bibitem[Gunther(2013)]{ref41}
+T.~Gunther.
+\newblock 2013.
+
+\bibitem[Hancock(2007)]{ref17}
+E.~.~G. Hancock, T.
+\newblock \emph{On lying and being lied to: A linguistic analysis of
+  deception}.
+\newblock 2007.
+
+\bibitem[Hemalatha and A.Govardhan(2013)]{ref29}
+V.~Hemalatha and A.Govardhan.
+\newblock \emph{Sentiment Analysis Tool using Machine Learning Algorithms}.
+\newblock 2013.
+
+\bibitem[HU(2013)]{ref22}
+HU.
+\newblock \emph{Using web crawler technology for text analysis of geo-events: A
+  Case study of the Huangyan Island incident}.
+\newblock 2013.
+
+\bibitem[Kaplan(2010)]{ref7}
+H.~.~M. Kaplan, Andreas.
+\newblock \emph{Users of the World, Unite! The Challenges and Opportunities of
+  Social Media}.
+\newblock 2010.
+
+\bibitem[Lee(2008)]{ref19}
+P.~. Lee.
+\newblock \emph{Opinion mining and sentiment analysis, Foundations and Trends
+  in Information Retrieval}.
+\newblock 2008.
+
+\bibitem[Liu(2010)]{ref47}
+B.~Liu.
+\newblock \emph{Sentiment Analysis: A Multi-Faceted Problem}.
+\newblock 2010.
+
+\bibitem[Liu(2012)]{ref16}
+L.~H. .~Z. Liu, Cao.
+\newblock \emph{Sentiment Analysis and Subjectivity, Handbook of Natural
+  Language Processing}.
+\newblock 2012.
+
+\bibitem[Loria(2019)]{ref43}
+S.~Loria.
+\newblock \emph{TextBlob: Simplified Text Processing}.
+\newblock 2019.
+\newblock URL \url{https://textblob.readthedocs.io/en/dev/}.
+
+\bibitem[Mahmud(2014)]{ref38}
+Mahmud.
+\newblock \emph{Tweet This or Not ? Predicting Twitter Users Actions from
+  Sentiment}.
+\newblock 2014.
+
+\bibitem[Meng(2012)]{ref6}
+Meng.
+\newblock \emph{Sentiment Analysis. A study on product features}.
+\newblock 2012.
+
+\bibitem[Mukherjee(2013)]{ref23}
+Mukherjee.
+\newblock \emph{Senitment Analysis}.
+\newblock 2013.
+\newblock URL
+  \url{https://www.researchgate.net/publication/236203597_Sentiment_Analysis_A_Literature_Survey}.
+
+\bibitem[Mukherjee(2012)]{ref2}
+S.~Mukherjee.
+\newblock Sentiment analysis, a literature survey.
+\newblock Technical report, Indian Institute of Technology, Bombay, 2012.
+\newblock URL
+  \url{https://www.researchgate.net/publication/236203597_Sentiment_Analysis_A_Literature_Survey}.
+
+\bibitem[Mullen(2011)]{ref5}
+Mullen.
+\newblock \emph{Introduction to Sentiment Analysis}.
+\newblock 2011.
+
+\bibitem[Murphy(2012)]{ref44}
+Murphy.
+\newblock \emph{Machine learning: a probabilistic perspective}.
+\newblock 2012.
+
+\bibitem[Newman(2003)]{ref18}
+e.~a. Newman.
+\newblock \emph{Lying words: Predicting deception from linguistic styles}.
+\newblock 2003.
+
+\bibitem[Notebook(2019)]{ref46}
+J.~Notebook.
+\newblock \emph{Jupyter Notebook}.
+\newblock 2019.
+\newblock URL
+  \url{https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html}.
+
+\bibitem[Shivhare and Khethawa(2012)]{ref39}
+Shivhare and Khethawa.
+\newblock \emph{Emotion Detection on Text}.
+\newblock 2012.
+
+\bibitem[Smith(2012)]{ref11}
+.~Y. Smith, N.
+\newblock \emph{How does brand-related user-generated content differ across
+  YouTube, Facebook, and Twitter?}
+\newblock 2012.
+
+\bibitem[Sood(2012)]{ref32}
+Sood.
+\newblock \emph{Anger Management: Using Sentiment Analysis to Manage Online
+  Communities}.
+\newblock 2012.
+
+\bibitem[Thelwall and Buckley(2012)]{ref36}
+M.~Thelwall and Buckley.
+\newblock \emph{Topic-Based Sentiment Analysis for the Social Web: The role of
+  Mood and Issue-Related Words, School of Technology, University of
+  Wolverhampton, Wulfruna Street, Wolverhampton WV1 1SB, UK: School of
+  Technology}.
+\newblock 2012.
+
+\bibitem[Turney(2002)]{ref26}
+Turney.
+\newblock \emph{Thumbs up or thumbs down?: semantic orientation applied to
+  unsupervised classification of reviews. in Proceedings of Annual Meeting of
+  the Association for Computational Linguistics}.
+\newblock 2002.
+
+\bibitem[Uchyigit(2012)]{ref15}
+S.~. Uchyigit.
+\newblock \emph{Sentimentor: Sentiment Analysis Of Twitter Data}.
+\newblock 2012.
+
+\bibitem[Valpola()]{ref28}
+Valpola.
+
+\bibitem[Verma(2014)]{ref20}
+.~R. Verma, Sharma.
+\newblock \emph{Literature Review on Sentiment Analysis of Big Data Using
+  Machine Learning}.
+\newblock 2014.
+
+\bibitem[Vladimir(1995)]{ref40}
+V.~. Vladimir.
+\newblock \emph{The Nature of Statistical Learning Theory}.
+\newblock 1995.
+
+\bibitem[Wiebe and O'Hara(2005)]{ref34}
+B.~R. Wiebe, Janyce and T.~O'Hara.
+\newblock \emph{Development and use of a goldstandard data set for subjectivity
+  classifications}.
+\newblock 2005.
+
+\bibitem[WikiPedia(2019)]{ref45}
+WikiPedia.
+\newblock \emph{Matplotlib}.
+\newblock 2019.
+\newblock URL \url{https://en.wikipedia.org/wiki/Matplotlib}.
+
+\end{thebibliography}

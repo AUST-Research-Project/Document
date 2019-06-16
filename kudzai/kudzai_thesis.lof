@@ -1,0 +1,38 @@
+\babel@toc {british}{}
+\babel@toc {british}{}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Sentiment analysis process}}{7}{figure.3.1}% 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces sample tweets}}{8}{figure.3.2}% 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces example of sentiment analysis results}}{10}{figure.3.3}% 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Machine learning types}}{14}{figure.3.4}% 
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Bayes theorem}}{15}{figure.3.5}% 
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Support vector machine}}{16}{figure.3.6}% 
+\contentsline {figure}{\numberline {3.7}{\ignorespaces k-means clustering}}{17}{figure.3.7}% 
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Sample training data}}{18}{figure.3.8}% 
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Confusion matrix results}}{19}{figure.3.9}% 
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Action Prediction}}{21}{figure.3.10}% 
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Action classification}}{22}{figure.3.11}% 
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Action classification multiple data sets}}{23}{figure.3.12}% 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Steps to analyze sentiment data}}{26}{figure.4.1}% 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Stochastic Gradient decent}}{29}{figure.4.2}% 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces SpaCy Training}}{29}{figure.4.3}% 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Robert Plutchik's wheel of emotions}}{30}{figure.4.4}% 
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Confusion matrix}}{32}{figure.4.5}% 
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Confusion matrix with multiple classes}}{33}{figure.4.6}% 
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Sample ISEAR training dataset with labels}}{35}{figure.5.1}% 
+\contentsline {figure}{\numberline {5.2}{\ignorespaces System Architecture}}{38}{figure.5.2}% 
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Sentiment Analysis data flow diagram}}{39}{figure.5.3}% 
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Illustration of the Sequence diagram}}{39}{figure.5.4}% 
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Blogger use case diagram}}{39}{figure.5.5}% 
+\contentsline {figure}{\numberline {5.6}{\ignorespaces System user use case diagram}}{40}{figure.5.6}% 
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Application Details}}{42}{figure.5.7}% 
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Access keys}}{42}{figure.5.8}% 
+\contentsline {figure}{\numberline {5.9}{\ignorespaces API permissions}}{43}{figure.5.9}% 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Real time plot of the analysis}}{46}{figure.7.1}% 
+\addvspace {10\p@ }

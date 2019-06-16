@@ -9,8 +9,6 @@
 
 % one can select one...
 \lstset{language=Python}
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%!!          THIS WILL BE CHANGED       !!%%%%
 
@@ -35,22 +33,78 @@ Babe\c{s} Bolyai University of Cluj-Napoca,\hspace*{-3cm}\\
 Romania
 }
 
-% this is to speed up compilation...
 
-%\includeonly{intro}
 
 
 \begin{document}
 
+
+% begin approval page
+\begin{figure}[h]
+  \centering
+  \pgfimage[width=0.7\linewidth]{images/logo_approval}
+\end{figure}
+
+
+
+\begin{center}
+\large\textbf{Approval by}
+\end{center}
+\leavevmode\\
+\leavevmode\\
+\leavevmode\\
+\leavevmode\\
+\noindent
+\textbf{Supervisor}\\
+Surname:\\
+First name:\\
+Signature:\\
+\\
+\\
+\\
+\\
+\noindent
+\textbf{The head of department}\\
+Surname:\\
+First name:\\
+Signature:\\
+
+
+\vspace*{\fill}
+\begingroup
+\begin{center}
+\tiny KM 10, Airport Road, Galadimawa. Abuja – Nigeria. P.M.B 681, Garki-Abuja. Tel: +234 (0) 9 291 6265 -7
+www.aust.edu.ng
+\end{center}
+\endgroup
+%%%% end approval page
+
+
+
+
+\pagebreak
+\vspace*{\fill}
+\begingroup
+\centering
+
+COPYRIGHT \textcopyright 2019\\
+KUDZAI ZISHUMBA\\
+ALL RIGHTS RESERVED\\
+ 
+\endgroup
+
+
+
+
 %% ABSTRACT
 \begin{abstract}%
 
-Sentiment analysis is a challenging natural language processing (NLP) problem.
+Sentiment analysis has proven to be one of the most challenging tasks in natural language processing (NLP).
 %
 Many AI systems have been developed which can detect the polarity of a sentence (degree of positivity, neutrality or negativity). But more information such as the emotion of the author can be detected.
 Our task here is to build an artificial agent -- or an AI system -- that is capable of detecting polarity in a document as well as the emotion of the author.
 %
-In a general sense, sentiment analysis determines the polarity of the opinion regarding the object/subject in discussion.
+Generally speaking sentiment analysis detects the polarity of the opinion based on the object/subject in discussion.
 %
 But emotion detection can identify the particular ``mood'' of the author.
 %
@@ -82,13 +136,15 @@ This work is the result of my own activity. I have neither given nor received un
   \parskip 1ex
   \tableofcontents
 }
-
+\listoffigures
+\addcontentsline{toc}{section}{\numberline{}List of Figures}
+\cleardoublepage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%    the structure of your thesis     %%%%%%%%%%%%
 
 
 % the document is structured into LOGICAL parts:
-\include{intro.tex}
+\include{intro}
 
 \include{theory}
 
@@ -96,11 +152,13 @@ This work is the result of my own activity. I have neither given nor received un
 \include{programs}
 
 
-{ \renewcommand{\baselinestretch}{0.8}\normalsize %
+{ 
+  \renewcommand{\baselinestretch}{0.8}\normalsize %
   \setlength{\itemsep}{-2.4mm}
   \setlength{\bibspacing}{0.67\baselineskip}
   \bibliographystyle{abbrvnat}
-  \bibliography{kudzai_thesis}
+  \bibliography{thesis}
+  \bibliographystyle{ieeetr}
 }
 
 \end{document}
