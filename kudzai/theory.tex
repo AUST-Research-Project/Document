@@ -7,7 +7,7 @@ Mass demonstrations by people often result in vandalism of public property in in
 
 
 \section{Objectives}
-
+To achieve the aim of the study the following objectives have been drawn. 
 \begin{itemize}
 \item To detect people\textquotesingle s mood from textual information posted on social media.
 \item To classify people\textquotesingle s sentiment based on their geographical location.
@@ -20,21 +20,22 @@ Our aim is to develop a system that can classify people\textquotesingle s mood a
 
 
 \section{Significance of the Study}
-Leaders of today face many difficult, potentially explosive situations in which they must make decisions that can help or harm their firms, themselves or others. Sentiment analysis will improve the ethical quality of decisions made by the authorities and managers, and also ensure that decisions made will not backfire. It also helps the authorities to predict the outcome of the decisions made, and determine the impact on the affected population. This study helps us to evaluate the degree of evaluability/argumentativeness with which the population under study communicates, \cite{ref5} and make improved decisions drawn from insights on the analyzed data.
+Leaders of today face many difficult, potentially explosive situations in which they must make decisions that can help or harm their firms, themselves or others. Sentiment analysis will improve the ethical quality of decisions made by the authorities and managers, and also ensure that decisions made will not backfire. It also helps the authorities to predict the outcome of the decisions made, and determine the impact on the affected population. This study helps us to evaluate the degree of evaluability/argumentativeness with which the population under study communicates, and make improved decisions drawn from insights on the analyzed data.
 
 
 
 \chapter{Research methodology}
-
+\section{Sentiment Analysis process}
 A graphical description of the processes involved in sentiment analysis approach that this research will follow is detailed in the diagram shown below:
 
 \begin{figure}[h]
   \centering
   \pgfimage[width=0.7\linewidth]{images/research_methodology}
   \caption[Sentiment analysis process]
-  {Basic processes involved in sentiment analysis}
+  {Basic processes involved in sentiment analysis, source:\cite{ref49}}
   \label{fig:ALAP:sm3}
 \end{figure}
+\label{research_methodology}
 
 
 \subsection{Data Collection}
@@ -56,11 +57,12 @@ However, with sentiment analysis, we can make use of natural language processing
 \end{figure}
 
 
+
 \subsection{Text Preparation}
 The text preparation process begins by cleaning the textual data prior to the analysis stage. Normally text preparation involves identifying and removing non textual content from the data such as hash tags and hyperlinks. Also, some non-essential information that does not contribute to the reviewer's opinion such as name and location and date all these are removed, also any other content that is deemed irrelevant to the analysis is also removed.
 
 \subsection{Sentiment Detection}
-Stage 3 of detecting sentiment, involves extracting the opinions from the reviews by the use of textual processing. The textual data is broken down into sentences and each sentence is analyzed for subjectivity. Sentences that are not subjective are discarded, only those that contain subjective text are kept for further analysis. Next sentiment detection is done, and it can either be done on single term level, phrase level, sentence or document level. Some of the techniques used are
+Stage 3 of \ref{research_methodology}, detecting sentiment, involves extracting the opinions from the reviews by the use of textual processing. The textual data is broken down into sentences and each sentence is analyzed for subjectivity. Sentences that are not subjective are discarded, only those that contain subjective text are kept for further analysis. Next sentiment detection is done, and it can either be done on single term level, phrase level, sentence or document level. Some of the techniques used are
 
 \begin{itemize}
 
@@ -68,11 +70,11 @@ Stage 3 of detecting sentiment, involves extracting the opinions from the review
 
 \item \textbf{N-Grams:} This is an approach that represents features of a document by a number of words in a specific sequence, for example, words in pairs or triplets... etc. up to "N" hence N-gram
 
-\item \textbf{Lemmas:} Lemmatization is a process whereby words are converted to their synonyms instead of using the literal word, and example of lemmatization could be\\
+\item \textbf{Lemmas:} Lemmatization is a process whereby words are converted to their synonyms instead of using the literal word, and example of lemmatization is\\
 better $\xrightarrow{}$ good, best $\xrightarrow{}$ good.\\
 This approach makes better generalization and simplifies the process of analysis.
 
-\item \textbf{Negation:} This method works in a much similar way to n-grams method, such phrases like “I like this book” and “I do not like this book”, using other techniques can be classified as being in the same category, but with negation included the two phrases are in opposite classes. However, negation cannot work in all situations, such as when sarcasm or satire is used. \cite{ref19}. Also, the polarity is not always reversed when negation is detected.
+\item \textbf{Negation:} This method works in a much similar way to n-grams method, such phrases like “I like this book” and “I do not like this book”, using other techniques can be classified as being in the same category, but with negation included the two phrases are in opposite classes. However, negation cannot work in all situations, such as when sarcasm or satire is used \cite{ref19}. Also, the polarity is not always reversed when negation is detected.
 
 \item \textbf{Opinion words:} When people express their emotions they often use, "feeling words" these can be adjective and adverbs. Words like these can be incorporated into a feature vector and they can represent the proximity of a word to a similar word, this is a good way to detect subjectivity in a document.
 \end{itemize}
@@ -131,7 +133,7 @@ In the following chapter we explore available technologies as well as progress t
 
 \subsection{Sentiment Analysis}
 Sentiment analysis is also known as opinion mining, it aims to detect subjective text and extract useful information from given textual data. The text can be classified as binary positive or negative but sometimes also neutral. 
-By making use of techniques and mechanisms insights can be drawn from the textual information. A huge corpus of textual data can be ingested into a statistical model and processed to produce information that can support operational, managerial, and strategic decision making, \cite{ref6}. In addition, sentiment analysis is a tool in data mining that can overcome challenges like harnessing, analyzing and interpreting textual content since data is dispersed, disorganized, and fragmented by systematically extracting and analyzing online data without facing any time delays, \cite{ref7}
+By making use of techniques and mechanisms insights can be drawn from the textual information. A huge corpus of textual data can be ingested into a statistical model and processed to produce information that can support operational, managerial, and strategic decision making \cite{ref6}. In addition, sentiment analysis is a tool in data mining that can overcome challenges like harnessing, analyzing and interpreting textual content since data is dispersed, disorganized, and fragmented by systematically extracting and analyzing online data without facing any time delays \cite{ref7}.
 \leavevmode\\
 
 Natural language processing (NLP) approaches, are able to capture the specificity of sentiment nuances through a variety of concepts, like part-of-speech disambiguation, sentence parsing, entity extraction, and context-based Boolean operators. They usually involve a form of rule-writing, which requires up-front manual labor but, once developed enables the desired accuracy levels within the subjective context.
@@ -140,7 +142,7 @@ Natural language processing (NLP) approaches, are able to capture the specificit
 Sentiment analysis is arguably the fastest growing areas of research in NLP. The growth of social media platforms such as online reviews has also resulted in the growth in importance of sentiment analysis, forum discussions, blogs, micro-blogs, Twitter, and social networks has increased the need to study this area. \cite{ref20}. Because of the vast amount of opinionated data that the web holds, if properly analyzed this can drastically help businesses and policy makers in their decision making. Using text mining and analysis techniques such as Artificial Neural Network (ANN) and Support Vector Machine (SVM), classification of sentiments can easily be performed even in real time.
 \leavevmode\\
 
-In particular, Twitter has become the top social media analytics channel due to its simple to use API, and social impact by some influential people, politicians and celebrities. With over 3 billion tweets and 15 billion Application Programming Interface (API) calls generated daily, \cite{ref8}. Twitter has both the supply and demand for opinionated data for a wide range of topics. One of the reasons for Twitters rapid growth in demand is because of the growing number of social media analytic applications  that make use of twitter's API. A major aspect of Twitter is Twitter sentiments, which are harnessed for understanding customer behavior and preferences \cite{ref11}, predicting financial performance \cite{ref9}, providing early warnings for undesirable medical catastrophes \cite{ref10}, predicting and understanding election outcomes\cite{ref12}, and as archived data which can potentially be used in the future for disaster response and surveillance systems, \cite{ref13}, etc. Several sentiment search engines exist where users run typical queries on any topic of interest, and generate text results. The results are normally classified into 3 polar categories, positive, neutral and negative. Some examples currently available are \cite{ref14}.
+In particular, Twitter has become the top social media analytics channel due to its simple to use API, and social impact by some influential people, politicians and celebrities. With over 3 billion tweets and 15 billion Application Programming Interface (API) calls generated daily \cite{ref8}. Twitter has both the supply and demand for opinionated data for a wide range of topics. One of the reasons for Twitter's rapid growth in demand is because of the growing number of social media analytic applications  that make use of twitter's API. A major aspect of Twitter is Twitter sentiments, which are harnessed for understanding customer behavior and preferences \cite{ref11}, predicting financial performance \cite{ref9}, providing early warnings for undesirable medical catastrophes \cite{ref10}, predicting and understanding election outcomes \cite{ref12}, and as archived data which can potentially be used in the future for disaster response and surveillance systems \cite{ref13}, etc. Several sentiment search engines exist where users run typical queries on any topic of interest, and generate text results. The results are normally classified into 3 polar categories, positive, neutral and negative. Some examples currently available are \cite{ref14},
 
 \begin{itemize}
 
@@ -152,17 +154,17 @@ In particular, Twitter has become the top social media analytics channel due to 
 
 \end{itemize}
 \leavevmode\\
-Looking at how data on twitter is analyzed, a certain tool is used for sentiment analysis which is called the Sentimentor. It makes use of the naive Bayes Classifier to categorize tweets into one of three classes, negative, neutral or positive classes. Sentimentor's user interface has an allows the user to visually analyze the word distributions. This tool presents classification results in an easy to understand pictorial format. Other insights drawn by Sentimentor include, the type of text and details of analysis. \cite{ref15}.
+Looking at how data on twitter is analyzed, a certain tool is used for sentiment analysis which is called the Sentimentor. It makes use of the naive Bayes Classifier to categorize tweets into one of three classes, negative, neutral or positive classes. Sentimentor's user interface has an allows the user to visually analyze the word distributions. This tool presents classification results in an easy to understand pictorial format. Other insights drawn by Sentimentor include, the type of text and details of analysis \cite{ref15}.
 
 \leavevmode\\
-The majority of opinion mining tools aim to detect the polarity of a textual document, they classify the polarity as either positive, negative, or neutral. For many applications this is sufficient, but textual data often contains a mix of sentiment both positive and negative in the same document, so at times it is necessary to be able to detect both simultaneously and also to determine the intensity of the sentiment expressed. An example may be programs that are used to monitor online chat rooms, and screen for inappropriate language or tone which could put other users at risk \cite{ref16}, must be able to detect both the strength and polarity of the information or sentiment expressed and whether participants were appropriately balancing positive and negative sentiment. Additionally some research to explore the role emotions play in online communication \cite{ref17}, can benefit from opinion mining, as would the growing body of psychology and other social science research into the role of sentiment in various types of discussion or general discourse, \cite{ref18}.
+The majority of opinion mining tools aim to detect the polarity of a textual document, they classify the polarity as either positive, negative, or neutral. For many applications this is sufficient, but textual data often contains a mix of sentiment both positive and negative in the same document, so at times it is necessary to be able to detect both simultaneously and also to determine the intensity of the sentiment expressed. An example may be programs that are used to monitor online chat rooms, and screen for inappropriate language or tone which could put other users at risk \cite{ref16}, must be able to detect both the strength and polarity of the information or sentiment expressed and whether participants were appropriately balancing positive and negative sentiment. Additionally some research to explore the role emotions play in online communication \cite{ref17}, can benefit from opinion mining, as would the growing body of psychology and other social science research into the role of sentiment in various types of discussion or general discourse \cite{ref18}.
 
 \clearpage
-An institution can enhance the decision making of its executive board by the simple use of Sentiment Analysis and machine learning Techniques. This research project is based on the design of an integrated system that will perform the semantics or text analysis. This project will consider the analysis, design and implementation of machine learning algorithms to demonstrate sentiment analysis on textual content of an event, \cite{ref19}.
+An institution can enhance the decision making of its executive board by the simple use of Sentiment Analysis and machine learning Techniques. This research project is based on the design of an integrated system that will perform the semantics or text analysis. This project will consider the analysis, design and implementation of machine learning algorithms to demonstrate sentiment analysis on textual content of an event \cite{ref19}.
 Recently we are starting to see an emergence of tools that can analyze sentiment at a feature level, but in general automated sentiment analysis technology has difficulty discerning one topic from another more so if many topics are discussed in the same document.
 \leavevmode\\
 
-\clearpage
+
 \subsection{Related work}
 As previously defined sentiment analysis aims to harness the vast amount of user generated data online. 
 Some of the main characteristics of such data is its high velocity, high volume and textual disorder as well as its diversity. 
@@ -197,13 +199,13 @@ Two machine learning techniques are illustrated in the diagram below:
 \clearpage
 \subsection{Machine Learning Types}
 
-Machine learning can be defined as system capable of the autonomous acquisition and integration of knowledge learned from experience, [Murphy, 2012].
-These systems can further subdivide into:
+Machine learning can be defined as system capable of the autonomous acquisition and integration of knowledge learned from experience [Murphy, 2012].
+These systems can be subdivided into:
 \leavevmode\\
 \textbf{a) Supervised learning}\\
 Examples of supervised learning include: Discriminant Function Analysis, Support Vector Machines, Regression Trees.\\
 \textbf{b) Unsupervised learning}\\
-Unsupervised learning techniques include Self-Organizing Maps (SOM), K-Means clustering, etc.
+Unsupervised learning techniques include Self-Organizing Maps (SOM), K-Means clustering.
 In unsupervised learning the model is fed information but is expected to figure out information without any guidance.
 \leavevmode\\
 
@@ -221,26 +223,26 @@ Machine learning algorithms make use of scientific principles that learn and hel
 \end{figure}
 
 \leavevmode\\
-
-Where: The notation P (c | x) means "the probability of c given x."
+\noindent 
+Where: the notation P (c | x) means "the probability of c given x."
 To compute sentiment analysis on structured data using the naïve Bayes classifier in this case, we
 want to know the probability of a given category given a certain string of words in a document.
 
 \subsection{Maximum Entropy (supervised)}
-Another probabilistic based classifier  is the Maximum Entropy classifier. It belongs to the class of
+Another probabilistic based classifier  is the Maximum Entropy (MaxEnt) classifier. It belongs to the class of
 exponential models. MaxEnt does not make the assumption that the features are conditionally independent. 
 The Maximum Entropy algorithm is based on the Principle of Maximum Entropy. It selects from all the models based on the training set the one model that has the largest entropy this is the class of interest \cite{ref19}
 
 
 \subsection{Support Vector Machines (supervised)}
-A Support Vector Machine (SVM) is a binary classifier, it saperates two classes by a hyper-plane. In other words, given labelled training data (supervised learning), the algorithm
+A Support Vector Machine (SVM) is a binary classifier, it separates two classes by a hyper-plane. In other words, given labelled training data (supervised learning), the algorithm
 outputs an optimal hyper-plane which categorizes new examples, \cite{ref30}
 
 \begin{figure}[h]
   \centering
   \pgfimage[width=0.5\linewidth]{images/support_vector_machine}
   \caption[Support vector machine]%
-  {Support Vector machine Source:(Valpola, 2000)}
+  {Support Vector machine Source:\cite{ref28}}
   \label{fig:ALAP:sm3}
 \end{figure}
 
@@ -253,8 +255,8 @@ actually exist.
 \begin{figure}[h]
   \centering
   \pgfimage[width=0.5\linewidth]{images/k_means_clustering}
-  \caption[k-means clustering]%
-  {Unsupervised K-Means Clustering, Source:(Geiger, Schonberg and Ed, 2003)}
+  \caption[K-means clustering]%
+  {Unsupervised K-Means Clustering, Source: https://towardsdatascience.com/k-means-clustering-identifying-f-r-i-e-n-d-s-in-the-world-of-strangers-695537505d}
   \label{fig:ALAP:sm3}
 \end{figure}
 
@@ -324,7 +326,7 @@ and relating this to the probabilities of those numbers appearing in positive an
 
 
 \clearpage
-\subsection{results}
+\subsection{Results}
 
 A confusion matrix was used to visualize the results of a classification algorithm. The matrix for
 the result was:
@@ -367,13 +369,13 @@ a bag of words, where words have a varying degree of relevance  in the given doc
 
 
 \subsection{Studies Using Lexicon-Driven Methods}
-\cite{ref33} used the Multi-Perspective Question-Answering (MPQA) sentiment lexicon of \cite{ref34} to identify sentiment in tweets mentioning Barack Obama. To classify a tweet, they simply counted if it contains more positive or negative words according to the sentiment lexicon. Even though this is a very simple approach, they report significant correlation between the aggregated sentiment in tweets and public opinion polls published by Gallup. \cite{ref35} proposed a lexicon-based algorithm called SentiStrength, which assigns a binary polarity (positive/negative) and corresponding strength value between 1 and 5 to a given text. In addition to having a list of 298 positive and 465 negative terms annotated with polarity and strength values, SentiStrength uses lists of emoticons, negations and boosting words in the decision process. To address the issue of emphatic lengthening the authors proposed a 3 step procedure to reduce words to their standard form. After comparing SentiStrength to several ML classifiers based on MySpace comments, the author's method was found to perform better for classifying negative sentiment, but this is not the case for positive sentiment. The algorithm is enhanced in \cite{ref35}, where the authors introduce idiom lists and strength boosting by emphatic lengthening as well as an unsupervised version of SentiStrength. Furthermore, the number of terms in their sentiment strength wordlist was increased from 693 to 2310.They again compare their algorithm with different machine learning algorithms on six different datasets, including Twitter data, and found especially logistic regression to outperform SentiStrength, \cite{ref35}
+\cite{ref33} used the Multi-Perspective Question-Answering (MPQA) sentiment lexicon of \cite{ref34} to identify sentiment in tweets mentioning Barack Obama. To classify a tweet, they simply counted if it contains more positive or negative words according to the sentiment lexicon. Even though this is a very simple approach, they report significant correlation between the aggregated sentiment in tweets and public opinion polls published by Gallup. \cite{ref35} proposed a lexicon-based algorithm called SentiStrength, which assigns a binary polarity (positive/negative) and corresponding strength value between 1 and 5 to a given text. In addition to having a list of 298 positive and 465 negative terms annotated with polarity and strength values, SentiStrength uses lists of emoticons, negations and boosting words in the decision process. To address the issue of emphatic lengthening the authors proposed a 3 step procedure to reduce words to their standard form. After comparing SentiStrength to several ML classifiers based on MySpace comments, the author's method was found to perform better for classifying negative sentiment, but this is not the case for positive sentiment. The algorithm is enhanced in \cite{ref35}, where the authors introduce idiom lists and strength boosting by emphatic lengthening as well as an unsupervised version of SentiStrength. Furthermore, the number of terms in their sentiment strength wordlist was increased from 693 to 2310.They again compare their algorithm with different machine learning algorithms on six different datasets, including Twitter data, and found especially logistic regression to outperform SentiStrength \cite{ref35}
 
 \subsection{Studies Using Graph-Based Label Propagation}
 \cite{ref36} also experiment with a label propagation method and compared its performance
 to popular online tools for sentiment analysis of tweets and a dictionary based approach. They
 investigated the special role of emoticons in tweets and also used a graph propagation algorithm
-to classify the sentiment of tweets in other languages than English, \cite{ref37}
+to classify the sentiment of tweets in other languages than English \cite{ref37}
 
 
 
@@ -403,7 +405,7 @@ descriptions related to each action.
   \centering
   \pgfimage[width=0.5\linewidth]{images/mahmud_2014}
   \caption[Action Prediction]%
-  {Source: mahmud 2014}
+  {Action Prediction Source: \cite{ref38}}
   \label{fig:ALAP:sm1}
 \end{figure}
 
@@ -420,7 +422,7 @@ topic: "Vaccination has never been proven to have saved one single life"
 \end{enumerate}
 Mahmud focused on Twitter users and campaign topics “fracking” and “vaccination”. He used
 Twitter\textquotesingle s streaming API from Nov 1, 2013 to Nov 14, 2013 to sample 1000 users who mentioned
-about “fracking” and another 1000 users who mentioned about “vaccination”. Also, sentiments
+“fracking” and another 1000 users who mentioned “vaccination”. Also, sentiments
 were labeled as either (positive, negative) of each user towards the topic (“fracking” or
 “vaccination”) they tweeted about, \cite{ref38}.
 
@@ -459,7 +461,7 @@ one of the experiments on vaccination data.
   \centering
   \pgfimage[width=0.5\linewidth]{images/action_class_mahmud_2}
   \caption[Action classification]%
-  {Action classification accuracy (vaccination data), (Mahmud, 2014)}
+  {Action classification accuracy (vaccination data), \cite{ref38}}
   \label{fig:ALAP:sm1}
 \end{figure}
 
@@ -470,8 +472,8 @@ practice, (Mahmud, 2014)
 \begin{figure}[h]
   \centering
   \pgfimage[width=0.5\linewidth]{images/mahmud_2014_multiple_datasets}
-  \caption[Action classification multiple data sets]%
-  {Action classification accuracy (vaccination data), (Mahmud, 2014)}
+  \caption[Action classification on multiple data sets]%
+  {Action classification accuracy (vaccination data), \cite{ref38}}
   \label{fig:ALAP:sm1}
 \end{figure}
 
@@ -508,7 +510,7 @@ Although this sentence has just positive words, it still holds a negative sentim
 \textbf{$\Rightarrow$ Domain dependence:} The same sentence or phrase can have different meanings in
 different domains. The word ‘unpredictable’ is positive in the domain of movies, but if
 the same word is used in the context of a vehicle's steering, then it has a negative
-connotation, \cite{ref20}.\\
+connotation \cite{ref20}\\
 
 
 \textbf{$\Rightarrow$ Entity Recognition:} Not all the texual data in a sentence is talking about the same entity, multiple entities can be discussed in a single sentence or document. It is necessary for us to be able to separate out the text about a particular entity and then analyze its sentiment individually. Consider the
@@ -517,13 +519,12 @@ following:
 \item I hate Nokia, but I like Samsung.
 \end{itemize}
 A simple bag-of-words approach will mark this as neutral; however, it carries a specific sentiment
-for both the entities present in the statement,\cite{ref20}
+for both the entities present in the statement \cite{ref20}
 
 
 
 \section{Analysis of the proposed system}
-We need to develop an automatic natural language processing tool that extracts and analyses
-peoples' sentiment and emotion from unstructured text. The tool must be able to determine the general mood on a given topic.
+We need to develop an automatic natural language processing tool that extracts and analyzes people’s sentiment and emotion from unstructured text. The tool must be able to determine the general mood on a given topic.
 
 \section{Chapter Conclusion}
 With the rapid development of social media supported by network technology and network
@@ -575,7 +576,7 @@ The proposed system will be a hybrid system it will use both machine learning ap
 \clearpage
 
 
-\section{METHODOLOGY}
+\section{Methodology}
 \subsection{Introduction}
 In the previous chapter we explained some of the techniques which had been applied by different
 researchers on sentiment analysis. We tried also to explain the short comings and
@@ -629,7 +630,7 @@ Preceding Tri-gram: We can examine a tri-gram of the text, at least 90\% of scen
 Subjectivity and objectivity differentiates opinionated and factual based text. \cite{ref2}
 Being able to detect subjectivity and objectivity is an important part of sentiment analysis, because it can tell us more about the authors emotions and intentions, a subjective person is more likely to invoke action than an objective person. TextBlob python library can be used to detect the degree of subjectivity and the degree of objectivity, these results together with the polarity scores will be used to determine the impact of the sentiment. 
 
-\clearpage
+
 \subsection{Multi-label convolutional neural network text classifier (Spacy)}
 
 SpaCy is a free, open-source library for advanced Natural Language Processing (NLP) in Python \\
@@ -640,7 +641,7 @@ The Neural network is trained using stochastic gradient descent where the estima
 \begin{figure}[h]
   \centering
   \pgfimage[width=0.7\linewidth]{images/sgd}
-  \caption[Stochastic Gradient decent]%
+  \caption[Stochastic gradient descent]%
   {Stochastic Gradient decent}
   \label{fig:ALAP:sm3}
 \end{figure}
@@ -684,7 +685,7 @@ The wheel of emotions by Robert Plutchik, shows eight primary emotions, each emo
   \centering
   \pgfimage[width=0.5\linewidth]{images/emotion_wheel}
   \caption[Robert Plutchik's wheel of emotions]%
-  {Robert Plutchik's wheel of emotions}
+  {Robert Plutchik's wheel of emotions, source:https://psicopico.com/en/la-rueda-las-emociones-robert-plutchik/}
   \label{fig:ALAP:sm3}
 \end{figure}
 
@@ -772,6 +773,9 @@ calculated as Recall=Sensitivity=TP/(TP+FN)
 
 
 \chapter{Implementing Sentiment analysis}
+
+\section{Introduction}
+We will now outline the steps we will take to implement sentiment analysis, using some of the NLP techniques discussed.
 
 \subsection{Implementing (VaderSentiment and TextBlob)}
 
@@ -1234,7 +1238,7 @@ or controversy.
 
 
 
-\chapter{RECOMMENDATIONS, FUTURE WORK AND CONCLUSION}
+\chapter{Recommendations, future work and conclusion}
 \subsection{Recommendations}
 This tool may be used by the government, Non-Governmental Organizations, and business
 corporations. Investors may need to analyze the environment first before starting a business

@@ -1,78 +1,80 @@
 \babel@toc {british}{}
 \babel@toc {british}{}
-\contentsline {section}{\hbox to\@tempdima {\hfil }List of Figures}{4}{chapter*.2}% 
-\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}% 
-\contentsline {chapter}{\numberline {2}Problem Statement}{6}{chapter.2}% 
-\contentsline {section}{\numberline {2.1}Objectives}{6}{section.2.1}% 
-\contentsline {section}{\numberline {2.2}Aim}{6}{section.2.2}% 
-\contentsline {section}{\numberline {2.3}Significance of the Study}{6}{section.2.3}% 
-\contentsline {chapter}{\numberline {3}Research methodology}{7}{chapter.3}% 
-\contentsline {subsection}{\numberline {3.0.1}Data Collection}{7}{subsection.3.0.1}% 
-\contentsline {subsection}{\numberline {3.0.2}Text Preparation}{8}{subsection.3.0.2}% 
-\contentsline {subsection}{\numberline {3.0.3}Sentiment Detection}{8}{subsection.3.0.3}% 
-\contentsline {subsection}{\numberline {3.0.4}Sentiment Classification}{9}{subsection.3.0.4}% 
-\contentsline {subsection}{\numberline {3.0.5}Presentation of Output}{10}{subsection.3.0.5}% 
-\contentsline {section}{\numberline {3.1}Limitations}{10}{section.3.1}% 
-\contentsline {subsection}{\numberline {3.1.1}Delimitation of the study}{10}{subsection.3.1.1}% 
-\contentsline {section}{\numberline {3.2}Literature Review}{11}{section.3.2}% 
-\contentsline {subsection}{\numberline {3.2.1}Overview}{11}{subsection.3.2.1}% 
-\contentsline {subsection}{\numberline {3.2.2}Sentiment Analysis}{11}{subsection.3.2.2}% 
-\contentsline {subsection}{\numberline {3.2.3}Related work}{14}{subsection.3.2.3}% 
-\contentsline {subsection}{\numberline {3.2.4}Computation Science Techniques}{14}{subsection.3.2.4}% 
-\contentsline {subsection}{\numberline {3.2.5}Machine Learning Types}{15}{subsection.3.2.5}% 
-\contentsline {subsection}{\numberline {3.2.6}Examples of Machine Learning Algorithms}{15}{subsection.3.2.6}% 
-\contentsline {subsection}{\numberline {3.2.7}Maximum Entropy (supervised)}{16}{subsection.3.2.7}% 
-\contentsline {subsection}{\numberline {3.2.8}Support Vector Machines (supervised)}{16}{subsection.3.2.8}% 
-\contentsline {subsection}{\numberline {3.2.9}K-Means Clustering (unsupervised)}{17}{subsection.3.2.9}% 
-\contentsline {section}{\numberline {3.3}Studies on Sentiment Analysis Using the Na\IeC {\"\i }ve Bayes Classifier}{17}{section.3.3}% 
-\contentsline {subsection}{\numberline {3.3.1}Choosing the training set}{17}{subsection.3.3.1}% 
-\contentsline {subsection}{\numberline {3.3.2}results}{19}{subsection.3.3.2}% 
-\contentsline {subsection}{\numberline {3.3.3}Strengths and Challenges of this Method}{19}{subsection.3.3.3}% 
-\contentsline {subsection}{\numberline {3.3.4}Studies on Term Frequency\IeC {\textemdash }Inverse Document Frequency}{19}{subsection.3.3.4}% 
-\contentsline {subsection}{\numberline {3.3.5}Studies Using Lexicon-Driven Methods}{20}{subsection.3.3.5}% 
-\contentsline {subsection}{\numberline {3.3.6}Studies Using Graph-Based Label Propagation}{20}{subsection.3.3.6}% 
-\contentsline {subsection}{\numberline {3.3.7}Studies on Predicting Users Actions from Sentiment}{21}{subsection.3.3.7}% 
-\contentsline {subsection}{\numberline {3.3.8}Non-Hierarchical Action Classifier}{22}{subsection.3.3.8}% 
-\contentsline {subsection}{\numberline {3.3.9}Hierarchical Classifier}{22}{subsection.3.3.9}% 
-\contentsline {section}{\numberline {3.4}Challenges or problems faced with the current systems}{23}{section.3.4}% 
-\contentsline {section}{\numberline {3.5}Analysis of the proposed system}{24}{section.3.5}% 
-\contentsline {section}{\numberline {3.6}Chapter Conclusion}{24}{section.3.6}% 
-\contentsline {chapter}{\numberline {4}Proposed Sentiment Analysis System}{25}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}METHODOLOGY}{26}{section.4.1}% 
-\contentsline {subsection}{\numberline {4.1.1}Introduction}{26}{subsection.4.1.1}% 
-\contentsline {section}{\numberline {4.2}Lexicon (VaderSentiment)}{26}{section.4.2}% 
-\contentsline {subsection}{\numberline {4.2.1}Subjectivity and Objectivity (TextBlob)}{28}{subsection.4.2.1}% 
-\contentsline {subsection}{\numberline {4.2.2}Multi-label convolutional neural network text classifier (Spacy)}{29}{subsection.4.2.2}% 
-\contentsline {subsection}{\numberline {4.2.3}Training Dataset (ISEAR)}{30}{subsection.4.2.3}% 
-\contentsline {subsection}{\numberline {4.2.4}Streaming twitter (tweepy)}{31}{subsection.4.2.4}% 
-\contentsline {subsection}{\numberline {4.2.5}Text Processing document}{31}{subsection.4.2.5}% 
-\contentsline {subsection}{\numberline {4.2.6}Confusion matrix}{31}{subsection.4.2.6}% 
-\contentsline {chapter}{\numberline {5}Implementing Sentiment analysis}{34}{chapter.5}% 
-\contentsline {subsection}{\numberline {5.0.1}Implementing (VaderSentiment and TextBlob)}{34}{subsection.5.0.1}% 
-\contentsline {subsection}{\numberline {5.0.2}Training SpaCy Text classifier}{35}{subsection.5.0.2}% 
-\contentsline {subsection}{\numberline {5.0.3}Streaming twitter API(Tweepy)}{37}{subsection.5.0.3}% 
-\contentsline {subsection}{\numberline {5.0.4}Evaluating SpaCy classification model}{37}{subsection.5.0.4}% 
-\contentsline {section}{\numberline {5.1}System design}{38}{section.5.1}% 
-\contentsline {subsection}{\numberline {5.1.1}INTRODUCTION}{38}{subsection.5.1.1}% 
-\contentsline {subsection}{\numberline {5.1.2}Purpose}{38}{subsection.5.1.2}% 
-\contentsline {subsection}{\numberline {5.1.3}Scope}{38}{subsection.5.1.3}% 
-\contentsline {subsection}{\numberline {5.1.4}System overview}{38}{subsection.5.1.4}% 
-\contentsline {subsection}{\numberline {5.1.5}Architectural Design}{38}{subsection.5.1.5}% 
-\contentsline {subsection}{\numberline {5.1.6}Sentiment Analysis (detection and classification)}{38}{subsection.5.1.6}% 
-\contentsline {subsection}{\numberline {5.1.7}Sequence Diagram}{39}{subsection.5.1.7}% 
-\contentsline {subsection}{\numberline {5.1.8}Use Case Diagrams}{39}{subsection.5.1.8}% 
-\contentsline {section}{\numberline {5.2}Development Tools}{40}{section.5.2}% 
-\contentsline {subsection}{\numberline {5.2.1}SpaCy}{40}{subsection.5.2.1}% 
-\contentsline {subsection}{\numberline {5.2.2}VaderSentiment}{41}{subsection.5.2.2}% 
-\contentsline {subsection}{\numberline {5.2.3}TextBlob}{41}{subsection.5.2.3}% 
-\contentsline {subsection}{\numberline {5.2.4}Jupyter Notebook}{41}{subsection.5.2.4}% 
-\contentsline {subsection}{\numberline {5.2.5}MatplotLib}{42}{subsection.5.2.5}% 
-\contentsline {section}{\numberline {5.3}Creating Twitter Application}{42}{section.5.3}% 
-\contentsline {section}{\numberline {5.4}Implications of findings}{43}{section.5.4}% 
-\contentsline {chapter}{\numberline {6}RECOMMENDATIONS, FUTURE WORK AND CONCLUSION}{44}{chapter.6}% 
-\contentsline {subsection}{\numberline {6.0.1}Recommendations}{44}{subsection.6.0.1}% 
-\contentsline {subsection}{\numberline {6.0.2}Future Work}{44}{subsection.6.0.2}% 
-\contentsline {chapter}{\numberline {7}Results and analysis}{45}{chapter.7}% 
-\contentsline {section}{\numberline {7.1}Data visualization}{45}{section.7.1}% 
-\contentsline {subsection}{\numberline {7.1.1}matplotlib and seaborn}{45}{subsection.7.1.1}% 
-\contentsline {chapter}{\numberline {8}Conclusion}{47}{chapter.8}% 
+\contentsline {section}{\hbox to\@tempdima {\hfil }List of Figures}{5}{chapter*.2}% 
+\contentsline {chapter}{\numberline {1}Introduction}{6}{chapter.1}% 
+\contentsline {chapter}{\numberline {2}Problem Statement}{7}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Objectives}{7}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}Aim}{7}{section.2.2}% 
+\contentsline {section}{\numberline {2.3}Significance of the Study}{7}{section.2.3}% 
+\contentsline {chapter}{\numberline {3}Research methodology}{9}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Sentiment Analysis process}{9}{section.3.1}% 
+\contentsline {subsection}{\numberline {3.1.1}Data Collection}{9}{subsection.3.1.1}% 
+\contentsline {subsection}{\numberline {3.1.2}Text Preparation}{10}{subsection.3.1.2}% 
+\contentsline {subsection}{\numberline {3.1.3}Sentiment Detection}{10}{subsection.3.1.3}% 
+\contentsline {subsection}{\numberline {3.1.4}Sentiment Classification}{11}{subsection.3.1.4}% 
+\contentsline {subsection}{\numberline {3.1.5}Presentation of Output}{12}{subsection.3.1.5}% 
+\contentsline {section}{\numberline {3.2}Limitations}{12}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}Delimitation of the study}{12}{subsection.3.2.1}% 
+\contentsline {section}{\numberline {3.3}Literature Review}{13}{section.3.3}% 
+\contentsline {subsection}{\numberline {3.3.1}Overview}{13}{subsection.3.3.1}% 
+\contentsline {subsection}{\numberline {3.3.2}Sentiment Analysis}{13}{subsection.3.3.2}% 
+\contentsline {subsection}{\numberline {3.3.3}Related work}{15}{subsection.3.3.3}% 
+\contentsline {subsection}{\numberline {3.3.4}Computation Science Techniques}{15}{subsection.3.3.4}% 
+\contentsline {subsection}{\numberline {3.3.5}Machine Learning Types}{17}{subsection.3.3.5}% 
+\contentsline {subsection}{\numberline {3.3.6}Examples of Machine Learning Algorithms}{17}{subsection.3.3.6}% 
+\contentsline {subsection}{\numberline {3.3.7}Maximum Entropy (supervised)}{18}{subsection.3.3.7}% 
+\contentsline {subsection}{\numberline {3.3.8}Support Vector Machines (supervised)}{18}{subsection.3.3.8}% 
+\contentsline {subsection}{\numberline {3.3.9}K-Means Clustering (unsupervised)}{19}{subsection.3.3.9}% 
+\contentsline {section}{\numberline {3.4}Studies on Sentiment Analysis Using the Na\IeC {\"\i }ve Bayes Classifier}{19}{section.3.4}% 
+\contentsline {subsection}{\numberline {3.4.1}Choosing the training set}{19}{subsection.3.4.1}% 
+\contentsline {subsection}{\numberline {3.4.2}Results}{21}{subsection.3.4.2}% 
+\contentsline {subsection}{\numberline {3.4.3}Strengths and Challenges of this Method}{21}{subsection.3.4.3}% 
+\contentsline {subsection}{\numberline {3.4.4}Studies on Term Frequency\IeC {\textemdash }Inverse Document Frequency}{21}{subsection.3.4.4}% 
+\contentsline {subsection}{\numberline {3.4.5}Studies Using Lexicon-Driven Methods}{22}{subsection.3.4.5}% 
+\contentsline {subsection}{\numberline {3.4.6}Studies Using Graph-Based Label Propagation}{22}{subsection.3.4.6}% 
+\contentsline {subsection}{\numberline {3.4.7}Studies on Predicting Users Actions from Sentiment}{23}{subsection.3.4.7}% 
+\contentsline {subsection}{\numberline {3.4.8}Non-Hierarchical Action Classifier}{24}{subsection.3.4.8}% 
+\contentsline {subsection}{\numberline {3.4.9}Hierarchical Classifier}{24}{subsection.3.4.9}% 
+\contentsline {section}{\numberline {3.5}Challenges or problems faced with the current systems}{25}{section.3.5}% 
+\contentsline {section}{\numberline {3.6}Analysis of the proposed system}{26}{section.3.6}% 
+\contentsline {section}{\numberline {3.7}Chapter Conclusion}{26}{section.3.7}% 
+\contentsline {chapter}{\numberline {4}Proposed Sentiment Analysis System}{27}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Methodology}{28}{section.4.1}% 
+\contentsline {subsection}{\numberline {4.1.1}Introduction}{28}{subsection.4.1.1}% 
+\contentsline {section}{\numberline {4.2}Lexicon (VaderSentiment)}{28}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}Subjectivity and Objectivity (TextBlob)}{30}{subsection.4.2.1}% 
+\contentsline {subsection}{\numberline {4.2.2}Multi-label convolutional neural network text classifier (Spacy)}{30}{subsection.4.2.2}% 
+\contentsline {subsection}{\numberline {4.2.3}Training Dataset (ISEAR)}{32}{subsection.4.2.3}% 
+\contentsline {subsection}{\numberline {4.2.4}Streaming twitter (tweepy)}{33}{subsection.4.2.4}% 
+\contentsline {subsection}{\numberline {4.2.5}Text Processing document}{33}{subsection.4.2.5}% 
+\contentsline {subsection}{\numberline {4.2.6}Confusion matrix}{33}{subsection.4.2.6}% 
+\contentsline {chapter}{\numberline {5}Implementing Sentiment analysis}{36}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}Introduction}{36}{section.5.1}% 
+\contentsline {subsection}{\numberline {5.1.1}Implementing (VaderSentiment and TextBlob)}{36}{subsection.5.1.1}% 
+\contentsline {subsection}{\numberline {5.1.2}Training SpaCy Text classifier}{37}{subsection.5.1.2}% 
+\contentsline {subsection}{\numberline {5.1.3}Streaming twitter API(Tweepy)}{39}{subsection.5.1.3}% 
+\contentsline {subsection}{\numberline {5.1.4}Evaluating SpaCy classification model}{39}{subsection.5.1.4}% 
+\contentsline {section}{\numberline {5.2}System design}{40}{section.5.2}% 
+\contentsline {subsection}{\numberline {5.2.1}INTRODUCTION}{40}{subsection.5.2.1}% 
+\contentsline {subsection}{\numberline {5.2.2}Purpose}{40}{subsection.5.2.2}% 
+\contentsline {subsection}{\numberline {5.2.3}Scope}{40}{subsection.5.2.3}% 
+\contentsline {subsection}{\numberline {5.2.4}System overview}{40}{subsection.5.2.4}% 
+\contentsline {subsection}{\numberline {5.2.5}Architectural Design}{40}{subsection.5.2.5}% 
+\contentsline {subsection}{\numberline {5.2.6}Sentiment Analysis (detection and classification)}{40}{subsection.5.2.6}% 
+\contentsline {subsection}{\numberline {5.2.7}Sequence Diagram}{41}{subsection.5.2.7}% 
+\contentsline {subsection}{\numberline {5.2.8}Use Case Diagrams}{41}{subsection.5.2.8}% 
+\contentsline {section}{\numberline {5.3}Development Tools}{42}{section.5.3}% 
+\contentsline {subsection}{\numberline {5.3.1}SpaCy}{42}{subsection.5.3.1}% 
+\contentsline {subsection}{\numberline {5.3.2}VaderSentiment}{43}{subsection.5.3.2}% 
+\contentsline {subsection}{\numberline {5.3.3}TextBlob}{43}{subsection.5.3.3}% 
+\contentsline {subsection}{\numberline {5.3.4}Jupyter Notebook}{43}{subsection.5.3.4}% 
+\contentsline {subsection}{\numberline {5.3.5}MatplotLib}{44}{subsection.5.3.5}% 
+\contentsline {section}{\numberline {5.4}Creating Twitter Application}{44}{section.5.4}% 
+\contentsline {section}{\numberline {5.5}Implications of findings}{45}{section.5.5}% 
+\contentsline {chapter}{\numberline {6}Recommendations, future work and conclusion}{46}{chapter.6}% 
+\contentsline {subsection}{\numberline {6.0.1}Recommendations}{46}{subsection.6.0.1}% 
+\contentsline {subsection}{\numberline {6.0.2}Future Work}{46}{subsection.6.0.2}% 
+\contentsline {chapter}{\numberline {7}Results and analysis}{47}{chapter.7}% 
+\contentsline {section}{\numberline {7.1}Data visualization}{47}{section.7.1}% 
+\contentsline {subsection}{\numberline {7.1.1}matplotlib and seaborn}{47}{subsection.7.1.1}% 
+\contentsline {chapter}{\numberline {8}Conclusion}{49}{chapter.8}% 
