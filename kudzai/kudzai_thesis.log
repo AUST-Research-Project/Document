@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.28)  18 JUN 2019 00:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.28)  18 JUN 2019 12:22
 entering extended mode
 **./kudzai_thesis.tex
 (kudzai_thesis.tex
@@ -1216,9 +1216,6 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 
 ] [8]
 3. Chapter
-
-Package natbib Warning: Citation `ref49' on page 9 undefined on input line 35.
-
 [9
 
  <./images/research_methodology.png>]
@@ -1249,10 +1246,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 139--141
 Underfull \hbox (badness 10000) in paragraph at lines 142--144
 
  []
-
-
-Package natbib Warning: Citation `ref12' on page 13 undefined on input line 145
-.
 
 [13] [14]
 Underfull \hbox (badness 10000) in paragraph at lines 163--166
@@ -1327,7 +1320,7 @@ Overfull \hbox (0.64104pt too wide) in paragraph at lines 536--547
 
 [26]
 4. Chapter
-<images/lex_vs_ml.png, id=745, 403.5075pt x 319.94531pt>
+<images/lex_vs_ml.png, id=756, 403.5075pt x 319.94531pt>
 File: images/lex_vs_ml.png Graphic file (type png)
 <use images/lex_vs_ml.png>
 Package pdftex.def Info: images/lex_vs_ml.png  used on input line 563.
@@ -1361,26 +1354,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 636--639
 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 [30
 
  <./images/sgd.png>] [31 <./images/spacy_training.png>]
-
-Package natbib Warning: Citation `ref:4' on page 32 undefined on input line 682
-.
-
-
-Underfull \hbox (badness 2762) in paragraph at lines 688--688
+Underfull \hbox (badness 1253) in paragraph at lines 688--688
 []\T1/ptm/m/n/10.95 Figure 4.4: []Robert Plutchik's wheel of emo-tions, source:
-https://psicopico.com/en/la-rueda-las-
+ [][]$\T1/pcr/m/n/10.95 https : / / psicopico . com / en /
  []
 
 [32
 
  <./images/emotion_wheel.png>]
-<images/confusion_matrix.png, id=791, 253.69781pt x 195.73125pt>
+<images/confusion_matrix.png, id=813, 253.69781pt x 195.73125pt>
 File: images/confusion_matrix.png Graphic file (type png)
 <use images/confusion_matrix.png>
 Package pdftex.def Info: images/confusion_matrix.png  used on input line 740.
@@ -1392,7 +1377,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [33
 
 ] [34 <./images/confusion_matrix.png>]
-<images/confusion_matrix_2.png, id=802, 480.29437pt x 142.28156pt>
+<images/confusion_matrix_2.png, id=824, 480.29437pt x 142.28156pt>
 File: images/confusion_matrix_2.png Graphic file (type png)
 <use images/confusion_matrix_2.png>
 Package pdftex.def Info: images/confusion_matrix_2.png  used on input line 751.
@@ -1437,7 +1422,7 @@ Underfull \hbox (badness 2460) in paragraph at lines 1089--1090
 \T1/ptm/m/n/10.95 tasks. The lib-rary im-ple-ments
  []
 
-<images/spacy_logo.jpg, id=982, 1204.5pt x 632.3625pt>
+<images/spacy_logo.jpg, id=1004, 1204.5pt x 632.3625pt>
 File: images/spacy_logo.jpg Graphic file (type jpg)
 <use images/spacy_logo.jpg>
 Package pdftex.def Info: images/spacy_logo.jpg  used on input line 1095.
@@ -1452,7 +1437,7 @@ Underfull \hbox (badness 1412) in paragraph at lines 1108--1109
 \T1/ptm/m/n/10.95 tence po-lar-ity, pos-it-ive, neg-at-ive
  []
 
-<images/VaderSentiment_logo.png, id=983, 421.575pt x 421.575pt>
+<images/VaderSentiment_logo.png, id=1005, 421.575pt x 421.575pt>
 File: images/VaderSentiment_logo.png Graphic file (type png)
 <use images/VaderSentiment_logo.png>
 Package pdftex.def Info: images/VaderSentiment_logo.png  used on input line 111
@@ -1470,7 +1455,7 @@ Underfull \hbox (badness 3049) in paragraph at lines 1126--1128
 \T1/ptm/m/n/10.95 as part-of-speech tag-ging, noun
  []
 
-<images/textblob_logo.png, id=991, 592.2125pt x 543.02875pt>
+<images/textblob_logo.png, id=1013, 592.2125pt x 543.02875pt>
 File: images/textblob_logo.png Graphic file (type png)
 <use images/textblob_logo.png>
 Package pdftex.def Info: images/textblob_logo.png  used on input line 1133.
@@ -1490,7 +1475,7 @@ Underfull \hbox (badness 2310) in paragraph at lines 1144--1145
 \T1/ptm/m/n/10.95 and ac-cessed through the in-ter-
  []
 
-<images/jupyter_notebook.png, id=994, 1606.0pt x 797.98125pt>
+<images/jupyter_notebook.png, id=1016, 1606.0pt x 797.98125pt>
 File: images/jupyter_notebook.png Graphic file (type png)
 <use images/jupyter_notebook.png>
 Package pdftex.def Info: images/jupyter_notebook.png  used on input line 1150.
@@ -1510,7 +1495,7 @@ Underfull \hbox (badness 2547) in paragraph at lines 1165--1166
 \T1/ptm/m/n/10.95 like Tk-inter, wx-Py-thon, Qt, or
  []
 
-<images/matplot_lib.jpg, id=997, 722.7pt x 200.75pt>
+<images/matplot_lib.jpg, id=1019, 722.7pt x 200.75pt>
 File: images/matplot_lib.jpg Graphic file (type jpg)
 <use images/matplot_lib.jpg>
 Package pdftex.def Info: images/matplot_lib.jpg  used on input line 1171.
@@ -1571,21 +1556,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 1281--1286
 \openout2 = `programs.aux'.
 
  (programs.tex) (kudzai_thesis.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 48--53
-[]\T1/ptm/m/n/10.95 Dwergs.  \T1/ptm/m/it/10.95 re-face.me\T1/ptm/m/n/10.95 .  
-2009.  URL [][]$\T1/pcr/m/n/10.95 http : / / reface . me / statusupdates /
+Underfull \hbox (badness 10000) in paragraph at lines 20--26
+\T1/pcr/m/n/10.95 Review _ on _ Developing _ Corpora _ for _ Sentiment _ Analys
+is _ Using _ Plutchik %
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--80
-[]\T1/ptm/m/n/10.95 B. Go and Huang.  \T1/ptm/m/it/10.95 Twit-ter Sen-ti-ment C
-las-si-fic-a-tion us-ing Dis-tant Su-per-vi-sion\T1/ptm/m/n/10.95 .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 75--80
-\T1/ptm/m/n/10.95 2013.  URL [][]$\T1/pcr/m/n/10.95 https : / / www-[]cs . stan
-ford . edu / people / alecmgo / papers /
+Underfull \hbox (badness 1038) in paragraph at lines 28--34
+[]\T1/ptm/m/n/10.95 B. Bat-rinca and C. Tre-leaven, Philip.  \T1/ptm/m/it/10.95
+ So-cial me-dia ana-lyt-ics: a sur-vey of tech-niques, tools
  []
 
 [50
@@ -1593,36 +1572,25 @@ ford . edu / people / alecmgo / papers /
 
 
 
-]
-Underfull \hbox (badness 4479) in paragraph at lines 149--154
-[]\T1/ptm/m/n/10.95 Mukherjee.  \T1/ptm/m/it/10.95 Sen-it-ment Ana-lysis\T1/ptm
-/m/n/10.95 .  2013.  URL [][]$\T1/pcr/m/n/10.95 https : / / www . researchgate 
-. net /
- []
-
-)
-
-Package natbib Warning: There were undefined citations.
-
-[51]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 149.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 149.
+]) [51]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 148.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 148.
  (kudzai_thesis.aux (intro.aux) (theory.aux) (programs.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 149.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 149.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 148.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 148.
 Package rerunfilecheck Info: File `kudzai_thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 42D6C0A0ECF2578224455F976B2F36ED;14355.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 149.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
  ) 
 Here is how much of TeX's memory you used:
- 26225 strings out of 492897
- 467393 string characters out of 3141870
- 967276 words of memory out of 3000000
- 29281 multiletter control sequences out of 15000+200000
+ 26201 strings out of 492897
+ 467099 string characters out of 3141870
+ 967278 words of memory out of 3000000
+ 29263 multiletter control sequences out of 15000+200000
  69310 words of font info for 102 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,69p,1734b,1250s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1632,9 +1600,9 @@ ype1/urw/courier/ucrr8a.pfb><C:/miktex/fonts/type1/urw/courier/ucrro8a.pfb><C:/
 miktex/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/miktex/fonts/type1/urw/helvetic/
 uhvb8ac.pfb><C:/miktex/fonts/type1/urw/times/utmb8a.pfb><C:/miktex/fonts/type1/
 urw/times/utmr8a.pfb><C:/miktex/fonts/type1/urw/times/utmri8a.pfb>
-Output written on kudzai_thesis.pdf (54 pages, 2233053 bytes).
+Output written on kudzai_thesis.pdf (54 pages, 2237741 bytes).
 PDF statistics:
- 1177 PDF objects out of 1200 (max. 8388607)
- 347 named destinations out of 1000 (max. 500000)
+ 1189 PDF objects out of 1200 (max. 8388607)
+ 341 named destinations out of 1000 (max. 500000)
  817 words of extra memory for PDF output out of 10000 (max. 10000000)
 

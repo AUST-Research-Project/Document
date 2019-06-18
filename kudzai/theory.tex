@@ -32,7 +32,7 @@ A graphical description of the processes involved in sentiment analysis approach
   \centering
   \pgfimage[width=0.7\linewidth]{images/research_methodology}
   \caption[Sentiment analysis process]
-  {Basic processes involved in sentiment analysis, source:\cite{ref49}}
+  {Basic processes involved in sentiment analysis, source:\cite{ref14}}
   \label{fig:ALAP:sm3}
 \end{figure}
 \label{research_methodology}
@@ -62,7 +62,7 @@ However, with sentiment analysis, we can make use of natural language processing
 The text preparation process begins by cleaning the textual data prior to the analysis stage. Normally text preparation involves identifying and removing non textual content from the data such as hash tags and hyperlinks. Also, some non-essential information that does not contribute to the reviewer's opinion such as name and location and date all these are removed, also any other content that is deemed irrelevant to the analysis is also removed.
 
 \subsection{Sentiment Detection}
-Stage 3 of \ref{research_methodology}, detecting sentiment, involves extracting the opinions from the reviews by the use of textual processing. The textual data is broken down into sentences and each sentence is analyzed for subjectivity. Sentences that are not subjective are discarded, only those that contain subjective text are kept for further analysis. Next sentiment detection is done, and it can either be done on single term level, phrase level, sentence or document level. Some of the techniques used are
+Stage 3 of fig \ref{research_methodology}, detecting sentiment, involves extracting the opinions from the reviews by the use of textual processing. The textual data is broken down into sentences and each sentence is analyzed for subjectivity. Sentences that are not subjective are discarded, only those that contain subjective text are kept for further analysis. Next sentiment detection is done, and it can either be done on single term level, phrase level, sentence or document level. Some of the techniques used are
 
 \begin{itemize}
 
@@ -183,7 +183,7 @@ including re-sampling methods, Markov chain Monte Carlo methods, local regressio
 density estimation and principal components analysis. 
 
 Machine Learning aims to automate processing huge amounts of data with many variables. Machine learning is commonly used in areas such as pattern recognition for speech and  images
-in medicine for tumor detection and drug discovery, in finance for financial algorithms, credit scoring and algorithmic trading \cite{ref27}, energy forecasting in determining the load and predicting price.
+in medicine for tumor detection and drug discovery, in finance for financial algorithms, credit scoring and algorithmic trading, for energy use forecasting and determining the load and predicting price.
 Two machine learning techniques are illustrated in the diagram below:
 
 
@@ -191,7 +191,7 @@ Two machine learning techniques are illustrated in the diagram below:
   \centering
   \pgfimage[width=0.7\linewidth]{images/machine_learning_types}
   \caption[Machine learning types]%
-  {Machine Learning Types: Source: (Batrinca and Treleaven, 2014)}
+  {Machine Learning Types: Source: \cite{ref49}}
   \label{fig:ALAP:sm3}
 \end{figure}
 
@@ -335,7 +335,7 @@ the result was:
   \centering
   \pgfimage[width=0.5\linewidth]{images/andy_confusion_matrix}
   \caption[Confusion matrix results]%
-  {Confusion matrix results}
+  {Confusion matrix results, source: \cite{ref31}}
   \label{fig:ALAP:sm3}
 \end{figure}
 
@@ -491,12 +491,12 @@ Sentiment Analysis is a challenging task. which demands a thorough understanding
 
 The same word, “crude” is used as an opinion in first sentence, while it is completely
 objective in the second sentence, \cite{ref20}.\\
-\textbf{$\Rightarrow$ Ambiguity in Keyword Definitions:} One of the simplest ways to detect emotion is by using associated emotion keywords, however since keywords can have multiple meanings and sometimes be vague, this makes words have different meaning when used in a  different context. \cite{ref39}.\\
+\textbf{$\Rightarrow$ Ambiguity in Keyword Definitions:} One of the simplest ways to detect emotion is by using associated emotion keywords, however since keywords can have multiple meanings and sometimes be vague, this makes words have different meaning when used in a  different context \cite{ref39}.\\
 Also in some situations such as sentences with irony, words even without synonyms can portray different emotions.\\
 \textbf{$\Rightarrow$ Inability to recognize sentences without keywords:} 
 An approach based on keywords has the natural shortfall that sentences that do not contain those keywords will not be classified, this will give you and incorrect result.
 Take for instance the two sentences, "Hooray! I passed my qualify exam today"  and  “I passed my qualify exam today” , should imply the same emotion (joy), but the former without “hooray” could
-remain undetected if “hooray” is the only keyword to detect this emotion,\cite{ref39}.\\
+remain undetected if “hooray” is the only keyword to detect this emotion \cite{ref39}.\\
 
 
 \textbf{$\Rightarrow$ Sarcasm Detection:} Sarcastic sentences express negative opinion about a target using
@@ -554,7 +554,7 @@ The 2  main approaches for doing sentiment analysis are:
 \item lexicon-based approach
 \end{itemize}
 %
-Machine learning as the name suggests requires the model to be trained, lexicon based consists of a set of rules and doesn’t require prior training, a third method although not used very often is a hybrid method that combines both lexicon and machine learning approaches, generally it yields better results than either method individually.\cite{ref2}
+Machine learning as the name suggests requires the model to be trained, lexicon based consists of a set of rules and does not require prior training, a third method although not used very often is a hybrid method that combines both lexicon and machine learning approaches, generally it yields better results than either method individually \cite{ref2}
 %
 Table~\ref{tab:sent_analysis_approaches} will summarize the differences between the two approaches.
 
@@ -642,7 +642,7 @@ The Neural network is trained using stochastic gradient descent where the estima
   \centering
   \pgfimage[width=0.7\linewidth]{images/sgd}
   \caption[Stochastic gradient descent]%
-  {Stochastic Gradient decent}
+  {Stochastic Gradient decent, source: \url{https://pythonmachinelearning.pro/complete-guide-to-deep-neural-networks-part-2/}}
   \label{fig:ALAP:sm3}
 \end{figure}
 
@@ -671,7 +671,7 @@ The following diagram shows how SpaCy model is trained
   \centering
   \pgfimage[width=0.7\linewidth]{images/spacy_training}
   \caption[SpaCy Training]%
-  {SpaCy Training:https://spacy.io/usage/training}
+  {SpaCy Training, source: \url{https://spacy.io/usage/training}}
   \label{fig:ALAP:sm3}
 \end{figure}
  
@@ -679,13 +679,13 @@ The following diagram shows how SpaCy model is trained
 
 \subsection{Training Dataset (ISEAR)}
 
-The wheel of emotions by Robert Plutchik, shows eight primary emotions, each emotion is positioned with an opposite for example joy is the opposite of sadness, anger is the opposite of fear, trust is the opposite of disgust, and surprise is the opposite to anticipation. This group of four opposite emotion pairs forms 8 basic emotions. Plutchik's wheel also shows connections between the various emotions using a color wheel which also shows the different degrees of intensity for each emotion. The intensity of the emotion increases towards the center of the circle and decreases away from the center of the circle. For example, serenity has less intensity than joy, and ecstasy has more intensity than joy. The emotions can also be combined to form a different emotion. For example, combination of joy and trust can result in a new emotion "love". Likewise, joy, anger and trust are combined and form jealousy\cite{ref:4}.
+The wheel of emotions by Robert Plutchik, shows eight primary emotions, each emotion is positioned with an opposite for example joy is the opposite of sadness, anger is the opposite of fear, trust is the opposite of disgust, and surprise is the opposite to anticipation. This group of four opposite emotion pairs forms 8 basic emotions. Plutchik's wheel also shows connections between the various emotions using a color wheel which also shows the different degrees of intensity for each emotion. The intensity of the emotion increases towards the center of the circle and decreases away from the center of the circle. For example, serenity has less intensity than joy, and ecstasy has more intensity than joy. The emotions can also be combined to form a different emotion. For example, combination of joy and trust can result in a new emotion "love". Likewise, joy, anger and trust are combined and form jealousy \cite{ref4}.
 
 \begin{figure}[h]
   \centering
   \pgfimage[width=0.5\linewidth]{images/emotion_wheel}
   \caption[Robert Plutchik's wheel of emotions]%
-  {Robert Plutchik's wheel of emotions, source:https://psicopico.com/en/la-rueda-las-emociones-robert-plutchik/}
+  {Robert Plutchik's wheel of emotions, source: \url{https://psicopico.com/en/la-rueda-las-emociones-robert-plutchik/}}
   \label{fig:ALAP:sm3}
 \end{figure}
 
