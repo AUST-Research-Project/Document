@@ -3,7 +3,10 @@
 
 
 \chapter{Problem Statement}
-Mass demonstrations by people often result in vandalism of public property in industry, academia, etc., which leads to the disruption of daily organizational activities. They often use social media as a platform to express their views, sometimes extreme views towards the authorities. Opinions expressed by people can give very valuable information assisting in the decision-making process. Nowadays several websites encourage users to express and exchange their views, suggestions and opinions related to textual content publicly. The increase in popularity of these sites resulted in huge collection of people's opinions on the web in much unstructured manner. Drawing insights from the opinion sources is a challenging task. Recent attempts to compute sentiment analysis on unstructured data have used techniques such as opinion mining and sentiment lexicons.
+
+
+Mass demonstrations by people often result in vandalism of public property in industry, academia, etc., which leads to the disruption of daily organizational activities.
+They often use social media as a platform to express their views, sometimes extreme views towards the authorities. Opinions expressed by people can give very valuable information assisting in the decision-making process. Nowadays several websites encourage users to express and exchange their views, suggestions and opinions related to textual content publicly. The increase in popularity of these sites resulted in huge collection of people's opinions on the web in much unstructured manner. Drawing insights from the opinion sources is a challenging task. Recent attempts to compute sentiment analysis on unstructured data have used techniques such as opinion mining and sentiment lexicons.
 
 
 \section{Objectives}
@@ -675,7 +678,6 @@ The following diagram shows how SpaCy model is trained
   \label{fig:ALAP:sm3}
 \end{figure}
  
-\clearpage
 
 \subsection{Training Dataset (ISEAR)}
 
@@ -997,14 +999,16 @@ The results for each individual classification is quite satisfactory, considerin
 
 
 \section{System design}
-\subsection{INTRODUCTION}
-\subsection{Purpose}
-This section describes the software design and the architecture of the geographical mood detection and tool.
-\subsection{Scope}
-This mood detection and prediction tool will help in estimating a group of social media users'
-mood toward specific topics in terms of their sentiments and opinions from their posts on twitter.\\
 
-\subsection{System overview}
+\textbf{Purpose}\\
+This section describes the software design and the architecture of the geographical mood detection and tool.
+
+\textbf{Scope}\\
+This mood detection and prediction tool will help in estimating a group of social media users'
+mood toward specific topics in terms of their sentiments and opinions from their posts on twitter.
+
+\textbf{System overview}\\
+
 To come up with the geographical mood detection tool we utilize open source libraries, and open datasets to create models, and analyze the text then detect the mood. We will graph the results in real time then monitor the plots. From the plots we can visualize the polarity, subjectivity and emotion. We can monitor the sentiment trends in real time.
 
 \subsection{Architectural Design}
@@ -1083,100 +1087,72 @@ flexibility of changing keyword search parameters.
 
 \subsection{SpaCy}
 
-\begin{minipage}{0.4\textwidth}
-\begin{itemize}
-\item[\textbf{\emph{}}] 
+\begin{minipage}{0.68\textwidth}
 SPaCy is an open source python library used for common NLP tasks. The library implements statistical neural network models, it has language support for English, German, Spanish, Portuguese, French, Italian, Dutch as well as tokenizations for various other languages.
-\end{itemize}
 \end{minipage}%
 %
-\begin{minipage}{0.4\textwidth}
-\begin{center}
-    \includegraphics[width=0.6\textwidth]{images/spacy_logo}
-    %\captionof{figure}{Gripper}
-    \label{img:g}
-\end{center}
+\begin{minipage}{0.3\textwidth}
+  \hspace*{.4cm}
+  \includegraphics[width=\textwidth]{images/spacy_logo}
 \end{minipage}
 
 
 
 
 \subsection{VaderSentiment}
-\begin{minipage}{0.4\textwidth}
-\begin{itemize}
-\item[\textbf{\emph{}}] 
+
+\begin{minipage}{0.68\textwidth}
 VaderSentiment is a python library built on top of NLTK. it is a rule-based sentiment analysis engine, and implements grammatical and syntactical rules to detect sentence polarity, positive, negative and neutral.
-\end{itemize}
 \end{minipage}%
 %
-\begin{minipage}{0.4\textwidth}
-\begin{center}
-    \includegraphics[width=0.5\textwidth]{images/VaderSentiment_logo}
-    %\captionof{figure}{Gripper}
-    \label{img:g}
-\end{center}
+\begin{minipage}{0.3\textwidth}
+  {\ ~}\hfill
+  \includegraphics[width=.8\textwidth]{images/VaderSentiment_logo}
 \end{minipage}
 
 
 
 \subsection{TextBlob}
-\begin{minipage}{0.4\textwidth}
-\begin{itemize}
-\item[\textbf{\emph{}}] 
+
+\begin{minipage}{0.68\textwidth}
 TextBlob is a python library for processing textual data. TextBlob can be used to determine the degree of subjectivity or objectivity in a textual document.
 It exposes a concise API for carrying diving into common natural language processing (NLP) tasks such as part-of-speech tagging, noun phrase extraction, sentiment analysis, classification, translation, and more.\cite{ref43}
-\end{itemize}
 \end{minipage}%
 %
-\begin{minipage}{0.4\textwidth}
-\begin{center}
-    \includegraphics[width=0.5\textwidth]{images/textblob_logo}
-    %\captionof{figure}{Gripper}
-    \label{img:g}
-\end{center}
+\begin{minipage}{0.3\textwidth}
+  \hspace*{.4cm}
+  \includegraphics[width=\textwidth]{images/textblob_logo}
 \end{minipage}
 
 
 \subsection{Jupyter Notebook}
-\begin{minipage}{0.4\textwidth}
-\begin{itemize}
-\item[\textbf{\emph{}}] 
+
+\begin{minipage}{0.68\textwidth}
 The Jupyter Notebook App is a server-client application that allows editing and running notebook documents via a web browser. The Jupyter Notebook App can be executed on a local desktop requiring no internet access or can be installed on a remote server and accessed through the internet.\cite{ref46}
-\end{itemize}
+
 \end{minipage}%
 %
-\begin{minipage}{0.4\textwidth}
-\begin{center}
-    \includegraphics[width=0.5\textwidth]{images/jupyter_notebook}
-    %\captionof{figure}{Gripper}
-    \label{img:g}
-\end{center}
+\begin{minipage}{0.3\textwidth}
+  \hspace*{.4cm}
+  \includegraphics[width=\textwidth]{images/jupyter_notebook}
 \end{minipage}
-
-
-
-
 
 
 \subsection{MatplotLib}
-\begin{minipage}{0.4\textwidth}
-\begin{itemize}
-\item[\textbf{\emph{}}] 
+
+\begin{minipage}{0.68\textwidth}
+
 Matplotlib is a plotting library for the Python programming language and its numerical mathematics extension NumPy. It provides an object-oriented API for embedding plots into applications using general-purpose GUI toolkits like Tkinter, wxPython, Qt, or GTK+.\cite{ref45}
-\end{itemize}
 \end{minipage}%
 %
-\begin{minipage}{0.4\textwidth}
-\begin{center}
-    \includegraphics[width=0.5\textwidth]{images/matplot_lib}
-    %\captionof{figure}{Gripper}
-    \label{img:g}
-\end{center}
+\begin{minipage}{0.3\textwidth}
+  \hspace*{.4cm}
+  \includegraphics[width=\textwidth]{images/matplot_lib}
 \end{minipage}
 
 
-
 \section{Creating Twitter Application}
+
 Navigate to the url \url{https://developer.twitter.com/en}\\
 under the "App Details" tab fill in your application details and move to the next tab "Keys and Tokens"
 
@@ -1214,12 +1190,10 @@ Set the permissions for your API key.
 
 
 \section{Implications of findings}
-The boom in the availability of opinionated and emotionally charged data from various
-review sites, RSS feeds, and social networks has created a wave of interest in sentiment analysis
-by both academia and businesses. This is because there are many practical and potential
-applications of sentiment analysis. A Geographical Mood Detection tool can
-assist organizations and service providers to know the mindset of the people they are working
-with for instance:\\
+
+The boom in the availability of opinionated and emotionally charged data from various review sites, RSS feeds, and social networks has created a wave of interest in sentiment analysis by both academia and businesses.
+%
+This is because there are many practical and potential applications of sentiment analysis. A Geographical Mood Detection tool can assist organizations and service providers to know the mindset of the people they are working with for instance:\\
 
 \textbf{Business Applications}\\
 The tool can be adopted by any business which would like the ability to exploit unstructured data for actionable insights. Potential applications would be extracting product review, brand tracking, modifying
@@ -1237,16 +1211,17 @@ tracking the citizen\textquotesingle s opinion about a new scheme, predicting th
 or controversy.
 
 
-
 \chapter{Recommendations, future work and conclusion}
-\subsection{Recommendations}
-This tool may be used by the government, Non-Governmental Organizations, and business
-corporations. Investors may need to analyze the environment first before starting a business
+
+
+\section{Recommendations}
+
+This tool may be used by the government, Non-Governmental Organizations, and business corporations. Investors may need to analyze the environment first before starting a business
 venture, hence detecting mood of a society concerning a particular topic/product is of vital importance.
 We also propose that the tool can be used with experts in the field of big data analytics so as to gain
 better insights into their business/political atmosphere. It is clear that the adoption of advanced analytic approaches such as those used by our tool can guide organizations to  strategize and help them to make smarter decisions.\\
 
-\subsection{Future Work}
+\section{Future Work}
 In future work we plan to devise an approach to further improve the accuracy of mood detection by including not only textual information but also pictorial, video, and audio classification.
 Having said that, we believe that sentiment analysis will only increase in importance as more and
 more people use online channels to communicate, both directly and indirectly.
@@ -1262,13 +1237,16 @@ The sentence contains only positive words, yet still, it expresses a negative se
 
 
 \chapter{Results and analysis}\label{ch:Results}
+
 \section{Data visualization}
+
 The human brain processes information in a visual way, therefore it makes more sense to display the information using charts and graphs to visualize the information, as opposed to dumping large amounts of data onto spread sheets and reports. Data visualization makes it easier to identify areas that need attention.
 
 \subsection{matplotlib and seaborn}
+
 Seaborn is a Python data visualization library based on matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics.
 Matplotlib allows plotting multiple graphs on a single figure. Analysis can be made on different metrics at the same time. It also allows updating graph data in real-time.
-\clearpage
+
 \begin{figure}[h]
   \centering
   \pgfimage[width=0.5\linewidth]{images/graphs_results}
@@ -1291,6 +1269,7 @@ With this real-time analysis one can quickly see the prevailing mood as well as 
 
 
 \chapter{Conclusion}
+
 This research project has examined the role of social media networks in determining people's mood based on textual information they post. We developed a geographic mood detection tool based on social media.
 
 The results show that by utilizing social media platforms e.g. twitter, a tool can actually analyze people's mood towards a subject and inform the relevant authorities in real-time to know what the people\textquotesingle s general mood towards a particular subject is.
@@ -1299,21 +1278,6 @@ Making use of open python libraries and training data sets we were able to class
 of people based on their geographical location.
 
 Furthermore, this tool can be adopted by businesses, organizations and politicians who would like to have an edge and an insight into people's opinions over a giver topic.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
