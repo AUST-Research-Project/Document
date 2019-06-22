@@ -1,4 +1,4 @@
-%!TEX root = aust_thesis.tex
+%!TEX root = francis_thesis.tex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Chapter about theory}\label{ch:THEORY}
 \section{Computer Vision Tasks}
@@ -67,8 +67,15 @@ Instance segmentation is one step ahead of semantic segmentation wherein along w
 
 \subsection{Backbone}
 \subsubsection{Residual Networks (RESNET)}
-ResNet is an essential neural network that serves as a backbone to Mask R-CNN and numerous computer vision tasks. It makes the training of extremely deep neural networks possible which was very difficult before then due to the challenge of vanishing gradients, that hampers convergence in the network. According to [M] before RESNET, the problem of \textit{vanishing gradient} has been mainly addressed by normalized initialization [N, O, P, Q] and intermediate normalization layers [R], which enable networks with tens of layers to start converging for stochastic gradient descent (SGD) with backpropagation [S].
-Looking at the sample scenario of the vanishing gradients or degradation. A worst-case scenario of vanishing gradient is the case was the early layers of a deeper model can be replaced with a shallow network and the other layers can act as an identity function.  The shallow network and its deeper counterpart give the same accuracy. So deeper models do not perform well due to degradation. When a deeper network is used it approximates the mapping than its shallower variant and decreases the error by a notable margin. Also, the deeper network had issues of degradation.
+ResNet is an essential neural network that serves as a backbone to Mask R-CNN and numerous computer vision tasks. 
+It makes the training of extremely deep neural networks possible which was very difficult before then due to the 
+challenge of vanishing gradients, that hampers convergence in the network. According to \cite{M} before RESNET, the problem 
+of \textit{vanishing gradient} has been mainly addressed by normalized initialization \cite{N},\cite{O}, \cite{P}, \cite{Q} and intermediate 
+normalization layers \cite{R}, which enable networks with tens of layers to start converging for stochastic gradient descent 
+(SGD) with backpropagation \cite{S}.
+Looking at the sample scenario of the vanishing gradients or degradation. A worst-case scenario of vanishing gradient is
+ the case was the early layers of a deeper model can be replaced with a shallow network and the other layers can act as an identity function.  The shallow network and its deeper counterpart give the same accuracy. So deeper models do not perform well due to degradation. When a deeper network is used it approximates the mapping than its shallower variant and decreases the error by a notable margin. 
+ Also, the deeper network had issues of degradation.
 To solve this problem ResNet introduced the concept of skip connection.
 
 \begin{figure}[H]
@@ -86,12 +93,16 @@ Mathematically representing this, we can consider a mapping or space G(x) to be 
 \end{figure}
 
 \subsubsection{Feature Pyramid Network}
-Feature Pyramid Network (FPN) is a generic feature extractor used in various application for recognizing objects at different scales, developed by Lin et al [K]. For the recognition system for detecting objects at various scales, feature pyramid is a primary constituent of such a system. Pyramid representation has the problem of computing and memory intensiveness and has been avoided in the deep learning object detectors. Feature Pyramid Network (FPN) solves this problem by restructuring the architecture of the pyramid to a top-down architecture with lateral connections. The multi-scale, pyramidal hierarchy of deep ConvNet was leveraged to develop Feature Pyramid Network (FPN). Pyramids of  FPN are scale-invariant. This means that when an object scale changes it is offset by shifting its level in the pyramid.  
- Before the introduction of FPN, some ways were used in the extraction of features from images. Initially, hand-engineered features [U] were used and it makes use of featurized image pyramids. ConvNet is more robust to variance in scale, capable of representing higher-level semantics, and so features from it have quickly replaced engineered features. According to [L] this ConvNets gives multi-scale feature representation in which all levels are semantically strong, including the high-resolution levels.  Featuring each level of an image pyramid comes with the profound limitation of increase in inference time which makes it impractical for real applications. FPN explored the pyramidal shape of a ConvNet’s feature hierarchy to build a feature pyramid that has strong features with high-resolution at all scales. This gives a feature pyramid that has profound semantics at all phases and is constructed quickly  from a unit  input image scale 
+Feature Pyramid Network (FPN) is a generic feature extractor used in various application for recognizing objects at different scales, developed by Lin et al [K]. For the recognition system for detecting objects at various scales, feature pyramid is a primary constituent of such a system. Pyramid representation has the problem of computing and memory intensiveness and has been avoided in the deep learning object detectors. 
+Feature Pyramid Network (FPN) solves this problem by restructuring the architecture of the pyramid to a top-down architecture with lateral connections. The multi-scale, pyramidal hierarchy of deep ConvNet was leveraged to develop Feature Pyramid Network (FPN). Pyramids of  FPN are scale-invariant. This means that when an object scale changes it is offset by shifting its level in the pyramid.  
+ Before the introduction of FPN, some ways were used in the extraction of features from images. Initially, hand-engineered features [U] were used and it makes use of featurized image pyramids. ConvNet is more robust to variance in scale, capable of representing higher-level semantics, and so features from it have quickly replaced engineered features. 
+ According to \cite{L} this ConvNets gives multi-scale feature representation in which all levels are semantically strong, including the high-resolution levels.  Featuring each level of an image pyramid comes with the profound limitation of increase in inference time which makes it impractical for real applications. FPN explored the pyramidal shape of a ConvNet’s feature hierarchy to build a feature pyramid that has strong features
+  with high-resolution at all scales. 
+ This gives a feature pyramid that has profound semantics at all phases and is constructed quickly  from a unit  input image scale 
 \begin{figure}[H]
 \centering
   \includegraphics[height=3in]{images/fpn.jpg}
-   \caption{Top: a top-down architecture with skip connections, where predictions are made on the finest level (e.g., [T]). Bottom: FPN model that has a similar structure but leverages it as a feature pyramid, with predictions made independently at all levels [K].}
+   \caption{Top: a top-down architecture with skip connections, where predictions are made on the finest level (e.g., \cite{T}). Bottom: FPN model that has a similar structure but leverages it as a feature pyramid, with predictions made independently at all levels \cite{K}.}
 \end{figure}
 
 FPN was applied in Regional Proposal Network (RPN) and Fast R-CNN. With the new adaptations, RPN could be naturally trained and tested with FPN, Using FPN in a basic Faster R-CNN system, the result surpasses all existing single-model entries including those from the COCO 2016 challenge winners.
@@ -101,28 +112,46 @@ Regional Proposal Network (RPN) is a useful network effectively used in R-CNN th
 \begin{figure}[H]
 \centering
   \includegraphics[height=3in]{images/rcnn-rpn.jpg}
-   \caption{The architecture of Faster R-CNN. RPN generate the proposal for the objects. [J].}
+   \caption{The architecture of Faster R-CNN. RPN generate the proposal for the objects. \cite{J}.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
   \includegraphics[height=3in]{images/rpn-arch.jpg}
-   \caption{RPN Architecture [J].}
+   \caption{RPN Architecture \cite{J}.}
 \end{figure}
 
-Analyzing the architecture of RPN, the intermediate layer divides into a classifier and regressor layers, and the concept of the anchor was introduced. Anchor are boxes of different sizes and aspect ratio that are generated over an image that determines the ideal location, shape, and size of objects in the image. They overlap to fill up as much of the image as possible. Thousands of anchor boxes are generated for this. For each anchor box, the object’s bounding box that has the highest overlap is divided by non-overlap. This is termed Intersection Over Union (IOU). If the highest IOU is greater than 50 percent, the anchor box determines the object that gave the highest IOU. But if it is greater than 40 percent the true detection is ambiguous, and if it is less than 40 percent it predicts no object. Classifier gives the probability of a proposal containing the target object. Regression regresses the coordinates of the proposals. RPN is also used in Mask RCNN.
+Analyzing the architecture of RPN, the intermediate layer divides into a classifier and regressor layers, and the 
+concept of the anchor was introduced. Anchor are boxes of different sizes and aspect ratio that are generated over an 
+image that determines the ideal location, shape, and size of objects in the image. They overlap to fill up as much of 
+the image as possible. Thousands of anchor boxes are generated for this. For each anchor box, the object’s bounding box 
+that has the highest overlap is divided by non-overlap. This is termed Intersection Over Union (IOU). If the highest IOU 
+is greater than 50 percent, the anchor box determines the object that gave the highest IOU. But if it is greater than 40 
+percent the true detection is ambiguous, and if it is less than 40 percent it predicts no object. Classifier gives the
+ probability of a proposal containing the target object. Regression regresses the coordinates of the proposals. RPN is 
+ also used in Mask RCNN.
 \begin{figure}[H]
 \centering
   \includegraphics[height=3in]{images/rpn1.png}
-   \caption{Anchor boxes (dotted) and the shift/scale applied to them to fit the object precisely (solid). Several anchors can map to the same object.}
+   \caption{Anchor boxes (dotted) and the shift/scale applied to them to fit the object precisely (solid). 
+   Several anchors can map to the same object.}
 \end{figure}
 
-The RPN produces two results for each anchor; Anchor Class i.e. either the foreground or the background, and Bounding Box Refinement, an estimation to rectify the anchor box that fits the object well. This is a change in x,y, width, height.
+The RPN produces two results for each anchor; Anchor Class i.e. either the foreground or the background, and
+ Bounding Box Refinement, an estimation to rectify the anchor box that fits the object well. This is a change in x,y,
+  width, height.
 
 \subsection{ROI Classifier and Bounding Box Regressor}
-Region of Interest (ROI) classifier is proposed by the Region Proposal Network (RPN) and similarly, like the RPN, it produces two results for each ROI. First, the \textit{class}, it produces the classes of the object in the ROI, but it is deeper and can classify regions to specific classes (car, person, nucleus, etc). And secondly the\textit{ Bounding Box Refinement}, which further refines the location and size of the bounding box to envelope the object.
+Region of Interest (ROI) classifier is proposed by the Region Proposal Network (RPN) and similarly,
+ like the RPN, it produces two results for each ROI. First, the \textit{class}, it produces the classes
+  of the object in the ROI, but it is deeper and can classify regions to specific classes (car, person, nucleus, etc). 
+  And secondly the\textit{ Bounding Box Refinement}, which further refines the location and size of the bounding box 
+  to envelope the object.
 \subsubsection{ROI Pooling}
-Input sizes of a classifier vary. Classifiers require fixed, stable input size and can’t manage varying input sizes. Bounding box refinement in RPN produces ROI boxes of various sizes. ROI Pooling tackles this challenge. Cropping a part of a feature map and resizing it to a fixed size is termed ROI pooling. It is very much alike to the concept of resizing a cropped image.
+Input sizes of a classifier vary. Classifiers require fixed, stable input size and can’t manage varying input sizes. 
+Bounding box refinement in RPN produces ROI boxes of various sizes. ROI Pooling tackles this challenge.
+ Cropping a part of a feature map and resizing it to a fixed size is termed ROI pooling. It is very much alike to 
+ the concept of resizing a cropped image.
 \begin{figure}[H] 
 \centering
   \includegraphics[height=1.8in]{images/roi1.png}
@@ -139,8 +168,23 @@ Mask RCNN further added an extra branch to what Faster RCNN has. This is the mas
 
 
 \section{Drone-Based Dataset }
-Drones (or UAVs) furnished with high resolution cameras have been utilized in a wide range of applications, including agricultural, aerial photography, fast delivery, surveillance, etc. This has made, automatic comprehension of visual data collected from drones become highly demanding, which brings computer vision to drones more and more closely. Outstanding advancements have been made in general computer vision algorithms, such as detection and tracking, yet these algorithms are not usually flawless for dealing with sequences or images captured by drones, due to various difficulties such as view point changes and scales. Consequently, developing and appraising new vision algorithms for drone generated visual data is a key problem in drone-based applications.
-The major challenge of segmentation in drone generated visual data is the lack of proper datasets for these. A VisDrone Dataset was produced in [V]. The images and video sequences in the benchmark were captured over various urban/suburban areas of 14 different cities across China from north to south. Specifically, VisDrone2018 consists of 263 video clips and 10; 209 images (no overlap with video clips) with rich annotations, including object bounding boxes, object categories, occlusion, truncation ratios, etc. With intensive amount of effort, our benchmark has more than 2:5 million annotated instances in 179; 264 images/video frames [V]. Also Semantic Drone Dataset that focuses on semantic understanding of urban scenes for increasing the safety of autonomous drone flight and landing procedures. The imagery depicts more than 20 houses from nadir (bird's eye) view acquired at an altitude of 5 to 30 meters above ground. A high resolution camera was used to acquire images at a size of 6000x4000px (24Mpx). The training set contains 400 publicly available images and the test set is made up of 200 private images. [W].
+Drones (or UAVs) furnished with high resolution cameras have been utilized in a wide range of applications, 
+including agricultural, aerial photography, fast delivery, surveillance, etc. This has made, automatic comprehension of 
+visual data collected from drones become highly demanding, which brings computer vision to drones more and more closely.
+ Outstanding advancements have been made in general computer vision algorithms, such as detection and tracking, yet these algorithms 
+ are not usually flawless for dealing with sequences or images captured by drones, due to various difficulties such as view point changes 
+ and scales. Consequently, developing and appraising new vision algorithms for drone generated visual data is a key problem in drone-based 
+ applications.
+The major challenge of segmentation in drone generated visual data is the lack of proper datasets for these. 
+A VisDrone Dataset was produced in \cite{V}. The images and video sequences in the benchmark were captured over
+ various urban/suburban areas of 14 different cities across China from north to south. Specifically, VisDrone2018 
+ consists of 263 video clips and 10; 209 images (no overlap with video clips) with rich annotations, including object 
+ bounding boxes, object categories, occlusion, truncation ratios, etc. With intensive amount of effort, our benchmark 
+  has more than 2:5 million annotated instances in 179; 264 images/video frames \cite{V}. Also Semantic Drone Dataset that focuses on
+   semantic understanding of urban scenes for increasing the safety of autonomous drone flight and landing procedures. The imagery depicts 
+   more than 20 houses from nadir (bird's eye) view acquired at an altitude of 5 to 30 meters above ground. A high resolution camera was 
+   used to acquire images at a size of 6000x4000px (24Mpx). The training set contains 400 publicly available images and the test set is 
+    made up of 200 private images. \cite{W}.
 
 \begin{figure}[H]
   \centering
