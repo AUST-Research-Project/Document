@@ -2,10 +2,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Chapter about theory}\label{ch:THEORY}
 \section{Computer Vision Tasks}
-With the advance of computer vision, task in computer vision has moved from simple tasks  of image classifaication to complex task like semantic and instance segmentation. Deep learning has made this possible, especially using the Vo
+With the advance of computer vision, task in computer vision has moved from simple tasks  of image classifaication to complex task like semantic and instance segmentation. 
 \subsection{Image Classification}
-Image classification is the process of assigning land cover classes to pixels. Image classification refers to the task of extracting information classes from a multiband raster image. The resulting raster from image classification can be used to create thematic maps. Depending on the interaction between the analyst and the computer during classification, there are two types of classification: supervised and unsupervised. The image classification plays an important role in environmental and socioeconomic applications. In order to improve the classification accuracy, scientists have laid path in developing the advanced classification techniques.
-Image classification analyzes the numerical properties of various image features and organizes data into categories. Classification algorithms typically employ two phases of processing: training and testing. In the initial training phase, characteristic properties of typical image features are isolated and, based on these, a unique description of each classification category, i.e. training class, is created. In the subsequent testing phase, these feature-space partitions are used to classify image features. The description of training classes is an extremely important component of the classification process. In supervised classification, statistical processes (i.e. based on an a priori knowledge of probability distribution functions) or distribution-free processes can be used to extract class descriptors. Unsupervised classification relies on clustering algorithms to automatically segment the training data into prototype classes. In either case, the motivating criteria for constructing training classes are that they are:
+Image classification investigates the numerical properties of the different picture includes and sorts out information into classifications. Grouping calculations commonly utilize two periods of preparing: preparing and testing. In the underlying preparing stage, trademark properties of common picture highlights are confined and, in light of these, a one of a kind depiction of every grouping class, for example, instructional course, is made. In the resulting testing stage, these component space parcels are utilized to group picture highlights. The depiction of instructional courses is a critical part of the characterization procedure. In the regulated arrangement, factual procedures (for example in light of a from the earlier learning of likelihood conveyance capacities) or dissemination free procedures can be utilized to concentrate class descriptors. The unsupervised classification depends on bunching calculations to naturally section the preparation information into model classes. In either case, the propelling criteria for building instructional courses are that they are:
 \begin{enumerate}
 \item Independent, e.a change in the description of one training class should not change the value of another,
 \item Discriminatory, e.different image features should have significantly different descriptions, and
@@ -19,44 +18,45 @@ Image classification analyzes the numerical properties of various image features
    \caption{Image Classification,Object detection Semantic Segmentation.}
 \end{figure}
 \subsection{Object Detection}
- The goal of object detection is to detect all instances of objects from a known class, such as people, cars or faces in an image. Typically only a small number of instances of the object are present in the image, but there is a very large number of possible locations and scales at which they can occur and that need to somehow be explored.
-Each detection is reported with some form of pose information. This could be as simple as the location of the object, a location and scale, or the extent of the object defined in terms of a bounding box. In other situations the pose information is more detailed and contains the parameters of a linear or non-linear transformation. For example a face detector may compute the locations of the
-eyes, nose and mouth, in addition to the bounding box of the face. An example of a vehicle and person detection that specifies the locations of certain parts is shown in Figure 1. The pose could also be defined by a three-dimensional transformation specifying the location of the object relative to the camera.
-Object detection systems construct a model for an object class from a set of
-training examples. In the case of a fixed rigid object only one example may be
-needed, but more generally multiple training examples are necessary to capture
-certain aspects of class variability.
+ The objective of object detection is to identify all cases of objects from a referred to class, for example, individuals, vehicles or faces in a picture. Normally just a few occurrences of the item are available in the picture, yet there is an enormous number of potential areas and scales at which they can happen and that need to by one way or another be investigated. 
+ Every location is accounted for with some type of posture data. This could be as straightforward as the area of the item, an area, and scale, or the degree of the article characterized as far as a jumping box. In different circumstances, the posture data is progressively nitty gritty and contains the parameters of a straight or non-direct change. For instance, a face identifier may process the areas of the 
+ eyes, nose, and mouth, notwithstanding the jumping box of the face. A case of a vehicle and individual discovery that determines the areas of specific parts appears in Figure 1. The posture could likewise be characterized by a three-dimensional change determining the area of the article with respect to the camera. 
+ Item discovery frameworks develop a model for an article class from a lot of 
+ preparing precedents. On account of a fixed inflexible article, just a single precedent might be 
+ required, however more by and large numerous preparation precedents are important to catch 
+ 
+ certain parts of class changeability.
 \begin{figure}[H]
   \centering
   \includegraphics[height=3in]{images/object_det.jpeg}
    \caption{Object detection with bounding boxes.}
 \end{figure}
 
-Object detection methods fall into two major categories, generative and discriminative. The first consists of a probability model for the pose variability of the objects together with an appearance model: a probability model for the image appearance conditional on a given pose, together with a model for background, i.e. non-object images. The model parameters can be estimated from training data and the decisions are based on ratios of posterior probabilities. The second typically builds a classifier that can discriminate between images (or sub-images) containing the object and those not containing the object. The parameters of the classifier are selected to minimize mistakes on the training data, often with a regularization bias to avoid overfitting. Other distinctions among detection algorithms have to do with the computational tools used to scan the entire image or search over possible poses, the type of image representation with which the models are constructed, and what type and how much training data is required to build a model.	
-
+Object detection strategies fall into two noteworthy classes, generative and discriminative. The principal comprises of a likelihood model for the posture changeability of the articles together with an appearance model: a likelihood model for the picture appearance restrictive on a given posture, together with a model for foundation, for example, non-object pictures. The model parameters can be assessed from preparing information and the choices depend on proportions of back probabilities. The second regularly manufactures a classifier that can segregate between pictures (or sub-images) containing the item and those not containing the object. The parameters of the classifier are chosen to limit botches on the training data, frequently with a regularization bias to abstain from overfitting. Different qualifications among discovery calculations have to do with the computational apparatuses used to check the whole picture or search over potential represents, the sort of picture portrayal with which the models are developed, and what type and how much training data is required to construct a model.
 
 
 \subsection{
 Semantic Segmentation
 }
-Segmentation is essential for image analysis tasks. Semantic segmentation describes the process of associating each pixel of an image with a class label, (such as flower, person, road, sky, ocean, or car).
-Semantic image segmentation can be applied effectively to any task that involves the segmentation of visual information. Examples include road segmentation for autonomous vehicles, medical image segmentation, scene segmentation for robot perception, and in image editing tools. Whilst currently available systems provide accurate object recognition, they are unable to delineate the boundaries between objects with the same accuracy.
+Segmentation is fundamental for picture analysis assignments. Semantic segmentation portrays the way toward partner every pixel of a picture with a class name, (for example, bloom, individual, street, sky, sea, or vehicle). 
 
-Oxford researchers have developed a novel neural network component for semantic segmentation that enhances the ability to recognise and delineate objects. This invention can be applied to improve any situation requiring the segmentation of visual information.
+Semantic image segmentation can be connected successfully to any errand that includes the division of visual data. Precedents incorporate street division for self-ruling vehicles, restorative picture division, scene division for robot observation, and in picture altering apparatuses. While at present accessible frameworks give precise article acknowledgment, they are unfit to depict the limits between items with a similar exactness. 
 
-Semantic image segmentation plays a crucial role in image understanding, allowing a computer to recognise objects in images. Recognition and delineation of objects is achieved through classification of each pixel in an image. Such processes have a wide range of applications in computer vision, in diverse and growing fields such as vehicle autonomy and medical imaging.
+Oxford scientists have built up a novel neural system segment for a semantic division that improves the capacity to perceive and depict objects. This development can be connected to improve any circumstance requiring the division of visual data. 
 
-The previous state-of-the-art image segmentation systems used Fully Convolutional Neural Network (FCNN) components, which offer excellent accuracy in recognising objects. Whilst this development represented a significant improvement in semantic segmentation, these networks do not perform well in delineating object boundaries. Conditional Random Fields (CRFs) can be employed in a post-processing step to improve object boundary delineation, however, this is not an optimum solution owing to a lack of integration with the deep network.
+Semantic image segmentation assumes a vital job in picture understanding, enabling a computer to perceive questions in pictures. Acknowledgment and depiction of articles are accomplished through the order of every pixel in a picture. Such procedures have a wide scope of utilization in PC vision, in differing and developing fields, for example, vehicle self-sufficiency and restorative imaging. 
+
+The past best in class picture division frameworks utilized Fully Convolutional Neural Network (FCNN) segments, which offer magnificent exactness in perceiving objects. While this advancement spoke to a huge improvement in the semantic division, these systems don't perform well in depicting object limits. Conditional Random Fields  (CRFs) can be utilized in a post-handling venture to improve object limit depiction, be that as it may, this isn't an ideal arrangement inferable from an absence of reconciliation with the profound system.
 \begin{figure}[H]
   \centering
   \includegraphics[height=3in]{images/semantic.jpg}
    \caption{Image with semantic segmentation.}
 \end{figure}
-Oxford researchers have developed a neural network component for semantic segmentation that harnesses the exceptional object recognition of FCNNs and the powerful boundary delineation of CRFs. CRFs are fully integrated as recurrent neural networks, resulting in a system that offers enhanced performance compared to the previous state-of-the-art. The novel system can be applied to any task that involves the segmentation of visual information. Examples include road segmentation for autonomous vehicles, medical image segmentation, scene segmentation for robot perception, and in image editing tools. Oxford University Innovation is seeking industrial partners that wish to explore the use of this system for commercial applications.
+Oxford specialists have built up a neural system segment for semantic segmentation that bridles the outstanding article acknowledgment of FCNNs and the incredible limit depiction of CRFs. CRFs are completely incorporated as repetitive neural systems, bringing about a framework that offers upgraded execution contrasted with the past cutting edge. The tale framework can be connected to any assignment that includes the division of visual data. Precedents incorporate street division for independent vehicles, restorative picture division, scene division for robot recognition, and in picture altering instruments. Oxford University Innovation is looking for modern accomplices that desire to investigate the utilization of this framework for business applications.
 \subsection{
 Instance Segmentation
 }
-Instance segmentation is one step ahead of semantic segmentation wherein along with pixel level classification, we expect the computer to classify each instance of a class separately. For example in the image above there are 3 people, technically 3 instances of the class “Person”. All the 3 are classified separately (in a different color). But semantic segmentation does not differentiate between the instances of a particular class.
+Instance segmentation is one stage in front of semantic division wherein alongside pixel level grouping, we anticipate that the computer should characterize each occurrence of a class independently. For instance in the picture above there are 3 individuals, actually 3 examples of the class "Person". All the 3 are characterized independently (in an alternate shading). Yet, the semantic division does not separate between the examples of a specific class.
 \begin{figure}[H]
   \centering
   \includegraphics[height=3in]{images/instance.png}
@@ -64,15 +64,17 @@ Instance segmentation is one step ahead of semantic segmentation wherein along w
 \end{figure}
 
 \section{CNN for Object Detection and  Segmentation }
+Mask RCNN is a profound neural system meant to take care of occurrence division issue in machine learning or computer vision. As it were, it can isolate various items in a picture or a video. You give it a picture, it gives you the object bouncing boxes, classes and masks. 
 
+There are two phases of Mask RCNN. Initially, it produces proposals about the areas where there may be an object dependent on the input picture. Second, it predicts the class of the object, refines the bounding box and produces a masks in pixel dimension of the item dependent on the primary stage proposition. The two phases are associated with the backbone structure. We will describe Mask R-CNN fully below. We have four components of Mask R-CNN viz; The backbone, Regional Proposal Network,{ROI Classifier and Bounding Box Regressor,Segmentation mask. These components will be discussed in detail in the sections below.
 \subsection{Backbone}
 \subsubsection{Residual Networks (RESNET)}
 ResNet is an essential neural network that serves as a backbone to Mask R-CNN and numerous computer vision tasks. 
 It makes the training of extremely deep neural networks possible which was very difficult before then due to the 
-challenge of vanishing gradients, that hampers convergence in the network. According to \cite{M} before RESNET, the problem 
-of \textit{vanishing gradient} has been mainly addressed by normalized initialization \cite{N},\cite{O}, \cite{P}, \cite{Q} and intermediate 
-normalization layers \cite{R}, which enable networks with tens of layers to start converging for stochastic gradient descent 
-(SGD) with backpropagation \cite{S}.
+challenge of vanishing gradients, that hampers convergence in the network. According to \protect\cite{M} before RESNET, the problem 
+of \textit{vanishing gradient} has been mainly addressed by normalized initialization \protect\cite{N},\protect\cite{O}, \protect\cite{P}, \protect\cite{Q} and intermediate 
+normalization layers \protect\cite{R}, which enable networks with tens of layers to start converging for stochastic gradient descent 
+(SGD) with backpropagation \protect\cite{S}.
 Looking at the sample scenario of the vanishing gradients or degradation. A worst-case scenario of vanishing gradient is
  the case was the early layers of a deeper model can be replaced with a shallow network and the other layers can act as an identity function.  The shallow network and its deeper counterpart give the same accuracy. So deeper models do not perform well due to degradation. When a deeper network is used it approximates the mapping than its shallower variant and decreases the error by a notable margin. 
  Also, the deeper network had issues of degradation.
@@ -89,20 +91,20 @@ Mathematically representing this, we can consider a mapping or space G(x) to be 
 
 \begin{figure}[H]
   \includegraphics[height=2.2in]{images/resnet-graph.jpg}
-   \caption{Training on ImageNet. Thin curves denote training error, and bold curves denote validation error of the center crops. Left: plain networks of 18 and 34 layers. Right: ResNets of 18 and 34 layers. In this plot, the residual networks have no extra parameter compared to their plain counterparts [M].}
+   \caption{Training on ImageNet. Thin curves denote training error, and bold curves denote validation error of the center crops. Left: plain networks of 18 and 34 layers. Right: ResNets of 18 and 34 layers. In this plot, the residual networks have no extra parameter compared to their plain counterparts \protect\cite{M}.}
 \end{figure}
 
 \subsubsection{Feature Pyramid Network}
 Feature Pyramid Network (FPN) is a generic feature extractor used in various application for recognizing objects at different scales, developed by Lin et al [K]. For the recognition system for detecting objects at various scales, feature pyramid is a primary constituent of such a system. Pyramid representation has the problem of computing and memory intensiveness and has been avoided in the deep learning object detectors. 
 Feature Pyramid Network (FPN) solves this problem by restructuring the architecture of the pyramid to a top-down architecture with lateral connections. The multi-scale, pyramidal hierarchy of deep ConvNet was leveraged to develop Feature Pyramid Network (FPN). Pyramids of  FPN are scale-invariant. This means that when an object scale changes it is offset by shifting its level in the pyramid.  
- Before the introduction of FPN, some ways were used in the extraction of features from images. Initially, hand-engineered features [U] were used and it makes use of featurized image pyramids. ConvNet is more robust to variance in scale, capable of representing higher-level semantics, and so features from it have quickly replaced engineered features. 
+ Before the introduction of FPN, some ways were used in the extraction of features from images. Initially, hand-engineered features \cite{U} were used and it makes use of featurized image pyramids. ConvNet is more robust to variance in scale, capable of representing higher-level semantics, and so features from it have quickly replaced engineered features. 
  According to \cite{L} this ConvNets gives multi-scale feature representation in which all levels are semantically strong, including the high-resolution levels.  Featuring each level of an image pyramid comes with the profound limitation of increase in inference time which makes it impractical for real applications. FPN explored the pyramidal shape of a ConvNet’s feature hierarchy to build a feature pyramid that has strong features
   with high-resolution at all scales. 
  This gives a feature pyramid that has profound semantics at all phases and is constructed quickly  from a unit  input image scale 
 \begin{figure}[H]
 \centering
   \includegraphics[height=3in]{images/fpn.jpg}
-   \caption{Top: a top-down architecture with skip connections, where predictions are made on the finest level (e.g., \cite{T}). Bottom: FPN model that has a similar structure but leverages it as a feature pyramid, with predictions made independently at all levels \cite{K}.}
+   \caption{Top: a top-down architecture with skip connections, where predictions are made on the finest level (e.g., \protect\cite{T}). Bottom: FPN model that has a similar structure but leverages it as a feature pyramid, with predictions made independently at all levels \protect\cite{K}.}
 \end{figure}
 
 FPN was applied in Regional Proposal Network (RPN) and Fast R-CNN. With the new adaptations, RPN could be naturally trained and tested with FPN, Using FPN in a basic Faster R-CNN system, the result surpasses all existing single-model entries including those from the COCO 2016 challenge winners.
@@ -112,13 +114,13 @@ Regional Proposal Network (RPN) is a useful network effectively used in R-CNN th
 \begin{figure}[H]
 \centering
   \includegraphics[height=3in]{images/rcnn-rpn.jpg}
-   \caption{The architecture of Faster R-CNN. RPN generate the proposal for the objects. \cite{J}.}
+   \caption{The architecture of Faster R-CNN. RPN generate the proposal for the objects. \protect\cite{J}.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
   \includegraphics[height=3in]{images/rpn-arch.jpg}
-   \caption{RPN Architecture \cite{J}.}
+   \caption{RPN Architecture \protect\cite{J}.}
 \end{figure}
 
 Analyzing the architecture of RPN, the intermediate layer divides into a classifier and regressor layers, and the 
@@ -176,15 +178,15 @@ visual data collected from drones become highly demanding, which brings computer
  and scales. Consequently, developing and appraising new vision algorithms for drone generated visual data is a key problem in drone-based 
  applications.
 The major challenge of segmentation in drone generated visual data is the lack of proper datasets for these. 
-A VisDrone Dataset was produced in \cite{V}. The images and video sequences in the benchmark were captured over
+A VisDrone Dataset was produced in \protect\cite{V}. The images and video sequences in the benchmark were captured over
  various urban/suburban areas of 14 different cities across China from north to south. Specifically, VisDrone2018 
  consists of 263 video clips and 10; 209 images (no overlap with video clips) with rich annotations, including object 
  bounding boxes, object categories, occlusion, truncation ratios, etc. With intensive amount of effort, our benchmark 
-  has more than 2:5 million annotated instances in 179; 264 images/video frames \cite{V}. Also Semantic Drone Dataset that focuses on
+  has more than 2:5 million annotated instances in 179; 264 images/video frames \protect\cite{V}. Also Semantic Drone Dataset that focuses on
    semantic understanding of urban scenes for increasing the safety of autonomous drone flight and landing procedures. The imagery depicts 
    more than 20 houses from nadir (bird's eye) view acquired at an altitude of 5 to 30 meters above ground. A high resolution camera was 
    used to acquire images at a size of 6000x4000px (24Mpx). The training set contains 400 publicly available images and the test set is 
-    made up of 200 private images. \cite{W}.
+    made up of 200 private images. \protect\cite{W}.
 
 \begin{figure}[H]
   \centering

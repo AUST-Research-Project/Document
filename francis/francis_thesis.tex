@@ -6,11 +6,6 @@
 \usepackage{subcaption}
 \usepackage[linesnumbered,ruled,vlined]{algorithm2e}
 \usepackage{algpseudocode}
-%\usepackage{biblatex}
-
-%\addbibresource{thesis.bib}
-
-%%
 
 
 % The set of languages we want to show
@@ -110,11 +105,7 @@ ALL RIGHTS RESERVED\\
 %% ABSTRACT
 \begin{abstract}%
 
-\noindent There have been several improvement in object detection and semantic segmentation results in recent years. Baseline systems that drives these advances are Fast/Faster R-CNN, Fully Convolutional Network and recently \textbf{Mask R-CNN} and its variant that has a weight transfer function.  Mask R-CNN is the state-of-art.  This research extends the application of the state-of-art in object detection and semantic segmentation in drone based datasets.
-
-Existing drone datasets was used to learn semantic segmentation on drone images using \textbf{Mask R-CNN}. And a new drone dataset will be collected, labelled, annotated with a bounding box object detection.
-
-Drone based images will be collected with the drone developed by the Robotic team at African University of Science and Technology, Abuja, which will be made public for academic researches.
+\noindent There have been several improvement in object detection and semantic segmentation results in recent years. Baseline systems that drives these advances are Fast/Faster R-CNN, Fully Convolutional Network and recently \textbf{Mask R-CNN} and its variant that has a weight transfer function.  Mask R-CNN is the state-of-art.  This research extends the application of the state-of-art in object detection and semantic segmentation in drone based datasets. Existing drone datasets was used to learn semantic segmentation on drone images using \textbf{Mask R-CNN}. And a new drone dataset will be collected, labelled, annotated with a bounding box object detection.Drone based images will be collected with the drone developed by the Robotic team at African University of Science and Technology, Abuja, which will be made public for academic researches.
 
 \noindent This work is the result of my own activity. I have neither given nor received unauthorized assistance on this work.
 
@@ -158,11 +149,13 @@ Drone based images will be collected with the drone developed by the Robotic tea
 \include{programs}
 
 
-{ \renewcommand{\baselinestretch}{0.8}\normalsize %
-  \setlength{\itemsep}{-2.4mm}
-  \setlength{\bibspacing}{0.67\baselineskip}
-  \bibliographystyle{abbrvnat}
-  \bibliography{thesis}
+{ 
+	\renewcommand{\baselinestretch}{0.8}\normalsize %
+	\setlength{\itemsep}{-2.4mm}
+	\setlength{\bibspacing}{0.67\baselineskip}
+	\bibliographystyle{abbrvnat}
+	\setcitestyle{numbers}
+	\bibliography{thesis}
 }
 
 \end{document}
