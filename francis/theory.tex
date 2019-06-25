@@ -91,7 +91,7 @@ Mathematically representing this, we can consider a mapping or space G(x) to be 
 
 \begin{figure}[H]
   \includegraphics[height=2.2in]{images/resnet-graph.jpg}
-   \caption{Training on ImageNet. Thin curves denote training error, and bold curves denote validation error of the center crops. Left: plain networks of 18 and 34 layers. Right: ResNets of 18 and 34 layers. In this plot, the residual networks have no extra parameter compared to their plain counterparts \protect\cite{M}.}
+   \caption{Training on ImageNet. Thin curves denote training error, and bold curves denote validation error of the center crops. Left: plain networks of 18 and 34 layers. Right: ResNets of 18 and 34 layers. In this plot, the residual networks have no extra parameter compared to their plain counterparts, see \cite{M}.}
 \end{figure}
 
 \subsubsection{Feature Pyramid Network}
@@ -133,10 +133,12 @@ percent the true detection is ambiguous, and if it is less than 40 percent it pr
  probability of a proposal containing the target object. Regression regresses the coordinates of the proposals. RPN is 
  also used in Mask RCNN.
 \begin{figure}[H]
-\centering
+  \centering
   \includegraphics[height=3in]{images/rpn1.png}
-   \caption{Anchor boxes (dotted) and the shift/scale applied to them to fit the object precisely (solid). 
-   Several anchors can map to the same object.}
+  
+  \caption{Anchor boxes (dotted) and the shift/scale applied to them to fit the object precisely (solid).
+  Several anchors can map to the same object.}
+  
 \end{figure}
 
 The RPN produces two results for each anchor; Anchor Class i.e. either the foreground or the background, and
@@ -147,29 +149,32 @@ The RPN produces two results for each anchor; Anchor Class i.e. either the foreg
 Region of Interest (ROI) classifier is proposed by the Region Proposal Network (RPN) and similarly,
  like the RPN, it produces two results for each ROI. First, the \textit{class}, it produces the classes
   of the object in the ROI, but it is deeper and can classify regions to specific classes (car, person, nucleus, etc). 
-  And secondly the\textit{ Bounding Box Refinement}, which further refines the location and size of the bounding box 
-  to envelope the object.
+  And secondly the\textit{ Bounding Box Refinement}, which further refines the location and size of the bounding box to envelope the object.
+
 \subsubsection{ROI Pooling}
+
 Input sizes of a classifier vary. Classifiers require fixed, stable input size and can’t manage varying input sizes. 
 Bounding box refinement in RPN produces ROI boxes of various sizes. ROI Pooling tackles this challenge.
- Cropping a part of a feature map and resizing it to a fixed size is termed ROI pooling. It is very much alike to 
- the concept of resizing a cropped image.
+%
+Cropping a part of a feature map and resizing it to a fixed size is termed ROI pooling. It is very much alike to the concept of resizing a cropped image.
+ 
 \begin{figure}[H] 
 \centering
-  \includegraphics[height=1.8in]{images/roi1.png}
+  \pgfimage[height=1.8in]{images/roi1.png}
    \caption{ROI Pooling.}
 \end{figure}
 
 \subsection{Segmentation Mask}
 Mask RCNN further added an extra branch to what Faster RCNN has. This is the mask branch. The Mask branch is a convolutional network that receives the positive regions selected by the ROI classifier and builds low resolution masks for them. The resolution is about 28x 28 pixels. They are soft masks, constituted by float numbers, so they contain more ingredients than binary masks. The size of the mask enables the mask branch to be light. When training the model, the ground-truth masks is scaled down to 28x28 to compute the loss, and when inferencing the predicted masks is scaled up to the size of the ROI bounding box and that produces the final masks, one per object.
+
 \begin{figure}[H]
   \centering
     \includegraphics[height=1.7in]{images/mask.png}
      \caption{Segmentation Mask of a drone-based imageset .}
   \end{figure}
 
+\section{Drone-Based Dataset}
 
-\section{Drone-Based Dataset }
 Drones (or UAVs) furnished with high resolution cameras have been utilized in a wide range of applications, 
 including agricultural, aerial photography, fast delivery, surveillance, etc. This has made, automatic comprehension of 
 visual data collected from drones become highly demanding, which brings computer vision to drones more and more closely.
@@ -189,17 +194,20 @@ A VisDrone Dataset was produced in \protect\cite{V}. The images and video sequen
     made up of 200 private images. \protect\cite{W}.
 
 \begin{figure}[H]
+  \centerline{%
+    \includegraphics[height=2.2in]{images/045.jpg}%
+  }
+ 
+  \caption{Drone-based imageset 1}
+  \label{image_1}
+\end{figure}
+
+%
+  
+\begin{figure}[H]
   \centering
+  \includegraphics[height=2.2in]{images/044.jpg}
   
-    \includegraphics[height=2.2in]{images/045.jpg}
-    \caption{Drone-based imageset 1}
-    \label{image 1}
-  \end{figure}
-  %
-  
-  \begin{figure}[H]
-    \centering
-    \includegraphics[height=2.2in]{images/044.jpg}
-    \caption{Drone-based imageset 2}
-    \label{image 2}
+  \caption{Drone-based imageset 2}
+  \label{image 2}
 \end{figure}

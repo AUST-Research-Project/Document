@@ -6,7 +6,7 @@
 \usepackage{subcaption}
 \usepackage[linesnumbered,ruled,vlined]{algorithm2e}
 \usepackage{algpseudocode}
-%\usepackage{biblatex}
+\usepackage{paralist}
 
 %\addbibresource{thesis.bib}
 
@@ -136,12 +136,10 @@ ALL RIGHTS RESERVED\\
 %Includes the List of figures
 
 \listoffigures
-\addcontentsline{toc}{section}{\numberline{}List of Figures}
-\cleardoublepage
+\clearpage
 
 \listofalgorithms
-\addcontentsline{toc}{section}{\numberline{}List of Algorithms}
-\cleardoublepage
+\clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%    the structure of your thesis     %%%%%%%%%%%%
 
@@ -164,7 +162,6 @@ ALL RIGHTS RESERVED\\
 	\setlength{\itemsep}{-2.4mm}
 	\setlength{\bibspacing}{0.67\baselineskip}
 	\bibliographystyle{abbrvnat}
-	\setcitestyle{numbers}
 	\bibliography{thesis}
 }
 

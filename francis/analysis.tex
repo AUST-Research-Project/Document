@@ -14,10 +14,10 @@ Various technologies, frameworks and libraries were used in this project. Every 
      \caption{Python logo, source: https://www.python.org/community/logos/}
   \end{figure}
 
-Python\footnote{https://www.python.org/community/logos/} is a high level programming language designed by Guido van Rossum in 1991. Its design philosophy emphasizes code readability and has a remarkable use of significant whitespace. The filename extensions include .py, .pyc, .pyw, .pyz. It support web development with frameworks like Django and Pyramid. It is applied in scientific studies and machine learning. Several libraries and frameworks have been developed by the Python community for this such as 
+Python\footnote{https://www.python.org/community/logos/} is a high level programming language designed by Guido van Rossum in 1991. Its design philosophy emphasizes code readability and has a remarkable use of significant white-space. The filename extensions include .py, .pyc, .pyw, .pyz. It support web development with frameworks like Django and Pyramid. It is applied in scientific studies and machine learning. Several libraries and frameworks have been developed by the Python community for this such as 
 SciPy\footnote{www.scipy.org}, Scikit-learn\footnote{scikit-learn.org/stable/}, Pandas\footnote{pandas.pydata.org}, Numpy\footnote{www.numpy.org/}, Theano\footnote{deeplearning.net/software/theano/}, PyTorch \footnote{pytorch.org/}, etc. It is also one of the most popular languages in the field of Convolutional neural network. Neural Networks like ResNet, VGGNet, Faster R-CNN, AlexNet in Keras or Pytorch, etc. 
 
-\subsection{ TensorFlow}
+\subsection{TensorFlow}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\linewidth]{images/TensorFlow.png}
@@ -34,7 +34,8 @@ For a wider documentation, please see the official website\footnote{www.tensorfl
      \caption{Keras logo, source:www.scikit-image.org}
   \end{figure}
 
-Keras \footnote{Keras.io} is an MIT licensed neural-network library written in Python. It was design by Francois Chollet and released first in March 2015. It is open-sourced. Keras is capable of running on top of Microsoft Cognitive Toolkit, TensorFlow, PlaidML or Theano for fast experimentation of deep neural networks. It enables implementation of deep learning and allows easy and 
+Keras\footnote{Keras.io} %
+is an MIT licensed neural-network library written in Python. It was design by Francois Chollet and released first in March 2015. It is open-sourced. Keras is capable of running on top of Microsoft Cognitive Toolkit, TensorFlow, PlaidML or Theano for fast experimentation of deep neural networks. It enables implementation of deep learning and allows easy and 
 fast prototyping, supports both convolutional networks and recurrent networks and the combination of both. For a wider documentation, please see the official website\footnote{www.keras.io}
 
 \subsection{ Scikit-Image}
@@ -60,30 +61,52 @@ Rather I made use of the Semantic Drone Dataset from Institute of Computer Graph
 The dataset contains images, bounding boxes as python pickle file, bounding boxes as xml, bounding boxes as mask images. The Semantic Drone Dataset focuses on semantic understanding of urban scenes for increasing the safety of autonomous drone flight and landing procedures. The imagery depicts  more than 20 houses from nadir (bird's eye) view acquired at an altitude of 5 to 30 meters above ground. A high resolution camera was used to acquire images at a size of 6000x4000px (24Mpx). The training set contains 400 publicly available images and the test set is made up of 200 private images. [W]
 For the task of person detection the dataset contains bounding box annotations of the training and test set. And for semantic segmentation, pixel-accurate annotation for the same training and test set was prepared. The complexity of the dataset is limited to 20 classes as listed below.
 
-\begin{itemize}
-  \item tree
-  \item tree
-  \item grass
-  \item other vegetation
-  \item dirt
-  \item gravel
-  \item rocks
-  \item water
-  \item paved area
-  \item pool
-  \item person
-  \item dog
-  \item car
-  \item bicycle
-  \item roof
-  \item wall
-  \item fence
-  \item fence-pole
-  \item window
-  \item door
-  \item obstacle
+\begin{tabular}%
+{@{}p{0.24\linewidth}@{}p{0.24\linewidth}@{}p{0.24\linewidth}@{}p{0.24\linewidth}@{}}
+\begin{minipage}[t]{\linewidth}
+  \vspace*{-0cm}
+  \begin{compactitem}
+    \item tree
+    \item grass
+    \item other vegetation
+    \item dirt
+    \item gravel
+  \end{compactitem}
+\end{minipage} &
+\begin{minipage}[t]{\linewidth}
+  \vspace*{-0cm}
+  \begin{compactitem}
+    \item rocks
+    \item water
+    \item paved area
+    \item pool
+    \item person
+  \end{compactitem}
+\end{minipage} &
+\begin{minipage}[t]{\linewidth}
+  \vspace*{-0cm}
+  \begin{compactitem}
+    \item dog
+    \item car
+    \item bicycle
+    \item roof
+    \item wall
+  \end{compactitem}
   
-\end{itemize}
+\end{minipage} &
+\begin{minipage}[t]{\linewidth}
+  \vspace*{-0cm}
+  \begin{compactitem}
+    \item fence
+    \item fence-pole
+    \item window
+    \item door
+    \item obstacle  
+  \end{compactitem}
+  
+\end{minipage}
+\end{tabular}
+
 The Drone Dataset is made freely available to academic and non-academic entities for non-commercial purposes such as academic research, teaching, scientific publications, or personal experimentation.
 \paragraph{}
 For the implementation of the instance segmentation, Python was used for obvious reasons. It enabled me to use deep learning framework like Tensorflow and Keras. The implementation of the model was carried out in the file drone.py and uses the Mask R-CNN library developed in python with TensorFlow and Keras by Matterport Inc. It was written by Waleed Abdulla from Matterport Inc. Matterport, Inc. published their implementation under the MIT License \cite{X}. The MIT License is a license granting the permission to use the code, copy it, modify it, publish and even to sell it free of charge.
@@ -208,7 +231,7 @@ The genuine function does not return total layers, however, it returns them in s
 \\
  \textbf{RPN}
 \\
-The RPN is worked by two functions, build\_rpn\_model and rpn\_graph. Notwithstanding, these functions assemble just the model, for example, the sliding window and its behavior, anchors are created in utils.py as depicted in section 5.1.3. Indeed, even in this split approach, it pursues the thought from section 3.4.3. Contributions for the rpn\_graph capacity are an element map, number of anchors per area and anchors stride and returns anchors class logits, probabilities and bounding boxes refinements. The work process of rpn\_graph is represented in pseudocode 5.3. build\_rpn\_model makes a model which initially feed the rpn\_graph work and at that point restores the previously mentioned qualities.
+The RPN is worked by two functions, build\_rpn\_model and rpn\_graph. Notwithstanding, these functions assemble just the model, for example, the sliding window and its behaviour, anchors are created in utils.py as depicted in section 5.1.3. Indeed, even in this split approach, it pursues the thought from section 3.4.3. Contributions for the rpn\_graph capacity are an element map, number of anchors per area and anchors stride and returns anchors class logits, probabilities and bounding boxes refinements. The work process of rpn\_graph is represented in pseudocode 5.3. build\_rpn\_model makes a model which initially feed the rpn\_graph work and at that point restores the previously mentioned qualities.
 \\
 \\
 \begin{algorithm}[H]
@@ -426,7 +449,6 @@ images with the predefined augmentation contained in a given registry bringing i
    add\_class\;}
    \For{\texttt{ directory in directories}}
    {add\_images\;}
-  
 \end{algorithm}
 .\\
 \\ 
@@ -503,8 +525,8 @@ focuses. This network together with their height and widths characterizes the re
   scales = array of scales\;
 ratios = array of ratios\;
 feature\_map\_shape = [height , width ]\;
-anchor\_stride = stride of anchors on the featuremap\;
-feature\_stride = stride of the featuremap\;
+anchor\_stride = stride of anchors on the feature map\;
+feature\_stride = stride of the feature map\;
  heights = scales divided by a square root of ratios ( each by each )\;
  widths = scales multiplied by square root of ratios ( each by each )\;
  shifts\_y = grid from 0 to shape [0] with stride anchor\_stride\;
@@ -536,7 +558,7 @@ unrealistic to train the first layers including low-level features, while change
   \includegraphics[width=0.8\linewidth]{images/drone-graph.png}
   \caption{Flowchart of the drone.py module written by the author.}
  \end{figure}
- \label{drone}
+ \label{fig:drone}
  \clearpage
 
  \begin{figure}[H]
