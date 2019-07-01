@@ -1,12 +1,11 @@
 %!TEX root = francis_thesis.tex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Results and analysis}\label{ch:Results}
+\chapter{Used Technologies}\label{ch:Used Technologies}
 
 
-\section{Used Technologies}
 Various technologies, frameworks and libraries were used in this project. Every implementation was carried out in Python, and frameworks like TensorFlow and Keras were used. Below are the list of the technologies used and a brief description.
 
-\subsection{Python}
+\section{Python}
 
 \begin{figure}[H]
     \centering
@@ -17,28 +16,27 @@ Various technologies, frameworks and libraries were used in this project. Every 
 Python\footnote{https://www.python.org/community/logos/} is a high level programming language designed by Guido van Rossum in 1991. Its design philosophy emphasizes code readability and has a remarkable use of significant white-space. The filename extensions include .py, .pyc, .pyw, .pyz. It support web development with frameworks like Django and Pyramid. It is applied in scientific studies and machine learning. Several libraries and frameworks have been developed by the Python community for this such as 
 SciPy\footnote{www.scipy.org}, Scikit-learn\footnote{scikit-learn.org/stable/}, Pandas\footnote{pandas.pydata.org}, Numpy\footnote{www.numpy.org/}, Theano\footnote{deeplearning.net/software/theano/}, PyTorch \footnote{pytorch.org/}, etc. It is also one of the most popular languages in the field of Convolutional neural network. Neural Networks like ResNet, VGGNet, Faster R-CNN, AlexNet in Keras or Pytorch, etc. 
 
-\subsection{TensorFlow}
+\section{TensorFlow}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\linewidth]{images/TensorFlow.png}
      \caption{TensorFlow logo, source: www.tensorflow.org}
   \end{figure}
-TensorFlow\footnote{www.tensorflow.org} is an Apache Licensed library. It is free and open-sourced and developed by Google Brain Team. It is written in Python, C++ and CUDA. It is a symbolic math library applied for machine learning application such as deep neural network, convolutional neural network. TensorFlow was used in the implementation of the deep learning network for this project. TensorFlow has a comprehensive, flexible ecosystem of tools, libraries that makes it user-friendly.
+TensorFlow is an Apache Licensed library. It is free and open-sourced and developed by Google Brain Team. It is written in Python, C++ and CUDA. It is a symbolic math library applied for machine learning application such as deep neural network, convolutional neural network. TensorFlow was used in the implementation of the deep learning network for this project. TensorFlow has a comprehensive, flexible ecosystem of tools, libraries that makes it user-friendly.
 For a wider documentation, please see the official website\footnote{www.tensorflow.org}
 \clearpage
 
-\subsection{Keras}
+\section{Keras}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\linewidth]{images/keras.png}
      \caption{Keras logo, source:www.scikit-image.org}
   \end{figure}
 
-Keras\footnote{Keras.io} %
-is an MIT licensed neural-network library written in Python. It was design by Francois Chollet and released first in March 2015. It is open-sourced. Keras is capable of running on top of Microsoft Cognitive Toolkit, TensorFlow, PlaidML or Theano for fast experimentation of deep neural networks. It enables implementation of deep learning and allows easy and 
+Keras is an MIT licensed neural-network library written in Python. It was design by Francois Chollet and released first in March 2015. It is open-sourced. Keras is capable of running on top of Microsoft Cognitive Toolkit, TensorFlow, PlaidML or Theano for fast experimentation of deep neural networks. It enables implementation of deep learning and allows easy and 
 fast prototyping, supports both convolutional networks and recurrent networks and the combination of both. For a wider documentation, please see the official website\footnote{www.keras.io}
 
-\subsection{ Scikit-Image}
+\section{ Scikit-Image}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\linewidth]{images/Scikit-image.png}
@@ -48,17 +46,17 @@ fast prototyping, supports both convolutional networks and recurrent networks an
 Scikit-Image is a BSD licensed image processing library. It is a collection of algorithms for segmentation, 
 geometric transformations, analysis, filtering, colour space manipulation, morphology, feature detection, and so on. It was first released in 2009, written by Stefan van der Walt.
 \cleardoublepage
-\section{Implementation}
-\subsection{Dataset}
+
+\chapter{Result and Analysis-Implementation}\label{Implementation}
+\section{Dataset}
 Drones, or general UAVs, equipped with cameras have been fast applied to a wide range of applications, including agricultural, aerial photography, fast delivery, and surveillance. Consequently, automatic understanding of visual data collected from these platforms become highly demanding, which brings computer vision to drones more and more closely. 
 Various computer vision task has been carried out by the Vision meets Drone (VisDrone) Challenges\footnote{www.aiskyeye.com}
 organized  by the AISKEYE team at Lab of Machine Learning and Data Mining , Tianjin University, China in the year 2018.
 Various computer vision task carried out in the challenge include object detection in images. The task aims to detect objects of predefined categories (e.g., cars and pedestrians) from individual images taken from drones. Also, object detection in videos challenge. The task is similar to the first, except that objects are required to be detected from videos. Then single-object tracking challenge. The task aims to estimate the state of a target, indicated in the first frame, in the subsequent video frames. And finally, multi-object tracking challenge. The task aims to recover the trajectories of objects in each video frame.
 Originally, I wanted to use the dataset provided by VisDrone Challenge for the training and validation of my Mask R-CNN Network, but due to lack of the segmentation mask data for the training set, I couldn’t use it.
-Rather I made use of the Semantic Drone Dataset from Institute of Computer Graphics and Vision, Graz University of Technology, Austria. \footnote{dronedataset.icg.tugraz.at}
-
-\paragraph{}
-The dataset contains images, bounding boxes as python pickle file, bounding boxes as xml, bounding boxes as mask images. The Semantic Drone Dataset focuses on semantic understanding of urban scenes for increasing the safety of autonomous drone flight and landing procedures. The imagery depicts  more than 20 houses from nadir (bird's eye) view acquired at an altitude of 5 to 30 meters above ground. A high resolution camera was used to acquire images at a size of 6000x4000px (24Mpx). The training set contains 400 publicly available images and the test set is made up of 200 private images. [W]
+Rather I made use of the Semantic Drone Dataset from Institute of Computer Graphics and Vision, Graz University of Technology, Austria \footnote{dronedataset.icg.tugraz.at}.
+\\
+The dataset contains images, bounding boxes as python pickle file, bounding boxes as xml, bounding boxes as mask images. The Semantic Drone Dataset focuses on semantic understanding of urban scenes for increasing the safety of autonomous drone flight and landing procedures. The imagery depicts  more than 20 houses from nadir (bird's eye) view acquired at an altitude of 5 to 30 meters above ground. A high resolution camera was used to acquire images at a size of 6000x4000px (24Mpx). The training set contains 400 publicly available images and the test set is made up of 200 private images. \protect\cite{W}
 For the task of person detection the dataset contains bounding box annotations of the training and test set. And for semantic segmentation, pixel-accurate annotation for the same training and test set was prepared. The complexity of the dataset is limited to 20 classes as listed below.
 
 \begin{tabular}%
@@ -106,38 +104,38 @@ For the task of person detection the dataset contains bounding box annotations o
   
 \end{minipage}
 \end{tabular}
-
+.\\
+\\
 The Drone Dataset is made freely available to academic and non-academic entities for non-commercial purposes such as academic research, teaching, scientific publications, or personal experimentation.
-\paragraph{}
-For the implementation of the instance segmentation, Python was used for obvious reasons. It enabled me to use deep learning framework like Tensorflow and Keras. The implementation of the model was carried out in the file drone.py and uses the Mask R-CNN library developed in python with TensorFlow and Keras by Matterport Inc. It was written by Waleed Abdulla from Matterport Inc. Matterport, Inc. published their implementation under the MIT License \cite{X}. The MIT License is a license granting the permission to use the code, copy it, modify it, publish and even to sell it free of charge.
+\\
+For the implementation of the instance segmentation, Python was used for obvious reasons. It enabled me to use deep learning framework like Tensorflow and Keras. The implementation of the model was carried out in the file drone.py and uses the Mask R-CNN library developed in python with TensorFlow and Keras by Matterport Inc. It was written by \textit{Waleed Abdulla} from \textit{Matterport Inc}. Matterport, Inc. published their implementation under the\textit{ MIT License}\footnote{https://opensource.org/licenses/MIT}. The MIT License is a license granting the permission to use the code, copy it, modify it, publish and even to sell it free of charge.
 There's absolutely no restriction on commercial use in MIT license. The only requirement is that you must include the MIT copyright notice with any copies of the software. Scripts, files and noteboks in the library are also under the MIT License and moreover, Waleed Abdulla himself agreed with the usage and modifications of his code for purposes of the research work.The Matterport, Inc. Mask R-CNN implementation can be found in their GitHub repository.
 Moreover, the Matterport implementation of Mask R-CNN was selected because of several reasons. Besides its license compatibility, it is quite robust and ready for modifications and adaptation for training in drone dataset leading to another implementation, so it saved thousands of lines of code. One of the major motivation behind its usage is that there is a plenty of people interested in this project, proposing their ideas and testing it. And these people are experienced in fields of computer vision and deep learning. Abdulla himself is responsive and active in answering people’s questions and issues. He is open-minded when discussing other people improvement proposals. I found it very useful.
-The next section will discuss the Mask R-CNN library, the workflow and necessary module of the library. The structure, architecture and components of the Mask R-CNN have been discussed in Chapter 2, so explanation of the programs only will be given in the next section. The library will be also discussed altogether with notes on my modifications connected with this thesis to distinguish them from Abdulla’s code.
+The next section will discuss the Mask R-CNN library, the workflow and necessary module of the library. The structure, architecture and components of the Mask R-CNN have been discussed in Chapter \ref{ch:THEORY}, so explanation of the programs only will be given in the next section. The library will be also discussed altogether with notes on my modifications connected with this thesis to distinguish them from Abdulla’s code.
 
-\subsection{Mask R-CNN library}
-The library which is hosted in Github has been forked 5445 times. It contains five important modules. Each module play an important role in the training and testing of model. Let’s go through this modules on after the other below:
+\section{Mask R-CNN library}
+The library which is hosted in \textit{Github} has been forked \textit{5445} times. It contains five important modules. Each module play an important role in the training and testing of model. Let’s go through this modules on after the other below:
 \\
-\textbf{Config.py}
-\\
-This is the configuration module of the system. It includes hyper-parameters for tuning of the model and necessary setting. It will described in section 4.2.1SS
+\textbf{Config.py}\
+This is the configuration module of the system. It includes hyper-parameters for tuning of the model and necessary setting. It will described in section \ref{sec:config}
 \\
 \textbf{Model.py}\
-This is fundamental core of the model. It develops and builds up the model. It will described in section 4.2.2
+This is fundamental core of the model. It develops and builds up the model. It will described in section \ref{sec:model}
 \\	
 \textbf{Parallel\_Model.py}\ 
 This module subclasses the standard Keras Model and adds multi-GPU support. It works by creating a copy of the model on each GPU and creates a parallelized computation.
 This file was not modify further and so will not explained in this thesis.
 \\
 \textbf{Utils.py} \
-This modules contains the utility classes and functions of the model. It will described in section 4.2.3
+This modules contains the utility classes and functions of the model. It will described in section \ref{sec:utils}
 \\
 \textbf{Visualize.py}\
-This contains function for display and visualization. It will described in section 4.2.4
+This contains function for display and visualization.
 \\
 
 The python files for the modules have good inner documentation, of which some of them and other functionalities will be discussed next.
 
-\subsubsection{Config.py}
+\subsection{Config.py} \label{sec:config}
 Config.py is the configuration settings for the model in the implementation by Matterport Inc.. It contains the hyper-parameters of the model. It has a classed called ModelConfig that houses these parameters. These parameter include;
  \begin{itemize}
    \item GPU Count
@@ -145,7 +143,7 @@ Config.py is the configuration settings for the model in the implementation by M
    \item Steps per Epoch
    \item Validation steps
    \item The choice of the backbone
-   \item Backbone strides (The strides of each layer of the Feature Pyramid Network (FPN) pyramid discussed in section 2.2)
+   \item Backbone strides (The strides of each layer of the Feature Pyramid Network (FPN) pyramid)
    \item Learning Rate
    \item RPN Train Anchors Per\_ Image (How many anchors per image to use for RPN training)
    \item Mask Shape
@@ -154,7 +152,7 @@ Config.py is the configuration settings for the model in the implementation by M
  \end{itemize}
  I inherited ModelConfig  class and then adapted the attributes to suit my hardware and the drone-based dataset in the drone.py module.  The config.py also a contains a display function that displays the model’s attribute.
 
- \subsubsection{Model.py}
+ \subsection{Model.py} \label{sec:model}
  This is the main Mask R-CNN implementation. It is made use of some modules for its implementation which include, os, random, datetime, re, logging, collections, multiprocessing ,numpy,tensorflow, keras, keras.backend ,keras.layers ,keras.engine  ,keras.models. distutils.version. For the module to work it needs TensorFlow 1.3+ and Keras 2.0.8+ .  Since this module builds the Mask R-CNN it has several classes and function performing various tasks. This classes and task the perform can be summed up thus;
  \begin{itemize}
    \item 	Initialization functions
@@ -169,16 +167,15 @@ Config.py is the configuration settings for the model in the implementation by M
    \item Miscellaneous functions and utilities connected to the model, like batch normalization data formatting and generating (building up targets, loading ground truth masks) or bounding boxes normalization.
    
  \end{itemize}
- Some important functions in the modules include train, load\_weight, build, etc. There was no modification made in this module for the training of model, apart from few modification to fix error that could be raised during the loading of masks. An explanation is given to the program written by Waleed Abdulla
+ Some important functions in the modules include train, load\_weight, build, etc. There was no modification made in this module for the training of model, apart from few modification to fix error that could be raised during the loading of masks. An explanation is given to the program written by \textit{Waleed Abdulla}.
 \\ 
 \\
-\textbf{ RESNET}
+\subsubsection{ RESNET}
+ The backbone of the Mask R-CNN is the Residual Network (RESNET). For the building of the RESNET, the principal function that does this is the resnet\_graph . The  resnet\_graph builds the ResNet graph and the  architecture can be ResNet50 or ResNet101.The batch norm layers of the network can be freeze or trained by setting the train\_bn to True or False, but the default is True. The workflow is outlined in pseudocode \ref{alg:1}.
 \\
- The backbone of the Mask R-CNN is the Residual Network (RESNET). For the building of the RESNET, the principal function that does this is the resnet\_graph . The  resnet\_graph builds the ResNet graph and the  architecture can be ResNet50 or ResNet101.The batch norm layers of the network can be freeze or trained by setting the train\_bn to True or False, but the default is True. The workflow is outlined in pseudocode 4.1
- \\
 \\
 
- \begin{algorithm}[H]
+ \begin{algorithm}[H] \label{alg:1}
   \caption{Building the ResNet backbone architecture}
   \SetAlgoLined
   \DontPrintSemicolon
@@ -205,10 +202,10 @@ Config.py is the configuration settings for the model in the implementation by M
  \end{algorithm}
 .\\
 \\
-The genuine function does not return total layers, however, it returns them in stages  C1, C2, C3, C4, C5 as can be seen in pseudocode 4.8, where this function is called  build\_resnet\_backbone. Every one of these stages speaks to the condition of craftsmanship before each convolutional block expansion, which is the last layer before changing components of input or yields. It is significant for the FPN as was referenced in Chapter 2 what's more, outlined in the model structure in pseudocode 4.8. Functions identity block and convolutional block are fundamentally the same as and both fabricates the bottleneck block. The main contrast is that the convolutional block function likewise actualizes a 1x1 convolution in the alternate route association as it is important to change the state of the contribution to the one utilized in the block. The remainder of their usage is pretty much the equivalent and is represented in pseudocode .2 (the convolution ought to be connected in the yield association step). It uses channels given to each call of the capacity in the ResNet pseudocode.
+The real function does not return total layers, however, it returns them in stages  C1, C2, C3, C4, C5 as can be seen in pseudocode \ref{alg:8}, where this function is called  \textit{build\_resnet\_backbone}. Every one of these stages represents the state of art  before each convolutional block addition, which is the last layer before changing components of input or yields. It is significant for the FPN as was referenced in Chapter \ref{ch:THEORY} and, outlined in the model structure in pseudocode \ref{alg:8}. Functions \textit{identity block} and \textit{convolutional block} are fundamentally the same and both builds the \textit{bottleneck block}. The main contrast is that the convolutional block function actualizes a 1x1 convolution in the shortcut connection as it is important to change the shape of the input to the one utilized in the block. The rest of their implementation is pretty much the equivalent and is represented in pseudocode \ref{alg:2} (the convolution ought to be applied in the output connection step). It uses filters given to each call of the function in the ResNet pseudocode.
 \\
 \\
-\begin{algorithm}[H]
+\begin{algorithm}[H] \label{alg:2}
   \caption{identity\_block}
   \SetAlgoLined
   \DontPrintSemicolon
@@ -229,12 +226,12 @@ The genuine function does not return total layers, however, it returns them in s
   \end{algorithm}
 .\\
 \\
- \textbf{RPN}
+ \subsubsection{RPN}
+
+The RPN is worked by two functions,\textit{ build\_rpn\_model} and \textit{rpn\_graph}. Notwithstanding, these functions assemble just the model, for example, the sliding window and its behaviour, anchors are created in utils.py as depicted in section 5.1.3. Indeed, even in this split approach, it pursues the thought from section 3.4.3. Inputs for the rpn\_graph capacity are an feature map, number of anchors per location and anchor stride and returns anchor class logits, probabilities and bounding boxes refinements. The work process of rpn\_graph is represented in pseudocode \ref{alg:3}. build\_rpn\_model makes a model which initially feed the rpn\_graph function and at that point restores the previously mentioned values.
 \\
-The RPN is worked by two functions, build\_rpn\_model and rpn\_graph. Notwithstanding, these functions assemble just the model, for example, the sliding window and its behaviour, anchors are created in utils.py as depicted in section 5.1.3. Indeed, even in this split approach, it pursues the thought from section 3.4.3. Contributions for the rpn\_graph capacity are an element map, number of anchors per area and anchors stride and returns anchors class logits, probabilities and bounding boxes refinements. The work process of rpn\_graph is represented in pseudocode 5.3. build\_rpn\_model makes a model which initially feed the rpn\_graph work and at that point restores the previously mentioned qualities.
 \\
-\\
-\begin{algorithm}[H]
+\begin{algorithm}[H] \label{alg:3}
   \caption{rpn\_graph}
   \SetAlgoLined
   \DontPrintSemicolon
@@ -250,10 +247,10 @@ The RPN is worked by two functions, build\_rpn\_model and rpn\_graph. Notwithsta
   \end{algorithm}
   .\\
 \\
-  A significant class for the RPN is the ProposalLayer class. It takes anchor probabilities, bounding box refinements and anchors themselves as inputs trim them to littler clumps while considering top anchors and applies refinements to the anchor boxes.
+  A significant class for the RPN is the \textit{ProposalLayer} class. It takes anchor probabilities, bounding box refinements and anchors themselves as inputs trim them to littler clumps while considering top anchors and applies refinements to the anchor boxes.
 \\
 \\
-\begin{algorithm}[H]
+\begin{algorithm}[H] \label{alg:4}
   \caption{ProposalLayer}
   \SetAlgoLined
   \DontPrintSemicolon
@@ -275,12 +272,12 @@ top\_anchors = names\_of\_anchors\_with\_top\_probs (probs , how\_many =min(6000
   .\\
   \\
 \clearpage
- \textbf{ROIAlign}
+ \subsubsection{ROIAlign}
+
+As was described already in chapter \ref{ch:THEORY}, RoIAlign is more or less the RoIPooling algorithm without rounding. The implementation is briefly sketched below \ref{alg:5}
 \\
-As was described already in chapter 2, RoIAlign is more or less the RoIPooling algorithm without rounding. The implementation is briefly sketched below
 \\
-\\
-\begin{algorithm}[H]
+\begin{algorithm}[H] \label{alg:5}
   \caption{RoIAlign}
   \SetAlgoLined
   \DontPrintSemicolon
@@ -303,16 +300,16 @@ pooled . rearrange\_to\_match\_the\_order ( boxes )\;
 \end{algorithm}
 .\\
 \\
-It executes the RoIAlign algorithm on different dimensions of the feature pyramid furthermore, in its specifications of the \newcommand*{\logten}{\mathop{\log_{2}}} condition, it pursues the thoughts behind identifications in [27] and furthermore applies the five-levels approach. The base picking at line 7 and the loop at line 9 the then pursues utilizing just layers two to five from chapter 5.1.2.
+It executes the RoIAlign algorithm on different dimensions of the feature pyramid furthermore, in its specifications of the   $\newcommand*{\logten}{\mathop{\log_{2}}}$ condition, it pursues the thoughts behind identifications in \cite{K} and furthermore applies the five-levels approach. The base picking at line 7 and the loop at line 9 the then pursues utilizing just layers two to five from section \ref{sec:maskmodel}.
 \\
 \\
-\textbf{Head architectures}
+\subsubsection{Head architectures}
+
+As can be found in figure \ref{fig:head}, the head architecture is separated into two areas. The head architecture for bounding boxes and class probabilities are handled by the fpn\_classifier\_graph function, and the mask architecture by the build\_fpn\_mask\_graph. 
+fpn\_classifier\_graph takes as input RoIs, feature maps, pool size and a number of classes and returns classifier logits, probabilities and bounding boxes refinements. build\_fpn\_mask\_graph takes a similar input yet returns just a list of masks.
 \\
-As can be found in figure 3.13 and was at that point portrayed in section 3.6.1, the head architecture is separated into two areas. The head architecture for bounding boxes what's more, class probabilities are dealt with by the fpn\_classifier\_graph function and the mask architecture by the build\_fpn\_mask\_graph. 
-fpn\_classifier\_graph takes as input RoIs, feature maps, pool size and a number of classes and returns classifier logits, probabilities and bounding boxes refinements. build\_fpn\_mask\_graph takes a similar input yet returns just a rundown of masks.
 \\
-\\
-\begin{algorithm}[H]
+\begin{algorithm}[H]\label{alg:6}
   \caption{fpn\_classifier\_graph}
   \SetAlgoLined
   \DontPrintSemicolon
@@ -338,7 +335,7 @@ fpn\_classifier\_graph takes as input RoIs, feature maps, pool size and a number
 \end{algorithm}
 .\\
 \\
-\begin{algorithm}[H]
+\begin{algorithm}[H] \label{alg:7}
   \caption{build\_fpn\_mask\_graph}
   \SetAlgoLined
   \DontPrintSemicolon
@@ -368,19 +365,16 @@ fpn\_classifier\_graph takes as input RoIs, feature maps, pool size and a number
 .\\
 \\
 
-In the pseudocodes above, a ROIAlign object is added as the first one into layers. This object was sketched in pseudocode 5.5.
+In the pseudocodes above \ref{alg:7}, a ROIAlign object is added as the first one into layers. This object was sketched in pseudocode \ref{alg:5}.
 \\
 \\
-\textbf{Mask R-CNN model}
-\\
-The focal point of the model.py record is the MaskRCNN class which contains techniques to manufacture the whole Mask R-CNN model by cobbling together various kinds of layers 
-what's more, to utilize it for training or detection. The work process of the technique build is represented in pseudocode 5.8 and pursues 
-the architecture portrayed in chapter 3.6.1. In the pseudocode, we can see that the head architecture contrasts a bit in the training and in the detection. It is expected to 
-the way that we need loss values to be processed during the training, so we figure them from detected values and target values (values dependent on known focuses from 
-the training dataset).
+\subsubsection{Mask R-CNN model} \label{sec:maskmodel}
+
+The focal point of the model.py file is the MaskRCNN class which contains techniques to build the whole Mask R-CNN model by cobbling together various kinds of layers  and, to utilize it for training or testing. The work process of the method \textit{build} is represented in pseudocode \ref{alg:8} and pursues the architecture portrayed in chapter \ref{ch:THEORY}. In the pseudocode, we can see that the head architecture contrasts a bit in the training and in the detection. It is expected to 
+the way that we need loss values to be processed during the training, so we figure them from \textit{detected} values and \textit{target} values (values dependent on known targets from the training dataset).
 \\
 \\
-\begin{algorithm}[H]
+\begin{algorithm}[H] \label{alg:8}
   \caption{Mask R-CNN.build}
   \SetAlgoLined
   \DontPrintSemicolon
@@ -406,25 +400,16 @@ the training dataset).
 \end{algorithm}
 .\\
 \\ 
-In the pseudocode, we can see a few classes and functions. Despite the fact that their motivations are very clear, some of them can be seen in various pseudocodes. Function
-build\_resnet\_backbone was at that point depicted in pseudocode 5.1, ensuing function build\_top\_down\_fpn\_layers is genuinely clear procedure connecting layers 
-as in section 3.6.1, generate\_anchors will be portrayed in 5.12, build\_rpn can be seen in pseudocode 5.3, ProposalLayer in pseudocode 5.4, fpn\_classifier speaks to the fpn\_classifier\_graph from pseudocode 5.6 and fpn\_mask is work 
-build\_fpn\_mask\_graph from pseudocode 5.7.
+In the pseudocode, we can see a few classes and functions. Despite the fact that their motivations are very clear, some of them can be seen in other various pseudocodes. Function
+build\_resnet\_backbone was at that point depicted in pseudocode \ref{alg:1}, ensuing function build\_top\_down\_fpn\_layers is a fairly straightforward process connecting layers, generate\_anchors will be portrayed in pseudocode  \ref{alg:12}, build\_rpn can be seen in pseudocode \ref{alg:3}, ProposalLayer in pseudocode \ref{alg:4}, fpn\_classifier speaks to the fpn\_classifier\_graph from pseudocode  \ref{alg:6} and fpn\_mask is function build\_fpn\_mask\_graph from pseudocode  \ref{alg:7}.
 
-\subsubsection{utils.py}
-The most significant piece of the utils.py record is the Dataset class. It is likewise the main 
-some portion of the utils.py code that was adjusted for the necessities of Drone-based dataset utilization 
-(the other changes are simply minor refactorings). The utils.py additionally contains a great deal of functions. Just a couple of them will be referenced 
-as every one of them have adequate documentation in the code.
+\subsection{Utils.py} \label{sec:utils}
+The most significant piece of the utils.py record is the Dataset class. It is likewise the main portion of the utils.py code that was modified for the necessities of Drone-based dataset utilization (the other changes are simply minor refactoring). The utils.py additionally contains a great deal of functions. Just a couple of them will be referenced as every one of them have adequate documentation in the code's file.
 \\
 \\
-\textbf{Dataset}
-\\
-The Dataset class is the base class for dataset classes and images. It contains data about them including their names, identifiers and on account of images
+\subsubsection{Dataset}
 
-likewise paths to them. One of the written methods is the one called import\_contents, which feeds the Dataset object with classes and images. The work process is represented in pseudocode 
-
-5.9. Contributions for the technique are: 
+The Dataset class is the base class for dataset classes and images. It contains data about them including their names, identifiers and for the images, paths to them. One of the written methods is the one called load\_drone, which feeds the Drone-Dataset object with classes and images. The work process is represented in pseudocode \ref{alg:9}. Inputs for the method are: 
 \begin{itemize}
   \item List of classes names proposed to be learned
 
@@ -432,12 +417,10 @@ likewise paths to them. One of the written methods is the one called import\_con
   \item Name of model
 \end{itemize}
 
-The add\_class method in pseudocode 5.9 import a class into the Dataset object dictionary  inside and out with an exceptional identifier; a significant part is containing 
-the foundation as the first class with identifier 0 (in the pseudocode represented simplifiedly by the saved\_class dictionary ). The add\_images line is a loop over all 
-images with the predefined augmentation contained in a given registry bringing in them out and out with their identifier and way into the Dataset object list.
+The add\_class method in pseudocode \ref{alg:9} import a class into the Dataset object dictionary  altogether with an exceptional identifier; a significant and necessary part containing the background as the first class with identifier 0 (in the pseudocode represented simply by the saved\_class dictionary ). The add\_images line is a loop over all images predefined extension contained in a given directory importing them altogether with their identifier and path into the Dataset object list.
 \\
 \\
-\begin{algorithm}[H]
+\begin{algorithm}[H] \label{alg:9}
   \caption{import\_contents}
   \SetAlgoLined
   \DontPrintSemicolon
@@ -453,12 +436,12 @@ images with the predefined augmentation contained in a given registry bringing i
 .\\
 \\ 
 Another important method written for the needs of the Drone-based dataset modules is
-the one called load\_mask. The work process of the method is illustrated in pseudocode
-5.10. It returns an array containing boolean masks (True for the mask, False elsewhere)
+the one called load\_mask. The workflow of the method is illustrated in pseudocode
+\ref{alg:10}. It returns an array containing boolean masks (True for the mask, False elsewhere)
 for each instance in the image, an array of class identifiers corresponding each instance in the masks array.
 \\
 \\
-\begin{algorithm}[H]
+\begin{algorithm}[H] \label{alg:10}
   \caption{get\_mask}
   \SetAlgoLined
   \DontPrintSemicolon
@@ -477,17 +460,15 @@ classes\_list = list containing class of the first mask\;
 \end{algorithm}
 .\\
 \\
-From the remainder of Dataset class methods, one more will be referenced. prepare must be called before the use of the Dataset object as it sets it up for use. 
-The readiness is done through setting object parameters like number of classes, classes names and identifiers or number of pictures. This setting depends on 
-data got during the import\_contents call. Bounding boxes apparatuses Since bounding boxes are not required to be given altogether with masks
-in the training dataset, the function extract\_boxes is utilized to process bounding boxes from masks. The function scans for the first and last horizontal and vertical 
-positions containing mask along all channels and returns them as an array. It implies that every pixel of the mask is contained in the returned horizontal-vertical bounding 
-box and it is likewise as tight as could reasonably be expected. 
-A function used to register the IOU is called just compute\_iou. Its work process is delineated in pseudocode 5.11. The treatment of no interception is likewise executed 
-in the function, yet for better understanding, it is excluded in the pseudocode. 
+From the rest of Dataset class methods, one more will be explained. \textit{\textbf{prepare}} must be called before the use of the Dataset object as it sets it up for use. The readiness is done through setting object parameters like number of classes, classes names and identifiers or number of pictures. This setting depends on data gotten during the \textit{import\_contents} call.
+ 
+\subsubsection{Bounding boxes tools} 
+Since bounding boxes are not required to be given altogether with masks in the training dataset, the function \textit{extract\_boxes} is utilized to process bounding boxes from masks. The function scans for the first and last horizontal and vertical 
+positions containing mask along all channels and returns them as an array. It implies that every pixel of the mask is contained in the returned horizontal-vertical bounding box and it is as tight as could reasonably be expected. 
+A function used to compute the IOU is called just \textit{compute\_iou}. Its workflow is delineated in pseudocode \ref{alg:11}. The handling of \textit{no interception} is also executed in the function, yet for better understanding, it is excluded in the pseudocode. 
 \\
 \\
-\begin{algorithm}[H]
+\begin{algorithm}[H] \label{alg:11}
   \caption{compute\_iou}
   \SetAlgoLined
   \DontPrintSemicolon
@@ -504,21 +485,13 @@ iou = intersection / union\;
 \end{algorithm}
 .\\
 \\
-With the correlation of ground truth boxes and the anticipated ones is associated likewise the function box\_refinement. It registers contrasts between ground truth 
-furthermore, anticipated directions of bounding boxes and returned them as the data 
-of the error bounding box incorrectness. 
+With the correlation of ground truth boxes and the predicted ones is connected in the function \textit{box\_refinement}. It computes contrasts between ground truth furthermore, predicted coordinates of bounding boxes and returned them as the data of bounding box inaccuracy. 
+\\
+\subsubsection{Pyramid anchor tools}
+The hypothesis of scales and pyramids was portrayed in chapter \ref{ch:THEORY}. Two functions  are associated with the formation of the anchors at various dimensions of a feature pyramid. The called one is \textit{generate\_pyramid\_anchors} which loops over scales. In the loop, the generate\_anchors function is called to produce anchors of ratios for a given arrangement of scales. The workflow of the generate\_anchors function is represented in pseudocode \ref{alg:12}. It takes scales and proportions of anchors, feature map shape and anchors and feature map strides as a series of inputs. It utilizes these inputs to figure heights and widths of various anchor and to compute grid of anchors centers. This grid together with their heights and widths defines the returned value,anchors.
 \\
 \\
-\textbf{Pyramid anchor tools }
-\\
-The hypothesis of scales and pyramids was at that point portrayed in chapter 3.4.3 and 3.6.1. Two functions  are associated with the formation of the anchors at various dimensions of 
-a feature pyramid. The called one is generate\_pyramid\_anchors which loops over scales. Tuned in, the generate\_anchors capacity is called to produce anchors of 
-proportions for a given arrangement of scales. The work process of the generate\_anchors function is represented in pseudocode 5.12. It takes scales and proportions of anchors, feature map shape and anchors and 
-feature map strides as a series of inputs. It utilizes these contributions to figure heights and widths of various stays (can be found in figure 3.6) and to compute a framework of anchors
-focuses. This network together with their height and widths characterizes the returned value, anchors.
-\\
-\\
-\begin{algorithm}[H]
+\begin{algorithm}[H] \label{alg:12}
   \caption{generate\_anchors}
   \SetAlgoLined
   \DontPrintSemicolon
@@ -540,23 +513,21 @@ anchors = [ anchors\_centers - 0.5 * anchors\_sizes , anchors\_centers + 0.5 * a
 \end{algorithm}
 .\\
 \\
-\textbf{Drone.py}
+\subsection{Drone.py}
 The responsibility of parents in teaching and training their children. The responsibility of drone.py is to train the model to detect or 
 predict object. Drone.py teaches the model to recognize the object attributes, colour, curves, edges and other attributes of object. 
 This file was written as part of the practical section of the thesis and defines an important function- train. 
 The train function in drone.py calls the parent train function present in the Mask R-CNN model defined above.  Before the training can take place the dataset needs to be loaded and likewise the mask. So the call to the load\_drone function loads the drone-bades dataset and their corresponding mask.   
 After the load\_drone function the next is the call to the prepare function. The prepare function sets up the model for training.
-The flowchart contains couple of as of now referenced functions and classes, explicitly the ModelConfig class and its display method from chapter 5.1.1, the MaskRCNN 
-class from section 5.1.2 and the Dataset class and its methods import\_contents what's more, prepare from chapter 5.1.3. 
-The last advance in this flowchart, a method model.train(), has really two extraordinary structures relying upon the utilization of initial weights. The initial structure is connected 
-for a training from a scratch and prepares all layers. The second one comprises of three littler sections; right off the bat preparing layers 5 and higher, at that point adjusting layers 4 and 
-higher and the last and greatest section is tweaking the entire design. It is appeared in the flowchart in \ref{fig:drone} and the thought behind this conduct is that it is 
-unrealistic to train the first layers including low-level features, while changes have a tremendous effect on more profound dimensions and those highlights ought to be pretty much the equivalent for any object.
+The flowchart contains referenced functions and classes, explicitly the ModelConfig class and its display method, the MaskRCNN 
+class and the Dataset class and its methods \textit{import\_contents} and \textit{prepare}. 
+The last stage in this flowchart, a method\textit{ model.train()}, has really two different forms depending on the usage of initial weights. The first form is applied for a training from a scratch and trains all layers. The second one comprises of three littler sections; firstly training layers 5 and higher, then fine-tuning layers 4 and higher and the last and biggest segment is refining the whole architecture. It appeared in the flowchart in \ref{fig:drone} and the thought behind this behavior is that it is unrealistic to train the first layers including low-level features, while changes have a tremendous effect on deeper levels and those features should be more or less the same
+for any object.
 \clearpage
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\linewidth]{images/drone-graph.png}
-  \caption{Flowchart of the drone.py module written by the author.}
+  \caption{Flowchart of the drone.py}
  \end{figure}
  \label{fig:drone}
  \clearpage
@@ -569,7 +540,7 @@ unrealistic to train the first layers including low-level features, while change
  \label{train}
  \clearpage
 
-\textbf{Drone-detect.py}
+\subsection{Drone-detect.py}
 In the event that we have a trained model, either prepared by us or given by another person, we can utilize it to distinguish highlights or items in maps. In fact, the trained model is used to detect features and maps in drone datasets collected from drones developed by the Robotic Team of African University of Science and Technology.  The yield from 
 the module comprises of a set of vector maps for each class. Despite the fact that the model is somewhat scale-invariant, it is prescribed to give object detection and masks incomparable 
 goals to the one utilized in training pictures.  The module is contained in the document drone\_detect.py. This record can be viewed as the second piece of the down to earth 
