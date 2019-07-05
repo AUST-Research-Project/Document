@@ -1,5 +1,5 @@
 % HEADER and settings -- do not change
-\documentclass[final,a4paper]{aust_thesis}
+\documentclass[final,book]{aust_thesis}
 \usepackage{definitions}
 \usepackage{graphicx}
 \usepackage{float}
@@ -19,7 +19,7 @@
 % one can select one...
 \lstset{language=Python}
 
-
+\begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%!!          THIS WILL BE CHANGED       !!%%%%
 
@@ -43,13 +43,14 @@ Faculty of Mathematics and Informatics,\hspace*{-3cm}\\
 Babe\c{s} Bolyai University of Cluj-Napoca,\hspace*{-3cm}\\
 Romania
 }
-
+% this command generates the titlepage
+\maketitle
 % this is to speed up compilation...
 
 %\includeonly{intro}
 
 
-\begin{document}
+
 % begin approval page
 \begin{figure}[h]
 	\centering
@@ -110,7 +111,7 @@ ALL RIGHTS RESERVED\\
 %% ABSTRACT
 \begin{abstract}%
 
-\noindent There have been several improvement in object detection and semantic segmentation results in recent years. Baseline systems that drives these advances are Fast/Faster R-CNN, Fully Convolutional Network and recently \textbf{Mask R-CNN} and its variant that has a weight transfer function.  Mask R-CNN is the state-of-art.  This research extends the application of the state-of-art in object detection and semantic segmentation in drone based datasets. Existing drone datasets was used to learn semantic segmentation on drone images using \textbf{Mask R-CNN}. And a new drone dataset will be collected, labelled, annotated with a bounding box object detection.Drone based images will be collected with the drone developed by the Robotic team at African University of Science and Technology, Abuja, which will be made public for academic researches.
+\noindent There have been several improvement in object detection and semantic segmentation results in recent years. Baseline systems that drives these advances are Fast/Faster R-CNN, Fully Convolutional Network and recently \textbf{Mask R-CNN} and its variant that has a weight transfer function.  Mask R-CNN is the state-of-art.  This research extends the application of the state-of-art in object detection and semantic segmentation in drone based datasets. Existing drone datasets was used to learn semantic segmentation on drone images using \textbf{Mask R-CNN}. 
 
 \noindent This work is the result of my own activity. I have neither given nor received unauthorized assistance on this work.
 \\
@@ -122,11 +123,21 @@ ALL RIGHTS RESERVED\\
 \end{abstract}
 
 
-% this command generates the titlepage
-\maketitle
 
+\cleardoublepage% especially in a document where chapters start at right-hand pages
+\phantomsection% for an anchor if you use hyperref
+\addtocontents{toc}{chapter}{Acknowledgements}% if you wish to have a TOC entry
+\chapter*{Acknowledgements}% for the actuall unnumbered heading
+\thispagestyle{empty}% or plain etc.
+\markboth{Acknowledgements}{Acknowledgements}% relevant depending on page style
+% or if it's more than one page
+Firstly, I would like to express my sincere gratitude to my advisor Prof.Lehel Csato for the continuous support of my Masters study and related research, for his patience, motivation, and immense knowledge. His guidance helped me in all the time of research and writing of this thesis. I could not have imagined having a better advisor and mentor for my Masters study.
+Besides my advisor, I would like to thank the rest of my faculties: Prof. Amos David, Dr. Rajesh Prasad, and Prof. Moses Akanbi, for their insightful comments and encouragement.
+I would also like to thank my colleagues for the memorable time with them and the academic contribution and support they gave to me during the research and thesis, especially my partner and friend Kudzai Zishumba, and my roommate Raphael Akubo, for stimulating discussions, for the sleepless nights we were working together before deadlines.
+Last but not the least, I would like to thank my family: my parents and to my siblings for supporting me spiritually, financially and emotionally throughout the period of writing this thesis and my life in general.
 %% 
 
+\clearpage
 % this command generates the table of contents
 { \baselineskip 1ex
   \parskip 1ex
